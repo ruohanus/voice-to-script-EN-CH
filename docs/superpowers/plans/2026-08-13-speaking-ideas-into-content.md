@@ -33,7 +33,7 @@
 - Consumes: the approved design at `docs/superpowers/specs/2026-08-13-speaking-ideas-into-content-design.md` and five recorded baseline failures.
 - Produces: a discoverable skill package whose first-stage response follows the five-section contract and whose later stages enrich and polish content.
 
-- [ ] **Step 1: Initialize the skill package**
+- [x] **Step 1: Initialize the skill package**
 
 Run:
 
@@ -47,7 +47,7 @@ python3 /Users/ruohanyu/.codex/skills/.system/skill-creator/scripts/init_skill.p
 
 Expected: the command creates `SKILL.md` and `agents/openai.yaml` with no resource directories.
 
-- [ ] **Step 2: Verify the scaffold fails the behavioral/specification gate**
+- [x] **Step 2: Verify the scaffold fails the behavioral/specification gate**
 
 Run:
 
@@ -57,7 +57,7 @@ rg -n 'Material bank|Content soul|Next voice-pass prompts|Finalize' skills/speak
 
 Expected: no matches, proving the generated scaffold does not yet implement the approved workflow.
 
-- [ ] **Step 3: Write the minimal staged skill**
+- [x] **Step 3: Write the minimal staged skill**
 
 Replace the scaffold with a `SKILL.md` that contains:
 
@@ -78,7 +78,7 @@ The body must define:
 - A compact quick-reference table and one end-to-end example.
 - Common mistakes keyed to the observed baseline failure of drafting too early.
 
-- [ ] **Step 4: Verify the specification markers and metadata**
+- [x] **Step 4: Verify the specification markers and metadata**
 
 Run:
 
@@ -89,7 +89,7 @@ python3 /Users/ruohanyu/.codex/skills/.system/skill-creator/scripts/quick_valida
 
 Expected: every marker is present and the validator reports `Skill is valid!`.
 
-- [ ] **Step 5: Commit the runtime package**
+- [x] **Step 5: Commit the runtime package**
 
 ```bash
 git add skills/speaking-ideas-into-content docs/superpowers/plans/2026-08-13-speaking-ideas-into-content.md
@@ -106,7 +106,7 @@ git commit -m "feat: add speaking ideas into content skill"
 - Consumes: the complete skill directory and raw user scenarios without expected answers or author conclusions.
 - Produces: evidence that the skill generalizes to first capture, subsequent pass, and explicit finalization.
 
-- [ ] **Step 1: Run five first-capture micro-tests**
+- [x] **Step 1: Run five first-capture micro-tests**
 
 Give five fresh-context agents the skill path and this raw request:
 
@@ -121,7 +121,7 @@ Expected for each response:
 - No finished social post appears.
 - No experience, fact, evidence, or certainty is invented.
 
-- [ ] **Step 2: Run a second-pass test**
+- [x] **Step 2: Run a second-pass test**
 
 Give a fresh agent the skill plus the initial transcript and this follow-up:
 
@@ -131,7 +131,7 @@ Second pass: Yesterday I tried recording while walking. I spoke for seven minute
 
 Expected: the response merges the new material, preserves the original soul unless genuinely changed, strengthens the skeleton and emotional arc, and reports only remaining high-value gaps or readiness to polish.
 
-- [ ] **Step 3: Run an explicit-finalization test**
+- [x] **Step 3: Run an explicit-finalization test**
 
 Give a fresh agent the skill plus both transcripts and this instruction:
 
@@ -141,11 +141,11 @@ Skip another recording and finalize this now as a concise first-person LinkedIn 
 
 Expected: the finished post comes first; verbal clutter is removed; the supplied “seven minutes” detail remains accurate; no unsupported facts or experiences appear; a brief editorial note follows only if useful.
 
-- [ ] **Step 4: Refine and re-test any observed gap**
+- [x] **Step 4: Refine and re-test any observed gap**
 
 If a test omits a required section or drafts too early, strengthen the positive response contract in `SKILL.md`. If a test invents support, strengthen the source-labeling rule. Re-run the failing scenario and then the complete five-test first-capture set.
 
-- [ ] **Step 5: Re-run static validation**
+- [x] **Step 5: Re-run static validation**
 
 ```bash
 python3 /Users/ruohanyu/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/speaking-ideas-into-content
@@ -164,7 +164,7 @@ Expected: validator success and no whitespace errors.
 - Consumes: the validated repository package.
 - Produces: an auto-discoverable personal skill that can be invoked with `$speaking-ideas-into-content`.
 
-- [ ] **Step 1: Resolve and inspect the exact install target**
+- [x] **Step 1: Resolve and inspect the exact install target**
 
 ```bash
 printf '%s\n' "${CODEX_HOME:-$HOME/.codex}/skills/speaking-ideas-into-content"
@@ -173,7 +173,7 @@ test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/speaking-ideas-into-content" || fi
 
 Expected: the exact target is known before copying; an existing skill, if any, is inspected rather than silently overwritten.
 
-- [ ] **Step 2: Install the verified package**
+- [x] **Step 2: Install the verified package**
 
 If the target does not exist, create its parent and copy the directory:
 
@@ -184,7 +184,7 @@ cp -R skills/speaking-ideas-into-content "${CODEX_HOME:-$HOME/.codex}/skills/spe
 
 If the target exists, compare it with the repository package and request explicit overwrite approval before replacing it.
 
-- [ ] **Step 3: Validate the installed copy and compare it byte-for-byte**
+- [x] **Step 3: Validate the installed copy and compare it byte-for-byte**
 
 ```bash
 python3 /Users/ruohanyu/.codex/skills/.system/skill-creator/scripts/quick_validate.py "${CODEX_HOME:-$HOME/.codex}/skills/speaking-ideas-into-content"
@@ -193,7 +193,7 @@ diff -r skills/speaking-ideas-into-content "${CODEX_HOME:-$HOME/.codex}/skills/s
 
 Expected: `Skill is valid!` and no diff output.
 
-- [ ] **Step 4: Complete the requirement-by-requirement audit**
+- [x] **Step 4: Complete the requirement-by-requirement audit**
 
 Check:
 
@@ -203,7 +203,7 @@ Check:
 - Discoverability: folder name, YAML description, UI metadata, and explicit `$speaking-ideas-into-content` invocation agree.
 - Quality: static validator, behavioral tests, installed-copy validator, and byte comparison all pass.
 
-- [ ] **Step 5: Commit refinements, if any**
+- [x] **Step 5: Commit refinements, if any**
 
 ```bash
 git add skills/speaking-ideas-into-content docs/superpowers/plans/2026-08-13-speaking-ideas-into-content.md
