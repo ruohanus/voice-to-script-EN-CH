@@ -1,0 +1,4 @@
+interface:
+  display_name: "Speaking Ideas Into Content"
+  short_description: "Turn voice notes into structured, authentic content"
+  default_prompt: "Use $speaking-ideas-into-content to help me develop this voice note into publishable content while preserving my voice."
