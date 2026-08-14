@@ -4,9 +4,9 @@ Date: 2026-08-14
 
 ## Purpose
 
-Revise the personal `speaking-ideas-into-content` Codex skill so its final output is an engaging, reflective, conversational talking-head video script for professionals considering career changes, professionals with ADHD, and founders with ADHD.
+Revise the personal `speaking-ideas-into-content` Codex skill so its final outputs are engaging, reflective, conversational English and Simplified Mandarin talking-head video scripts for professionals considering career changes, professionals with ADHD, and founders with ADHD.
 
-The revision preserves the existing voice-first workflow: speak freely, discover the idea, deepen it through another voice pass, and polish last. It adds a story-selection checkpoint, Jenny Hoyos-inspired causal storytelling, conditional evidence research, runtime controls, and light delivery notes.
+The revision preserves the existing voice-first workflow: speak freely, discover the idea, deepen it through another voice pass, and polish last. It adds a story-selection checkpoint, Jenny Hoyos-inspired causal storytelling, conditional evidence research, bilingual adaptation, runtime controls, and light delivery notes.
 
 ## Output target
 
@@ -17,7 +17,9 @@ The revision preserves the existing voice-first workflow: speak freely, discover
 - Runtime: at least 2.5 minutes and no more than 15 minutes.
 - Word-count estimate: approximately 375–2,250 words at a natural reflective delivery pace of about 150 words per minute. Use runtime, not padding, as the governing requirement.
 - Story sources: personal experience plus anonymized client/team examples and composite scenarios only when the user supplies or authorizes the underlying material.
-- Final presentation: clean teleprompter-ready copy with light notes such as `[pause]`, `[emphasize]`, and `[show source/title]`.
+- Languages: produce both an English version and a natural Simplified Mandarin version adapted for Chinese-speaking viewers.
+- Bilingual relationship: preserve the same story, claims, evidence strength, and resolution, but do not translate sentence by sentence. Rewrite idioms, transitions, examples, rhythm, and framing when needed so each version sounds native and conversational.
+- Final presentation: return only the two humanized, teleprompter-ready scripts and their light delivery notes. Keep research logs, diagnostics, word counts, runtime calculations, and polishing reports internal.
 
 ## Revised workflow
 
@@ -77,13 +79,22 @@ Merge the new voice pass without erasing natural language. Update the content so
 
 When the user confirms the material is ready or explicitly asks to finalize:
 
-1. Draft the teleprompter-ready script.
-2. Estimate spoken word count and runtime.
-3. Revise until the estimated runtime is between 2.5 and 15 minutes.
-4. Remove filler, false starts, repetition, and transcription artifacts while preserving meaning, point of view, distinctive phrasing, emotional texture, and natural rhythm.
-5. Add light delivery and evidence notes after the script.
+1. Draft the English teleprompter script from the approved story spine and evidence.
+2. Estimate its spoken word count and runtime internally, then revise until the estimated runtime is between 2.5 and 15 minutes.
+3. Apply the English `humanizer` skill as an embedded polishing pass. Follow its diagnostic process internally, but suppress its draft, critique, summary, and process report from the user-facing result.
+4. Create the Simplified Mandarin version as a Chinese-native adaptation from the same approved story spine, not as a line-by-line translation of the English draft.
+5. Apply the Chinese-first `shuorenhua` skill as an embedded polishing pass. Preserve facts, claims, evidence strength, emotional truth, and the speaker's voice while removing translation-like phrasing, mechanical symmetry, inflated language, and unnatural written-Chinese rhythm.
+6. Read both versions for spoken cadence. Remove filler, false starts, repetition, transcription artifacts, tongue-twisting syntax, and phrases that look natural on a page but sound stiff aloud.
+7. Check that both versions resolve the same central conflict and remain within the 2.5–15 minute range at a natural pace. They may differ in sentence structure and exact length.
+8. Return only:
+   - the final humanized English teleprompter script;
+   - light English delivery notes;
+   - the final humanized Simplified Mandarin teleprompter script;
+   - light Chinese delivery notes.
 
-If the supplied material cannot honestly support 2.5 minutes, request another voice pass instead of padding. If it would exceed 15 minutes, narrow the central question or split the material into a series.
+Do not expose intermediate drafts, humanizer diagnostics, AI-writing critiques, polishing reports, research logs, word counts, or runtime calculations in the finalization response. Evidence-display cues such as `[show source/title]` may appear in the light delivery notes when relevant.
+
+If the supplied material cannot honestly support 2.5 minutes in both languages, request another voice pass instead of padding. If either version would exceed 15 minutes, narrow the central question or split the material into a series.
 
 ## Storytelling contract
 
@@ -149,9 +160,11 @@ Forward tests for the revised skill must cover:
 2. Each direction begins with a question and uses causal **therefore/but** beats.
 3. A purely personal story does not trigger unnecessary research.
 4. A meaningful ADHD or career claim produces an evidence menu and waits for user selection.
-5. An explicit finalization request produces a reflective, conversational 2.5–15 minute script with a runtime estimate and light delivery notes.
+5. An explicit finalization request produces only a humanized English teleprompter script, its light delivery notes, a naturally adapted Simplified Mandarin teleprompter script, and its light delivery notes.
 6. Insufficient material triggers another voice pass instead of padding.
 7. Excess material is narrowed or split rather than exceeding 15 minutes.
 8. A reference video creates a temporary structural style fingerprint without copying language.
+9. The Chinese version preserves the English version's story, claim strength, evidence, and resolution without reading like a literal translation.
+10. The English `humanizer` and Chinese `shuorenhua` passes run internally and do not expose drafts, diagnostics, critiques, reports, word counts, or runtime calculations.
 
 The package must pass the official skill validator, remain consistent between the repository and personal installation, and preserve the previously tested voice-first behavior.
