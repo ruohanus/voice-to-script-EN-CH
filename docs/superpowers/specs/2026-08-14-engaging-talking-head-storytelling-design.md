@@ -4,7 +4,7 @@ Date: 2026-08-14
 
 ## Purpose
 
-Revise the personal `speaking-ideas-into-content` Codex skill so its final outputs are engaging, reflective, conversational English and Simplified Mandarin talking-head video scripts for professionals considering career changes, professionals with ADHD, and founders with ADHD.
+Revise `speaking-ideas-into-content` into a public, general-purpose Codex skill whose final outputs are engaging, reflective, conversational talking-head video scripts adapted to the creator's intended audience and selected language mode.
 
 The revision preserves the existing voice-first workflow: speak freely, discover the idea, deepen it through another voice pass, and polish last. It adds a story-selection checkpoint, Jenny Hoyos-inspired causal storytelling, conditional evidence research, bilingual adaptation, runtime controls, and light delivery notes.
 
@@ -12,14 +12,14 @@ The revision preserves the existing voice-first workflow: speak freely, discover
 
 - Format: talking-head video script.
 - Tone: reflective and conversational, like speaking thoughtfully to one person.
-- Audience: career-changing professionals, professionals with ADHD, and founders with ADHD.
+- Audience: any intended viewer group. Identify the viewer's context, relevant tension, and desired change from the user's material. If the intended audience is clear, state the inference for confirmation; if it is ambiguous or would materially change the story, ask before proposing narrative directions. Career-changing professionals, professionals with ADHD, and founders with ADHD are examples, not defaults.
 - Viewer outcome: feeling understood, reconsidering a limiting belief, gaining a practical next step, or any fitting combination.
 - Runtime: at least 2.5 minutes and no more than 15 minutes.
 - Word-count estimate: approximately 375–2,250 words at a natural reflective delivery pace of about 150 words per minute. Use runtime, not padding, as the governing requirement.
 - Story sources: personal experience plus anonymized client/team examples and composite scenarios only when the user supplies or authorizes the underlying material.
-- Languages: produce both an English version and a natural Simplified Mandarin version adapted for Chinese-speaking viewers.
-- Bilingual relationship: preserve the same story, claims, evidence strength, and resolution, but do not translate sentence by sentence. Rewrite idioms, transitions, examples, rhythm, and framing when needed so each version sounds native and conversational.
-- Final presentation: return only the two humanized, teleprompter-ready scripts and their light delivery notes. Keep research logs, diagnostics, word counts, runtime calculations, and polishing reports internal.
+- Language modes: English, Simplified Mandarin, or bilingual. Honor an explicitly selected mode; otherwise default to bilingual.
+- Bilingual relationship: preserve the same story, claims, evidence strength, and resolution across both versions, but do not translate sentence by sentence. Rewrite idioms, transitions, examples, rhythm, and framing when needed so each version sounds native and conversational.
+- Final presentation: return only the humanized, teleprompter-ready script or scripts requested by the selected language mode, each followed by light delivery notes. Keep research logs, diagnostics, word counts, runtime calculations, and polishing reports internal.
 
 ## Revised workflow
 
@@ -29,10 +29,11 @@ Accept a recording, transcript, or rough notes. Preserve the current workbench w
 
 1. **Material bank** — vivid wording, scenes, claims, examples, tensions, emotions, and unresolved fragments.
 2. **Content soul** — the strongest central insight in one sentence.
-3. **Viewer question** — the honest question the script can open and ultimately answer.
-4. **Story ingredients** — protagonist or point of view, desire, stakes, conflicts, decisions, consequences, change, and available resolution.
-5. **Gaps and support** — missing scenes, causal links, emotional truth, claims needing validation, and useful counterpoints.
-6. **Next voice-pass prompts** — conversational questions that elicit concrete moments, internal conflict, decisions, and consequences.
+3. **Audience and language** — the intended viewer, their context and tension, the desired viewer change, and the selected English, Simplified Mandarin, or bilingual output mode. Default to bilingual when no mode is specified.
+4. **Viewer question** — the honest question the script can open and ultimately answer.
+5. **Story ingredients** — protagonist or point of view, desire, stakes, conflicts, decisions, consequences, change, and available resolution.
+6. **Gaps and support** — missing scenes, causal links, emotional truth, claims needing validation, and useful counterpoints.
+7. **Next voice-pass prompts** — conversational questions that elicit concrete moments, internal conflict, decisions, and consequences.
 
 Do not draft the finished script from the first capture unless the user explicitly asks to skip the staged workflow.
 
@@ -79,22 +80,16 @@ Merge the new voice pass without erasing natural language. Update the content so
 
 When the user confirms the material is ready or explicitly asks to finalize:
 
-1. Draft the English teleprompter script from the approved story spine and evidence.
-2. Estimate its spoken word count and runtime internally, then revise until the estimated runtime is between 2.5 and 15 minutes.
-3. Apply the English `humanizer` skill as an embedded polishing pass. Follow its diagnostic process internally, but suppress its draft, critique, summary, and process report from the user-facing result.
-4. Create the Simplified Mandarin version as a Chinese-native adaptation from the same approved story spine, not as a line-by-line translation of the English draft.
-5. Apply the Chinese-first `shuorenhua` skill as an embedded polishing pass. Preserve facts, claims, evidence strength, emotional truth, and the speaker's voice while removing translation-like phrasing, mechanical symmetry, inflated language, and unnatural written-Chinese rhythm.
-6. Read both versions for spoken cadence. Remove filler, false starts, repetition, transcription artifacts, tongue-twisting syntax, and phrases that look natural on a page but sound stiff aloud.
-7. Check that both versions resolve the same central conflict and remain within the 2.5–15 minute range at a natural pace. They may differ in sentence structure and exact length.
-8. Return only:
-   - the final humanized English teleprompter script;
-   - light English delivery notes;
-   - the final humanized Simplified Mandarin teleprompter script;
-   - light Chinese delivery notes.
+1. Confirm or apply the selected language mode. Use bilingual when the user has not selected one.
+2. For English or bilingual mode, draft the English teleprompter script from the approved story spine and evidence. Estimate its spoken word count and runtime internally, revise it into the 2.5–15 minute range, and apply the English `humanizer` skill as an embedded polishing pass. Follow its diagnostic process internally, but suppress its draft, critique, summary, and process report from the user-facing result.
+3. For Simplified Mandarin or bilingual mode, create a Chinese-native teleprompter script from the approved story spine. In bilingual mode, preserve the English version's story and evidence without translating it line by line. Estimate runtime internally, revise it into the 2.5–15 minute range, and apply the Chinese-first `shuorenhua` skill as an embedded polishing pass. Preserve facts, claims, evidence strength, emotional truth, and the speaker's voice while removing translation-like phrasing, mechanical symmetry, inflated language, and unnatural written-Chinese rhythm.
+4. Read every requested version for spoken cadence. Remove filler, false starts, repetition, transcription artifacts, tongue-twisting syntax, and phrases that look natural on a page but sound stiff aloud.
+5. Check that every requested version resolves the same approved central conflict and remains within the 2.5–15 minute range at a natural pace. Bilingual versions may differ in sentence structure and exact length.
+6. Return only the requested final script or scripts and the corresponding light delivery notes. In bilingual mode, order the output as English script, English delivery notes, Simplified Mandarin script, and Chinese delivery notes.
 
 Do not expose intermediate drafts, humanizer diagnostics, AI-writing critiques, polishing reports, research logs, word counts, or runtime calculations in the finalization response. Evidence-display cues such as `[show source/title]` may appear in the light delivery notes when relevant.
 
-If the supplied material cannot honestly support 2.5 minutes in both languages, request another voice pass instead of padding. If either version would exceed 15 minutes, narrow the central question or split the material into a series.
+If the supplied material cannot honestly support 2.5 minutes in every requested language, request another voice pass instead of padding. If any requested version would exceed 15 minutes, narrow the central question or split the material into a series.
 
 ## Storytelling contract
 
@@ -140,6 +135,7 @@ These references are directional, not voices to imitate.
 - Do not diagnose the speaker or viewer.
 - Use careful language for correlations, theories, contested findings, and individual experiences.
 - If research tools are unavailable, stop at the claim inventory and ask whether to continue without evidence or wait for research access.
+- If a polishing sub-skill required by the selected language mode is unavailable, explain which dependency is missing and provide installation guidance instead of silently substituting a weaker process.
 - If the user rejects all story directions, return to the material bank and generate new options rather than combining rejected spines.
 - If the user says “finalize now,” honor the request while clearly noting unresolved claims or runtime limitations.
 
@@ -156,15 +152,18 @@ Baseline tests must show how the current skill handles a realistic voice note wi
 
 Forward tests for the revised skill must cover:
 
-1. A first voice note produces the expanded workbench and two or three selectable narrative directions, not a finished script.
+1. A first voice note produces the expanded workbench, identifies or asks for the intended audience, records the selected language mode or bilingual default, and offers two or three selectable narrative directions instead of a finished script.
 2. Each direction begins with a question and uses causal **therefore/but** beats.
 3. A purely personal story does not trigger unnecessary research.
 4. A meaningful ADHD or career claim produces an evidence menu and waits for user selection.
-5. An explicit finalization request produces only a humanized English teleprompter script, its light delivery notes, a naturally adapted Simplified Mandarin teleprompter script, and its light delivery notes.
-6. Insufficient material triggers another voice pass instead of padding.
-7. Excess material is narrowed or split rather than exceeding 15 minutes.
-8. A reference video creates a temporary structural style fingerprint without copying language.
-9. The Chinese version preserves the English version's story, claim strength, evidence, and resolution without reading like a literal translation.
-10. The English `humanizer` and Chinese `shuorenhua` passes run internally and do not expose drafts, diagnostics, critiques, reports, word counts, or runtime calculations.
+5. English mode produces only a humanized English teleprompter script and light English delivery notes.
+6. Simplified Mandarin mode produces only a humanized Chinese teleprompter script and light Chinese delivery notes.
+7. With no language preference, bilingual mode produces a humanized English teleprompter script, its light delivery notes, a naturally adapted Simplified Mandarin teleprompter script, and its light delivery notes.
+8. Insufficient material triggers another voice pass instead of padding.
+9. Excess material is narrowed or split rather than exceeding 15 minutes.
+10. A reference video creates a temporary structural style fingerprint without copying language.
+11. In bilingual mode, the Chinese version preserves the English version's story, claim strength, evidence, and resolution without reading like a literal translation.
+12. The polishing sub-skills required by the selected language mode run internally and do not expose drafts, diagnostics, critiques, reports, word counts, or runtime calculations.
+13. A missing required polishing dependency produces a clear installation instruction rather than a silently degraded final script.
 
-The package must pass the official skill validator, remain consistent between the repository and personal installation, and preserve the previously tested voice-first behavior.
+The public package must include clear installation and dependency guidance, pass the official skill validator, remain consistent between the repository and personal installation, and preserve the previously tested voice-first behavior.
