@@ -15,7 +15,7 @@ The revision preserves the existing voice-first workflow: speak freely, discover
 - Audience: any intended viewer group. Identify the viewer's context, relevant tension, and desired change from the user's material. If the intended audience is clear, state the inference for confirmation; if it is ambiguous or would materially change the story, ask before proposing narrative directions. Career-changing professionals, professionals with ADHD, and founders with ADHD are examples, not defaults.
 - Viewer outcome: feeling understood, reconsidering a limiting belief, gaining a practical next step, or any fitting combination.
 - Runtime: at least 2.5 minutes and no more than 15 minutes.
-- Word-count estimate: approximately 375–2,250 words at a natural reflective delivery pace of about 150 words per minute. Use runtime, not padding, as the governing requirement.
+- Length estimate: for English, approximately 375–2,250 words at a natural reflective delivery pace of about 150 words per minute. For Simplified Mandarin, estimate from natural spoken Mandarin cadence rather than applying an English word-count formula. Use runtime, not padding, as the governing requirement in every language.
 - Story sources: personal experience plus anonymized client/team examples and composite scenarios only when the user supplies or authorizes the underlying material.
 - Language modes: English, Simplified Mandarin, or bilingual. Honor an explicitly selected mode; otherwise default to bilingual.
 - Bilingual relationship: preserve the same story, claims, evidence strength, and resolution across both versions, but do not translate sentence by sentence. Rewrite idioms, transitions, examples, rhythm, and framing when needed so each version sounds native and conversational.
