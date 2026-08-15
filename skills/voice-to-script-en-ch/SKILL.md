@@ -13,6 +13,7 @@ Read the reference that matches the current work:
 
 - For first captures, later voice passes, narrative choices, source ledgers, reference material, or imitation requests, read `references/story-workflow.md`.
 - Before proposing, researching, checking, or using external support, read `references/evidence-research.md`.
+- Before drafting or revising a script, read `references/spoken-style.md`.
 - Before drafting any final script, read `references/finalization.md` and use `scripts/estimate_runtime.py`.
 
 If more than one situation applies, read every relevant reference. Treat the rules below as the controlling contract.
@@ -45,9 +46,9 @@ Do not draft a polished script from a first capture unless the user explicitly a
 
 Build an open question, then move the viewer through causal progressions and meaningful conflicts:
 
-`question → therefore → but → therefore → but → resolution`
+`question → therefore → but → therefore → but → earned turn → one unresolved tension`
 
-Use “therefore” as logic, not necessarily as a spoken word. Every “but” must change the stakes, interpretation, or next action. Resolve the central conflict with a satisfying insight, decision, or earned next step. Do not force a neat ending the source material has not earned.
+Use “therefore” as logic, not necessarily as a spoken word. Every “but” must change the stakes, interpretation, or next action. Earn meaningful movement through a decision, changed interpretation, honest position, or next action while leaving exactly one intentional tension, uncertainty, or question open. Do not force a neat ending or explain away every conflict the source material has not earned.
 
 ## Dependency rules
 

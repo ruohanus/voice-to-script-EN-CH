@@ -26,7 +26,8 @@ When usable material already exists, do discovery work before asking setup quest
    - the likely `therefore / but` progression;
    - the conflict viewers would invest in;
    - the stakes;
-   - the kind of resolution it can honestly earn;
+   - the earned turn;
+   - what remains unresolved;
    - the likely ending effect;
    - a provisional runtime within 2.5–15 minutes, or a clear warning that more material is required;
    - what extra detail, if any, would strengthen it.
@@ -58,7 +59,9 @@ After narrative and evidence choices are authorized, create one internal, langua
 - core question and content soul;
 - ordered story beats;
 - causal links and meaningful conflicts;
-- resolution and final takeaway;
+- earned turn and exactly one unresolved tension;
+- source passage for the clip line;
+- recommended ending mode and facts/disclosures available to alternates;
 - approved facts, examples, claims, and evidence identifiers;
 - deliberate omissions and uncertainty boundaries;
 - target duration within 2.5–15 minutes;
@@ -70,10 +73,10 @@ Generate English and Simplified Chinese independently from this contract. Never 
 
 Offer, rather than assume, enrichment such as a concrete example, a counterpoint, an analogy, or a researched framework. A user may decline any optional enrichment. If source material is thin, build the shortest honest story that meets 2.5 minutes; ask for more material only when the minimum cannot be reached without invention or empty padding.
 
-If the material would exceed 15 minutes, narrow the central question or propose a series. Preserve the essential conflict and resolution in each proposed unit. Offer omitted material as a possible sequel only outside the finalized output.
+If the material would exceed 15 minutes, narrow the central question or propose a series. Preserve the essential conflict, earned movement, and productive openness in each proposed unit. Offer omitted material as a possible sequel only outside the finalized output.
 
 ## References and imitation safety
 
 Analyze supplied reference transcripts or videos for a temporary structural fingerprint: hook type, information order, tension spacing, reveal timing, sentence-length variation, and delivery energy. Do not copy memorable wording, signature metaphors, catchphrases, or a creator's protected expression.
 
-If asked to write exactly in a living creator's style, decline the exact imitation briefly and offer an abstracted version using generic craft properties such as conversational pacing, curiosity gaps, concrete conflict, earned vulnerability, and clear resolution. Keep the user's own voice primary.
+If asked to write exactly in a living creator's style, decline the exact imitation briefly and offer an abstracted version using generic craft properties such as conversational pacing, curiosity gaps, concrete conflict, earned vulnerability, meaningful movement, and productive openness. Keep the user's own voice primary.
