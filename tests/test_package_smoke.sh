@@ -39,6 +39,7 @@ require_file "$skill_dir/agents/openai.yaml"
 require_file "$skill_dir/references/story-workflow.md"
 require_file "$skill_dir/references/evidence-research.md"
 require_file "$skill_dir/references/finalization.md"
+require_file "$skill_dir/references/spoken-style.md"
 require_file "$skill_dir/scripts/estimate_runtime.py"
 
 require_pattern '^name: voice-to-script-en-ch$' "$skill_dir/SKILL.md" 'stable skill name'
@@ -72,8 +73,8 @@ if rg -n '/Users/|Simplified Mandarin|Jenny Hoyos|Jessica McCabe|Struthless|How 
 fi
 
 scenario_count=$(rg -c '^### [0-9]+\.' "$repo_root/tests/behavioral/scenarios.md")
-test "$scenario_count" -eq 48 || {
-  printf 'expected 48 behavioral scenarios, found %s\n' "$scenario_count" >&2
+test "$scenario_count" -eq 56 || {
+  printf 'expected 56 behavioral scenarios, found %s\n' "$scenario_count" >&2
   exit 1
 }
 

@@ -295,3 +295,43 @@ Observe: the talking-head workflow does not activate when the user did not reque
 Input: rich material, explicit audience, “you choose,” “no evidence,” bilingual default, and finalize request in one turn.
 
 Observe: the agent proceeds without re-asking audience, direction, evidence, language, or optional voice-pass questions; only hard blockers can stop finalization.
+
+### 49. Breathable deletion pass
+
+Source contains overwritten explanations and long sentences.
+Observe: the result cuts redundant explanation, uses one-breath lines and purposeful fragments, and preserves distinctive source phrasing.
+
+### 50. No invented embodiment or quotation
+
+Source contains an abstract feeling and a paraphrased objection but no physical detail or exact quote.
+Observe: the result invents neither sensory detail nor quoted dialogue and keeps the objection unquoted.
+
+### 51. Earned turn with one unresolved tension
+
+Source supports a decision but not certainty about its future result.
+Observe: the complete script earns the decision and leaves exactly that future uncertainty unresolved rather than adding a lesson.
+
+### 52. Main ending and labeled alternatives
+
+Approved English finalization with enough material for all four ending modes.
+Observe: one complete script uses a recommended ending and is followed by at least three materially different alternatives labeled by mode and optimization goal where applicable.
+
+### 53. Ending-mode integrity
+
+Source supports a story request, named reader, callback, and unapologized position.
+Observe: each ending performs its named function, remains one or two breaths, avoids a generic maxim, and preserves the same facts and unresolved tension.
+
+### 54. Source-grounded clip line
+
+Source contains one strong self-recognition line buried beneath explanation.
+Observe: the line appears around the two-thirds point, the explanation after it is removed, and the line identifies the viewer rather than merely flattering the writer.
+
+### 55. Spoken-language prohibitions
+
+Source includes throat-clearing, parentheses, semicolons, asides, announced-insight phrases, and engagement bait.
+Observe: final scripts remove those forms while preserving useful repetition, discomfort, and source rhythm.
+
+### 56. Bilingual endings and runtime boundary
+
+Bilingual finalization with alternates long enough to push the combined deliverable over the limit.
+Observe: each complete script independently passes 2.5–15 minutes; alternates and notes are excluded; both languages preserve the earned turn, unresolved tension, and ending-mode intent without literal translation.
