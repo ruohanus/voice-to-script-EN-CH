@@ -12,7 +12,7 @@ Draft each requested language directly from the approved story contract:
 
 - English should sound reflective, conversational, and natural when spoken aloud.
 - Simplified Chinese should be natural spoken Chinese adapted for the intended Chinese-speaking viewers, not translation-shaped prose. Do not assume a mainland-China audience unless the user specifies one.
-- Bilingual scripts must preserve the same question, story beats, facts, conflicts, resolution, evidence boundaries, and intended viewer shift. They may differ in idiom, sentence order within a beat, connective phrasing, and culturally natural explanation.
+- Bilingual scripts must preserve the same question, story beats, facts, conflicts, earned turn, exactly one remaining unresolved tension, evidence boundaries, and intended viewer shift. They may differ in idiom, sentence order within a beat, connective phrasing, and culturally natural explanation.
 - Chinese-only mode must not generate an English draft.
 
 For every branch, make an initial deletion pass before rewriting: cut throat-clearing, duplicate explanation, softened restatements, and transcription artifacts while retaining source tics, useful repetition, fragments, and uncomfortable admissions that carry the writer's voice. Then perform an aloud pass. Split or cut every stumble, restart, or breath failure. Format one breath per line; line breaks are pauses. Use contractions in English and equivalent natural spoken compression in Simplified Chinese without forcing English grammar onto Chinese.
@@ -52,7 +52,7 @@ For bilingual output, run a parity audit across:
 - every approved fact and evidence boundary;
 - meaningful conflicts and stakes;
 - clip line, earned turn, unresolved tension, and ending intent; and
-- resolution, takeaway, and call to reflection.
+- earned turn and exactly one remaining unresolved tension.
 
 Parity is semantic, not literal. Do not make either version a line-by-line translation.
 
