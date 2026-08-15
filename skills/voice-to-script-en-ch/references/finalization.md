@@ -96,7 +96,10 @@ After the numeric gate passes, read for spoken cadence. Pause-heavy delivery may
 For each requested language, output in this exact order:
 
 ```text
-[Complete teleprompter script]
+[Complete teleprompter body]
+
+Recommended ending — [mode]
+[One-or-two-breath recommended conclusion]
 
 Alternate endings
 [At least three labeled alternatives]

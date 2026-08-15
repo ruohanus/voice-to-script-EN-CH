@@ -76,7 +76,7 @@ No fourth wording patch was made. Three minimal, evidence-backed instruction ref
 
 ### Final overwritten English rerun
 
-Observed behavior: The late source-grounded line, `I had confused being easy to reach with making things easier for other people`, stands alone before the script advances to a caveat. The main ending is visibly labeled `Recommended ending — Unapologized position`; it and all three alternates explicitly keep the question of how availability can help without making the team dependent.
+Observed behavior: The late source-grounded line, `I had confused being easy to reach with making things easier for other people`, is immediately followed by the caveat `I don't think messages are the enemy.` The main ending is visibly labeled `Recommended ending — Unapologized position`; it and all three alternates explicitly keep the question of how availability can help without making the team dependent.
 
 | Scenario | Verdict | Evidence |
 | --- | --- | --- |
@@ -85,7 +85,7 @@ Observed behavior: The late source-grounded line, `I had confused being easy to 
 | 51 | pass | The notification-block decision is earned and the availability/dependence question is the sole remaining tension. |
 | 52 | pass | A labeled recommended ending is followed by three distinct, mode-labeled alternates. |
 | 53 | pass | The named reader, story request, callback, and unapologized position each perform their named function, remain concise, and state the shared tension. |
-| 54 | pass | The source-grounded recognition line appears in the later third; the following material advances rather than paraphrases it. |
+| 54 | fail | The immediately adjacent `I don't think messages are the enemy.` is a caveat, not the required advance to an event, time, or action. |
 | 55 | not applicable | The packet does not provide the full prohibition predicate. |
 | 56 | not applicable | English-only request. |
 
@@ -121,4 +121,51 @@ Observed behavior: The response preserves the personal source facts and gives En
 
 ## Final forward-test verdict
 
-The minimal refinements close the observed English output gaps in fresh contexts. One final bilingual fresh-context response still fails the required clean output and ending contracts. Status: **DONE_WITH_CONCERNS** pending independent review; no additional patch was made after the third evidence-backed refinement.
+The minimal refinements close the observed English ending-output gaps, but the final overwritten-English run still fails the clip-line hard ordering gate. One final bilingual fresh-context response also fails the required clean output and ending contracts. Status: **DONE_WITH_CONCERNS** pending independent review; no additional patch was made after the third evidence-backed refinement.
+
+## Task-review fix round 1
+
+### Controlling-template correction
+
+The previous final-output boundary named only scripts and light notes, while the canonical clean-output template omitted the required recommended-ending block. Both surfaces now require the same per-language order: complete teleprompter body, `Recommended ending — [mode]` and its one-or-two-breath conclusion, at least three labeled alternate endings, then light delivery notes.
+
+### Overwritten-English clip-line regrade
+
+No focused rerun was performed for this packet in this fix round. The recorded adjacent lines are:
+
+```text
+I had confused being easy to reach with making things easier for other people.
+I don't think messages are the enemy.
+```
+
+The second line is a caveat, not an event, time, or action advance. Scenario 54 is therefore correctly graded **fail**, not pass, for that run.
+
+### Focused bilingual rerun
+
+Prompt: the exact bilingual packet and neutral wrapper at `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-source-packets.md` (packet 3). The fresh-context response followed the corrected per-language order and used `Recommended ending — Story request — best for comments`, followed by `Named reader — best for shares`, `Callback — best for cohesion`, and `Unapologized position` alternatives in both branches. The runtime-bearing complete bodies, including the recommended conclusion but excluding editorial headings, alternates, and notes, are retained at:
+
+- `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-fix1-bilingual-en.txt`
+- `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-fix1-bilingual-zh.txt`
+
+Runtime commands and results:
+
+```text
+python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-fix1-bilingual-en.txt
+{"language": "en", "estimated_seconds": 203.6, "estimated_minutes": 3.39, "status": "within_range", "word_count": 509, "rate": 150, "rate_unit": "words_per_minute"}
+
+python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language zh .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-fix1-bilingual-zh.txt
+{"language": "zh", "estimated_seconds": 222.0, "estimated_minutes": 3.7, "status": "within_range", "han_character_count": 888, "latin_word_count": 0, "han_rate": 240, "latin_rate": 150}
+```
+
+| Scenario | Verdict | Evidence |
+| --- | --- | --- |
+| 49 | pass | Both branches use predominantly short displayed lines and purposeful fragments. |
+| 50 | not applicable | The packet supplies spoken wording and concrete meeting events. |
+| 51 | pass | Both branches earn naming the deadline mismatch and retain the same high-stakes uncertainty. |
+| 52 | pass | Every language section visibly separates a recommended, mode-labeled conclusion from three labeled alternatives. |
+| 53 | partial | The English endings are one or two breaths; the Chinese story-request ending occupies three displayed breath lines despite preserving its mode and tension. |
+| 54 | partial | The late `name the confusion` line is source-grounded, but the next material reflects on its meaning rather than advancing an event, time, or action. |
+| 55 | not applicable | The packet does not provide the full prohibition predicate. |
+| 56 | pass | Both independently measured complete branches are within range, separate from alternates/notes, semantically parallel, and carry the same ending-mode intent. |
+
+The output-order and runtime findings are closed. The existing clip-line hard-gate issue remains accurately recorded; the Chinese ending's three-line breath issue is a newly observed partial, not the subject of another speculative wording change in this round.

@@ -61,4 +61,4 @@ If a required polishing skill is unavailable, stop only the affected finalizatio
 
 ## Final-output boundary
 
-When finalization succeeds, return only the requested final humanized teleprompter script or scripts plus light delivery notes. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.
+When finalization succeeds, return only the requested final humanized teleprompter script or scripts. For each requested language, assemble the complete body, a visibly labeled `Recommended ending — [mode]` and conclusion, at least three labeled alternate endings, then light delivery notes. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.
