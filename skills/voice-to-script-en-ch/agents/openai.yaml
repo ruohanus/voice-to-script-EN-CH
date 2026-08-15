@@ -1,0 +1,4 @@
+interface:
+  display_name: "voice to script en/ch"
+  short_description: "Shape spoken ideas into audience-aware video scripts"
+  default_prompt: "Use $voice-to-script-en-ch to develop this recording or rough spoken idea into a reflective talking-head script. Use bilingual English and Simplified Chinese unless I choose one."

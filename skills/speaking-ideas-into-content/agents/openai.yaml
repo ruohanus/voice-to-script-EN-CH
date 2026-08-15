@@ -1,4 +1,0 @@
-interface:
-  display_name: "Speaking Ideas Into Video Scripts"
-  short_description: "Shape spoken ideas into audience-aware video scripts"
-  default_prompt: "Use $speaking-ideas-into-content to develop this recording or rough spoken idea into a reflective talking-head script. Use bilingual English and Simplified Chinese unless I choose one."

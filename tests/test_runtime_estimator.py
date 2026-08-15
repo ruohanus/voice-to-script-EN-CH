@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "skills" / "speaking-ideas-into-content" / "scripts" / "estimate_runtime.py"
+SCRIPT = ROOT / "skills" / "voice-to-script-en-ch" / "scripts" / "estimate_runtime.py"
 
 
 def load_estimator():

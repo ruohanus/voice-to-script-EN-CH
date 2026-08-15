@@ -1,4 +1,4 @@
-# Speaking Ideas Into Content
+# voice to script en/ch
 
 A public ChatGPT/Codex skill for developing voice notes, recordings, transcripts, rambles, and rough spoken ideas into reflective, conversational talking-head video scripts.
 
@@ -14,17 +14,17 @@ The skill supports English, Simplified Chinese, and bilingual output. Bilingual 
 
 ## Repository layout
 
-The installable skill is in `skills/speaking-ideas-into-content/`. The repository root also contains behavioral specifications, deterministic runtime tests, the project license, and third-party notices.
+The installable skill is in `skills/voice-to-script-en-ch/`. The repository root also contains behavioral specifications, deterministic runtime tests, the project license, and third-party notices.
 
 ## Install for local use
 
 Clone or download this repository, then install the skill directory with a host-compatible skill installer. With the Skills CLI:
 
 ```bash
-npx skills add ./skills/speaking-ideas-into-content
+npx skills add ./skills/voice-to-script-en-ch
 ```
 
-You can also copy the skill directory into the skills location supported by your host. Do not copy the repository's test or development files into the skill directory.
+You can also copy the skill directory into the skills location supported by your host. For native Codex discovery, use `.agents/skills/voice-to-script-en-ch/` within a project or `$HOME/.agents/skills/voice-to-script-en-ch/` for a user-level installation. Do not copy the repository's test or development files into the skill directory.
 
 ## Required polishing dependencies
 

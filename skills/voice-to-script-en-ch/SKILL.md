@@ -1,9 +1,9 @@
 ---
-name: speaking-ideas-into-content
+name: voice-to-script-en-ch
 description: Use when someone wants to turn a voice note, recording, transcript, ramble, or rough idea into a reflective, conversational talking-head video script with an engaging story arc, optional evidence, English or Simplified Chinese output, and a verified 2.5-to-15-minute runtime.
 ---
 
-# Speaking Ideas Into Content
+# voice to script en/ch
 
 Develop spoken raw material into an audience-aware talking-head video script without sanding away the speaker's point of view. Default to a bilingual English and Simplified Chinese deliverable. The user may choose English, Simplified Chinese, or bilingual at any time.
 

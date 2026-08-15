@@ -2,7 +2,7 @@
 set -eu
 
 repo_root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-skill_dir="$repo_root/skills/speaking-ideas-into-content"
+skill_dir="$repo_root/skills/voice-to-script-en-ch"
 
 require_file() {
   test -f "$1" || {
@@ -21,6 +21,16 @@ require_pattern() {
   }
 }
 
+require_case_pattern() {
+  pattern=$1
+  path=$2
+  label=$3
+  rg -q "$pattern" "$path" || {
+    printf 'missing case-sensitive contract: %s\n' "$label" >&2
+    exit 1
+  }
+}
+
 require_file "$repo_root/README.md"
 require_file "$repo_root/LICENSE"
 require_file "$repo_root/THIRD_PARTY_NOTICES.md"
@@ -31,7 +41,11 @@ require_file "$skill_dir/references/evidence-research.md"
 require_file "$skill_dir/references/finalization.md"
 require_file "$skill_dir/scripts/estimate_runtime.py"
 
-require_pattern '^name: speaking-ideas-into-content$' "$skill_dir/SKILL.md" 'stable skill name'
+require_pattern '^name: voice-to-script-en-ch$' "$skill_dir/SKILL.md" 'stable skill name'
+require_case_pattern '^  display_name: "voice to script en/ch"$' "$skill_dir/agents/openai.yaml" 'public display name'
+require_pattern '\$voice-to-script-en-ch' "$skill_dir/agents/openai.yaml" 'canonical invocation'
+require_pattern 'npx skills add \./skills/voice-to-script-en-ch' "$repo_root/README.md" 'canonical install command'
+require_case_pattern '^# voice to script en/ch$' "$repo_root/README.md" 'lowercase public product name'
 require_pattern 'talking-head video script' "$skill_dir/SKILL.md" 'talking-head trigger'
 require_pattern 'approved story contract' "$skill_dir" 'canonical story contract'
 require_pattern 'English, Simplified Chinese, or bilingual' "$skill_dir" 'language modes'
