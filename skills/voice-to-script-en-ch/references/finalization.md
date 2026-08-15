@@ -19,6 +19,8 @@ For every branch, make an initial deletion pass before rewriting: cut throat-cle
 
 Build the complete teleprompter script with the approved clip line, earned turn, and exactly one unresolved tension. Choose the strongest ending mode for that complete script and use it as the recommended ending.
 
+Before output, audit clip-line assembly separately: keep the approved source-grounded clip line around two-thirds through the complete script, then advance to the next story beat. This is a hard ordering gate: if the next spoken line defines, paraphrases, translates, compares, or otherwise explains the clip line, move that line before the clip line or delete it. The next spoken line after the clip line must advance the event, time, or action rather than reinforce its meaning.
+
 ## Required polishing passes
 
 ### English
@@ -66,6 +68,10 @@ After the complete script's recommended ending is chosen and polished, generate 
 4. `Unapologized position`
 
 The recommended ending plus the alternatives must collectively use at least three modes. Alternatives must be materially distinct, one or two breaths each, preserve the approved facts, earned turn, and exactly one unresolved tension, and avoid generic advice, generic maxims, engagement bait, or new explanation. Do not use an alternative to resolve the tension left intentionally open in the complete script.
+
+In the final user-facing output, place the complete script's last one-or-two-breath conclusion beneath `Recommended ending — [mode]`, using the exact selected mode label above. The label is editorial and is excluded from the complete script's runtime. The recommended ending itself must perform its named mode; do not replace it with a generic reflective question or invitation addressed to an abstract viewer.
+
+Before output, audit the words of the recommended ending and **every** alternate separately. A correct label is not evidence: each ending must actually perform its labeled mode as defined in `spoken-style.md` and state, rather than merely imply, the same source-specific unresolved tension. Reject any ending that only carries the mode label, substitutes a generic question for its function, or drops the unresolved tension to sound more conclusive.
 
 ## Hard runtime gate
 
