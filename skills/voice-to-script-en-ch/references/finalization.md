@@ -73,6 +73,8 @@ In the final user-facing output, place the complete script's last one-or-two-bre
 
 Before output, audit the words of the recommended ending and **every** alternate separately. A correct label is not evidence: each ending must actually perform its labeled mode as defined in `spoken-style.md` and state, rather than merely imply, the same source-specific unresolved tension. Reject any ending that only carries the mode label, substitutes a generic question for its function, or drops the unresolved tension to sound more conclusive.
 
+Count the displayed spoken lines in the recommended ending and every alternate before output. Each must contain no more than two spoken lines or breaths; exclude only its editorial label. Compress Simplified Chinese naturally when needed rather than spilling an ending into a third line.
+
 ## Hard runtime gate
 
 Every requested complete script must be at least 2.5 minutes and no longer than 15 minutes. Before appending alternate endings and delivery notes, run `scripts/estimate_runtime.py` on the complete script body only:

@@ -36,6 +36,8 @@ Place one clip line around the two-thirds point. Prefer a line the writer alread
 
 The clip line should make the viewer feel accurately seen or self-aware, not merely make the writer sound impressive. Let it stand without an immediate explanatory sentence after it.
 
+Select and place the clip line at a boundary where an approved later event, time, or action beat still remains. If a strong candidate occurs too late for that advance, move it earlier without changing chronology or choose another source-grounded candidate; never accept a caveat or reflection as the next beat.
+
 ## Design the ending
 
 Give the ending its own revision pass. Let the story earn a decision, changed interpretation, honest position, or next action, then leave exactly one intentional tension, uncertainty, or question open. The ending must preserve the same approved facts, earned turn, and unresolved tension as the main script.

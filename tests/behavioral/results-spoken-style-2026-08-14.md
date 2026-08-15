@@ -169,3 +169,63 @@ python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language zh .
 | 56 | pass | Both independently measured complete branches are within range, separate from alternates/notes, semantically parallel, and carry the same ending-mode intent. |
 
 The output-order and runtime findings are closed. The existing clip-line hard-gate issue remains accurately recorded; the Chinese ending's three-line breath issue is a newly observed partial, not the subject of another speculative wording change in this round.
+
+## Task-review fix round 2
+
+### Controlling refinements
+
+- `spoken-style.md` now requires clip-line placement at a boundary that leaves an approved later event, time, or action beat. A candidate that is too late must move earlier without changing chronology or yield to another source-grounded candidate.
+- `finalization.md` now requires a final displayed-line count: every recommended or alternate ending has at most two spoken lines/breaths, excluding only its editorial label; Simplified Chinese must compress naturally rather than spill into a third line.
+
+### Exact overwritten-English rerun
+
+Prompt: packet 1 and the neutral wrapper in `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-source-packets.md`.
+
+Clip-line adjacency:
+
+```text
+I had confused being easy to reach with making things easier for other people.
+The first afternoon felt selfish.
+```
+
+The following line is a remaining source event/time beat, so it satisfies the hard ordering gate.
+
+| Scenario | Verdict | Evidence |
+| --- | --- | --- |
+| 49 | pass | Short spoken lines and source repetition replace the overwritten explanation. |
+| 50 | not applicable | This packet is not the no-detail predicate. |
+| 51 | pass | The notification-block decision is earned and the availability question stays open. |
+| 52 | pass | Visible recommended ending plus three mode-labeled alternates. |
+| 53 | partial | The story-request alternate is two lines but does not explicitly state the shared unresolved tension. |
+| 54 | pass | The source-grounded clip line is followed by the first-afternoon event, not a caveat or reflection. |
+| 55 | not applicable | The packet lacks the full prohibition predicate. |
+| 56 | not applicable | English-only request. |
+
+### Exact bilingual rerun
+
+Prompt: packet 3 and the same neutral wrapper. Ending line counts, excluding labels: English recommended 2; English alternates 2/2/2; Simplified Chinese recommended 2; Simplified Chinese alternates 2/2/2. The prior three-line Chinese Story-request failure is closed.
+
+Clip-line adjacency remains noncompliant in both branches:
+
+```text
+EN: If I can name the confusion accurately, I do not have to solve the entire problem before I speak.
+EN: I am not saying uncertainty is automatically useful.
+
+ZH: 如果我能把混乱说准，我不需要先把整个问题解决，才可以说话。
+ZH: 我不是说，不确定本身就一定有用。
+```
+
+The second line in each pair is a caveat, so the bilingual clip-line hard gate remains failed.
+
+| Scenario | Verdict | Evidence |
+| --- | --- | --- |
+| 49 | partial | Both branches are mostly line-broken for speech, but several displayed multi-clause lines remain long. |
+| 50 | not applicable | The packet contains supplied speech and concrete meeting events. |
+| 51 | pass | Both branches preserve the earned deadline-mismatch intervention and high-stakes uncertainty. |
+| 52 | pass | Both show a recommended mode heading, conclusion, and three labeled alternates. |
+| 53 | pass | Every recommended/alternate ending is mode-labeled, tension-bearing, and no more than two spoken lines. |
+| 54 | fail | Both clip lines are immediately followed by caveats rather than event, time, or action advances. |
+| 55 | not applicable | The packet lacks the full prohibition predicate. |
+| 56 | partial | Assembly and parity pass; runtime was measured exactly in fix round 1 but not remeasured from this new fresh output. |
+
+Round 2 closes the overwritten-English clip placement and bilingual Chinese ending-length findings. The bilingual clip-line placement remains a demonstrated residual; no further patch is made in this formal round.
