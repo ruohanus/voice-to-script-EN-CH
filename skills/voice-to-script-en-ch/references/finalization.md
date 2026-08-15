@@ -21,6 +21,8 @@ Build the complete teleprompter script with the approved clip line, earned turn,
 
 Before output, audit clip-line assembly separately: keep the approved source-grounded clip line around two-thirds through the complete script, then advance to the next story beat. This is a hard ordering gate: if the next spoken line defines, paraphrases, translates, compares, or otherwise explains the clip line, move that line before the clip line or delete it. The next spoken line after the clip line must advance the event, time, or action rather than reinforce its meaning.
 
+Perform that clip-line audit independently for every requested language after its final body is assembled. Inspect the actual adjacent written line. If the candidate fails, physically move it earlier or replace it with another approved source-grounded candidate at a boundary before a remaining event, time, or action beat, then re-check the new adjacent line before output. Do not leave a failed candidate in place because it is strong or late.
+
 ## Required polishing passes
 
 ### English
@@ -73,7 +75,11 @@ In the final user-facing output, place the complete script's last one-or-two-bre
 
 Before output, audit the words of the recommended ending and **every** alternate separately. A correct label is not evidence: each ending must actually perform its labeled mode as defined in `spoken-style.md` and state, rather than merely imply, the same source-specific unresolved tension. Reject any ending that only carries the mode label, substitutes a generic question for its function, or drops the unresolved tension to sound more conclusive.
 
+For every ending, reserve one of its one-or-two spoken lines for an explicit writer-side statement of that exact unresolved tension. A viewer question, a mode label, or an implied risk does not satisfy this requirement.
+
 Count the displayed spoken lines in the recommended ending and every alternate before output. Each must contain no more than two spoken lines or breaths; exclude only its editorial label. Compress Simplified Chinese naturally when needed rather than spilling an ending into a third line.
+
+Run a final aloud line audit over each complete body: split or cut any displayed multi-clause line that carries more than one independently performable beat. Preserve only approved source material while making every remaining line one breath.
 
 ## Hard runtime gate
 

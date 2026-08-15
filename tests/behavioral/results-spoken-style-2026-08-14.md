@@ -229,3 +229,52 @@ The second line in each pair is a caveat, so the bilingual clip-line hard gate r
 | 56 | partial | Assembly and parity pass; runtime was measured exactly in fix round 1 but not remeasured from this new fresh output. |
 
 Round 2 closes the overwritten-English clip placement and bilingual Chinese ending-length findings. The bilingual clip-line placement remains a demonstrated residual; no further patch is made in this formal round.
+
+## Task-review fix round 3
+
+### Exact reruns
+
+Used only packet 1 (overwritten English) and packet 3 (bilingual), each with the neutral wrapper in `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-source-packets.md`.
+
+**Overwritten English clip adjacency**
+
+```text
+I had confused being easy to reach
+with making things easier for other people.
+The answer isn't to ignore messages.
+```
+
+The candidate is still followed by a caveat, so scenario 54 remains failed. Its Story-request alternate now uses two spoken lines and explicitly states the shared tension: `I'm still learning how to make room for that work without becoming unreachable when something genuinely needs me.`
+
+**Bilingual clip adjacency**
+
+```text
+EN: If I can name the confusion accurately, I don't have to solve the entire problem before I speak.
+EN: After that meeting, I started trying to catch the moment earlier.
+
+ZH: 如果我能把困惑说准，我不必先把整个问题都解决，才可以开口。
+ZH: 那次以后，我开始试着更早一点抓住那个时刻。
+```
+
+Each following line advances to a later event/time action, so the bilingual clip-line hard gate passes. The displayed complete bodies use one-breath line breaks; the Story-request, Named reader, Callback, and Unapologized position endings in both branches are each two spoken lines and each explicitly carry the unresolved high-stakes uncertainty.
+
+| Scenario | Overwritten English | Bilingual | Evidence |
+| --- | --- | --- |
+| 49 | pass | pass | Final aloud audit splits the displayed bodies into short, performable beats. |
+| 50 | not applicable | not applicable | Neither packet is the no-detail predicate. |
+| 51 | pass | pass | Both preserve the earned turn and one source-specific future uncertainty. |
+| 52 | pass | pass | Recommended endings and three mode-labeled alternates appear for every requested language. |
+| 53 | pass | pass | Each ending is one or two lines and explicitly states its writer-side unresolved tension. |
+| 54 | fail | pass | Overwritten English still places its clip line before a caveat; bilingual advances to an event/time beat. |
+| 55 | not applicable | not applicable | Neither packet contains the complete prohibition predicate. |
+| 56 | not applicable | pass | Independently measured complete bodies are within range; headings, alternates, and notes are excluded. |
+
+The exact round-3 bilingual response is retained in `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round3-bilingual-output.md`. Runtime commands and results, with `Recommended ending` editorial labels, alternates, and notes excluded:
+
+```text
+awk '/^## English/{on=1; next} /^Alternate endings$/{if (on) exit} on && !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round3-bilingual-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en
+{"language": "en", "estimated_seconds": 179.2, "estimated_minutes": 2.99, "status": "within_range", "word_count": 448, "rate": 150, "rate_unit": "words_per_minute"}
+
+awk '/^## 简体中文/{on=1; next} /^Alternate endings$/{if (on) exit} on && !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round3-bilingual-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language zh
+{"language": "zh", "estimated_seconds": 189.75, "estimated_minutes": 3.16, "status": "within_range", "han_character_count": 759, "latin_word_count": 0, "han_rate": 240, "latin_rate": 150}
+```
