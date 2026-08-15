@@ -1,87 +1,63 @@
 ---
 name: speaking-ideas-into-content
-description: Use when a user wants to develop a voice note, recording, transcript, ramble, or scattered spoken thoughts into an article, post, script, or other publishable content while retaining their authentic voice.
+description: Use when someone wants to turn a voice note, recording, transcript, ramble, or rough idea into a reflective, conversational talking-head video script with an engaging story arc, optional evidence, English or Simplified Chinese output, and a verified 2.5-to-15-minute runtime.
 ---
 
 # Speaking Ideas Into Content
 
-## Overview
+Develop spoken raw material into an audience-aware talking-head video script without sanding away the speaker's point of view. Default to a bilingual English and Simplified Chinese deliverable. The user may choose English, Simplified Chinese, or bilingual at any time.
 
-Turn relaxed speech into strong content without forcing the user to write first. Let speaking discover the idea; use AI to find its soul, build its skeleton, deepen it, and polish only after another voice pass.
+## Read the workflow before acting
 
-## Classify the current stage
+Read the reference that matches the current work:
 
-| Input state | Response |
+- For first captures, later voice passes, narrative choices, source ledgers, reference material, or imitation requests, read `references/story-workflow.md`.
+- Before proposing, researching, checking, or using external support, read `references/evidence-research.md`.
+- Before drafting any final script, read `references/finalization.md` and use `scripts/estimate_runtime.py`.
+
+If more than one situation applies, read every relevant reference. Treat the rules below as the controlling contract.
+
+## Precedence
+
+When requirements compete, protect them in this order:
+
+1. Factual integrity, faithful attribution, and the user's real experience.
+2. The hard 2.5-to-15-minute runtime for every requested language version.
+3. The narrative direction the user authorized.
+4. The evidence the user authorized.
+5. Optional enrichment, examples, and stylistic flourishes.
+
+Omit dispensable material before weakening a higher-priority requirement. Never invent experiences, quotations, statistics, sources, or certainty.
+
+## Route the current stage
+
+| Input state | Action |
 |---|---|
-| First recording, transcript, or rough notes | Stage 1 discovery workbench |
-| Another voice pass after a workbench | Stage 2 enriched workbench |
-| Explicit request to finalize now | Stage 3 finished content |
+| First useful capture | Analyze it now; return a discovery workbench plus 2–3 narrative directions when the material supports meaningful alternatives. |
+| Added voice pass or answers | Merge them into the workbench, update the directions, and ask only the highest-value remaining questions. |
+| User selects a direction, including “you choose” | Record the selection and continue without asking for another confirmation. |
+| External support would materially help | Offer a small evidence menu; research with the strongest available reliable research or web capability. |
+| User approves the story and evidence choices, or says “finalize now” | Create the internal approved story contract and finalize. |
 
-Accept pasted text and attached audio or video. Transcribe media before analysis. Mark uncertain words or passages instead of guessing. Work in the user's language unless asked otherwise.
+Do not draft a polished script from a first capture unless the user explicitly asks to finalize now. “Finalize now” waives optional discovery, not truthfulness, runtime, language, or required polishing.
 
-## Stage 1: Discovery workbench
+## Required narrative engine
 
-Treat the first capture like a relaxed call with a friend: fragments, emotion, repetition, and unfinished thoughts are useful material. Return exactly these sections, in this order:
+Build an open question, then move the viewer through causal progressions and meaningful conflicts:
 
-### Material bank
+`question → therefore → but → therefore → but → resolution`
 
-Collect the user's vivid phrases, claims, examples, tensions, emotions, and unresolved fragments. Preserve distinctive wording. Label unclear transcript passages.
+Use “therefore” as logic, not necessarily as a spoken word. Every “but” must change the stakes, interpretation, or next action. Resolve the central conflict with a satisfying insight, decision, or earned next step. Do not force a neat ending the source material has not earned.
 
-### Content soul
+## Dependency rules
 
-State the strongest central insight in one sentence. Ground it in the user's words; do not manufacture a thesis.
+- English finalization requires the installed `humanizer` skill.
+- Simplified Chinese finalization requires the installed `shuorenhua` skill.
+- Bilingual finalization requires both.
+- Research requires the strongest available reliable research or web capability. A particular search adapter is optional; its absence must not block research when another capable tool exists.
 
-### Skeleton
+If a required polishing skill is unavailable, stop only the affected finalization, preserve all completed work, name the missing dependency, and give its installation command. Do not silently imitate the missing skill.
 
-Build a speakable beginning-to-end outline. Show the opening tension, development, support, turn, and ending insight when the material supports them.
+## Final-output boundary
 
-### Gaps and support
-
-List only gaps that materially weaken the skeleton: missing causal links, vague claims, needed examples, counterpoints, or useful perspectives. Separate:
-
-- **From the user:** facts and experiences already supplied.
-- **To explore:** questions the user can answer from experience.
-- **Possible support:** explanations or evidence AI suggests. Verify external factual support before presenting it as fact.
-
-### Next voice-pass prompts
-
-Give a short sequence of conversational prompts the user can answer aloud. Order them to fill the biggest gaps while drawing out concrete detail and emotion.
-
-End by inviting the next recording or transcript. The Stage 1 deliverable is the workbench itself.
-
-## Stage 2: Enrich through speaking
-
-Merge the new voice pass into the existing material bank. Keep the original voice and update the content soul only when the new material genuinely changes it. Strengthen the skeleton, reasoning, examples, and emotional arc.
-
-Return the updated workbench, then either:
-
-- provide a smaller set of prompts when high-value gaps remain; or
-- state that the material is ready to polish and ask the user to confirm format, audience, and length if still unknown.
-
-Repeat Stage 2 when another pass adds meaningful substance.
-
-## Stage 3: Polish last
-
-When the user says to finalize, honor that request even if another voice pass could help. Return the finished content first.
-
-- Match the requested format, audience, length, and language.
-- Remove filler words, false starts, duplicate phrases, and transcription artifacts.
-- Preserve meaning, point of view, distinctive phrases, emotional texture, and natural rhythm.
-- Never invent experiences, quotations, statistics, evidence, or certainty.
-- Add a brief **Editorial note** only for unverified claims, marked uncertainties, or meaningful choices the user should know about.
-
-## Compact example
-
-User: “I keep waiting for a perfect idea. My useful thoughts appear while walking, but a blank page makes me freeze. Maybe consistency is making capture easier.”
-
-First response: preserve phrases in **Material bank**; identify ease-of-capture as **Content soul**; build the **Skeleton**; flag the missing concrete example in **Gaps and support**; ask what happened during one real walk in **Next voice-pass prompts**. Invite another recording rather than drafting the post.
-
-## Common mistakes
-
-| Mistake | Correction |
-|---|---|
-| Drafting a polished post from the first capture | Produce the five-part Stage 1 workbench. |
-| Replacing the user's language with generic creator advice | Preserve distinctive phrases and organize around them. |
-| Treating plausible explanations as evidence | Label them possible support and verify before use. |
-| Asking platform questions before analyzing usable material | Build the workbench first; resolve format before polishing. |
-| Forcing another pass after “finalize now” | Move directly to Stage 3. |
+When finalization succeeds, return only the requested final humanized teleprompter script or scripts plus light delivery notes. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.

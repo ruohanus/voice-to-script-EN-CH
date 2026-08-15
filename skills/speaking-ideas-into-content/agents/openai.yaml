@@ -1,4 +1,4 @@
 interface:
-  display_name: "Speaking Ideas Into Content"
-  short_description: "Turn voice notes into structured, authentic content"
-  default_prompt: "Use $speaking-ideas-into-content to help me develop this voice note into publishable content while preserving my voice."
+  display_name: "Speaking Ideas Into Video Scripts"
+  short_description: "Shape spoken ideas into audience-aware video scripts"
+  default_prompt: "Use $speaking-ideas-into-content to develop this recording or rough spoken idea into a reflective talking-head script. Use bilingual English and Simplified Chinese unless I choose one."
