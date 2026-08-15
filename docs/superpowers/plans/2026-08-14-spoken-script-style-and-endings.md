@@ -260,7 +260,7 @@ If no skill refinement was needed, stage only the results file.
 
 - [ ] **Step 1: Review final scope and repository state**
 
-Run `git status --short`, `git diff c169493..HEAD --stat`, and `git diff --check`. Confirm changes are limited to the approved design/plan, behavioral contracts/results, core skill routing, story workflow, spoken-style reference, finalization, and package completeness test. Installation guidance, identity, dependencies, scripts, and packaging remain unchanged.
+Run `git status --short`, `git diff f56f503..HEAD --stat`, and `git diff --check`. Confirm changes are limited to the approved design/plan, behavioral contracts/results, core skill routing, story workflow, spoken-style reference, finalization, and package completeness test. Installation guidance, identity, dependencies, scripts, and packaging remain unchanged.
 
 - [ ] **Step 2: Mirror the validated skill to the canonical runtime copy**
 
