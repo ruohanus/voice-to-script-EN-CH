@@ -278,3 +278,78 @@ awk '/^## English/{on=1; next} /^Alternate endings$/{if (on) exit} on && !/^Reco
 awk '/^## 简体中文/{on=1; next} /^Alternate endings$/{if (on) exit} on && !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round3-bilingual-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language zh
 {"language": "zh", "estimated_seconds": 189.75, "estimated_minutes": 3.16, "status": "within_range", "han_character_count": 759, "latin_word_count": 0, "han_rate": 240, "latin_rate": 150}
 ```
+
+## Task-review fix round 4
+
+### Root cause and minimal correction
+
+The round-3 aloud audit still depended on subjective judgment and only required splitting a multi-clause line with more than one independently performable beat. That left a loophole for long single grammatical sentences and endings: the retained bilingual output included a 23-word English body line, its 39-Han-character Chinese counterpart, and longer ending lines. The finalization audit now checks every displayed spoken line in bodies and endings against measurable ceilings of 18 English spoken words and 28 Simplified Chinese Han characters, then still requires the stricter aloud/stumble/breath judgment for shorter lines.
+
+The clip check also happened after a strong candidate had already been selected, so packet 1 repeatedly kept the supplied self-recognition late and tried to repair its adjacency after assembly. The approved story contract now records a clip candidate together with its specific source-grounded successor event/time/action. Finalization assembles and rechecks that pair. A supplied narrator-level self-recognition remains the candidate and may frame the next source event without reordering the events themselves.
+
+The first packet-1 rerun after adding the pair chose a weaker earlier recognition while leaving the supplied line late. The final one-sentence selection refinement closed that remaining loophole. No facts, event order, bilingual generation rule, ending rule, or runtime boundary changed.
+
+### Final exact fresh-context reruns
+
+Used only packet 1 and packet 3 with the neutral wrapper in `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-source-packets.md`. Each run used a separate fresh context, read only the current repository skill and required finalization references, received no rubric or suspected-failure language, and returned only the user-facing response. No execution trace was available, so this result does not claim that either polishing dependency was invoked.
+
+**Packet 1 clip adjacency**
+
+```text
+I had confused being easy to reach with making things easier for other people.
+So I tried something embarrassingly small.
+```
+
+The supplied self-recognition now advances immediately to the notification-block experiment. The caveats remain later, after the first-afternoon and one-week result, so they no longer occupy the post-clip slot.
+
+**Packet 3 clip adjacency**
+
+```text
+EN: I hadn't solved the whole problem.
+EN: I'd only named the confusion accurately.
+EN: Later, a teammate told me that question had saved them a week of work.
+
+ZH: 我没有解决整个问题，只是把混乱说清楚了。
+ZH: 后来，一个同事告诉我，那个问题帮他们省下了一周的工作。
+```
+
+The recognition beat is independently phrased in each language and advances directly to the later teammate report, not to a caveat, paraphrase, or explanation.
+
+### Mechanical line and runtime evidence
+
+The exact final responses were retained in ignored SDD scratch while grading. The following line audit covered every displayed spoken body and ending line while excluding editorial labels and delivery notes:
+
+```text
+task-4-round4-final-packet1-output.md: max_en=18, max_zh=0, violations=0
+task-4-round4-final-packet3-output.md: max_en=16, max_zh=22, violations=0
+```
+
+Thus the previously failed 23-word / 39-Han body pair and the long Story-request lines do not recur. Every recommended and alternate ending remains one or two displayed spoken lines.
+
+Runtime was measured on each complete body plus its recommended conclusion, excluding the `Recommended ending` editorial heading, alternate endings, and delivery notes:
+
+```text
+awk '/^Alternate endings$/{exit} !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round4-final-packet1-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en
+{"language": "en", "estimated_seconds": 243.2, "estimated_minutes": 4.05, "status": "within_range", "word_count": 608, "rate": 150, "rate_unit": "words_per_minute"}
+
+awk '/^## English$/{on=1; next} /^Alternate endings$/{if(on) exit} on && !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round4-final-packet3-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en
+{"language": "en", "estimated_seconds": 174.4, "estimated_minutes": 2.91, "status": "within_range", "word_count": 436, "rate": 150, "rate_unit": "words_per_minute"}
+
+awk '/^## 简体中文$/{on=1; next} /^Alternate endings$/{if(on) exit} on && !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round4-final-packet3-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language zh
+{"language": "zh", "estimated_seconds": 186.75, "estimated_minutes": 3.11, "status": "within_range", "han_character_count": 747, "latin_word_count": 0, "han_rate": 240, "latin_rate": 150}
+```
+
+### Scenario grades
+
+| Scenario | Packet 1 | Packet 3 | Evidence |
+| --- | --- | --- | --- |
+| 49 | pass | pass | No displayed spoken line exceeds 18 English words or 28 Han characters; purposeful fragments and source repetition remain. |
+| 50 | not applicable | not applicable | Neither packet is the no-detail predicate. |
+| 51 | pass | pass | Packet 1 leaves only the reachable-versus-dependent boundary open; both packet-3 branches leave only higher-stakes follow-through open. |
+| 52 | pass | pass | Every requested language has a visible recommended ending followed by three distinct labeled alternates. |
+| 53 | pass | pass | Every ending performs its label, explicitly carries the writer-side tension, and occupies one or two compliant spoken lines. |
+| 54 | pass | pass | The exact adjacent lines above advance from recognition to a source event/action in packet 1 and both packet-3 branches. |
+| 55 | not applicable | not applicable | Neither packet supplies the complete prohibition predicate. |
+| 56 | not applicable | pass | English and Chinese are independently phrased, semantically parallel, separately assembled, and independently within runtime. |
+
+Round 4 closes both review findings while retaining source facts and event order, bilingual independence and parity, ending structure and mode integrity, and runtime scope.

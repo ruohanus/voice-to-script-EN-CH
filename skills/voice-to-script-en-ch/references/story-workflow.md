@@ -60,7 +60,7 @@ After narrative and evidence choices are authorized, create one internal, langua
 - ordered story beats;
 - causal links and meaningful conflicts;
 - earned turn and exactly one unresolved tension;
-- source passage for the clip line;
+- source passage for the clip line paired with the specific later source event, time, or action beat that must immediately follow it;
 - recommended ending mode and facts/disclosures available to alternates;
 - approved facts, examples, claims, and evidence identifiers;
 - deliberate omissions and uncertainty boundaries;

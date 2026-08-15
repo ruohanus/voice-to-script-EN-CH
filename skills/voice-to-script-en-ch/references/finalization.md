@@ -19,9 +19,11 @@ For every branch, make an initial deletion pass before rewriting: cut throat-cle
 
 Build the complete teleprompter script with the approved clip line, earned turn, and exactly one unresolved tension. Choose the strongest ending mode for that complete script and use it as the recommended ending.
 
-Before output, audit clip-line assembly separately: keep the approved source-grounded clip line around two-thirds through the complete script, then advance to the next story beat. This is a hard ordering gate: if the next spoken line defines, paraphrases, translates, compares, or otherwise explains the clip line, move that line before the clip line or delete it. The next spoken line after the clip line must advance the event, time, or action rather than reinforce its meaning.
+Before drafting the body, verify the clip-line pair in the approved story contract: the candidate must have a specific later source event, time, or action beat that can immediately follow it in source chronology. When the writer supplied a clear self-recognition line, keep that line as the candidate and use it as narrator-level framing immediately before the planned successor; moving commentary does not reorder the source events. Build a different source-grounded candidate only when the source contains no clear recognition line. Assemble the verified clip line and successor as an adjacent pair around two-thirds through the complete script.
 
-Perform that clip-line audit independently for every requested language after its final body is assembled. Inspect the actual adjacent written line. If the candidate fails, physically move it earlier or replace it with another approved source-grounded candidate at a boundary before a remaining event, time, or action beat, then re-check the new adjacent line before output. Do not leave a failed candidate in place because it is strong or late.
+Before output, audit clip-line assembly separately. This is a hard ordering gate: the actual next spoken line must be the paired event, time, or action beat. If it instead defines, paraphrases, translates, compares, or otherwise explains the clip line, move that explanation before the pair or delete it, then re-check the adjacency.
+
+Perform that clip-line audit independently for every requested language after its final body is assembled. Inspect the actual adjacent written line. If the pair fails, replace the candidate and successor together with another approved pair, then re-check the new adjacent line before output. Do not leave a failed candidate in place because it is strong or late.
 
 ## Required polishing passes
 
@@ -79,7 +81,7 @@ For every ending, reserve one of its one-or-two spoken lines for an explicit wri
 
 Count the displayed spoken lines in the recommended ending and every alternate before output. Each must contain no more than two spoken lines or breaths; exclude only its editorial label. Compress Simplified Chinese naturally when needed rather than spilling an ending into a third line.
 
-Run a final aloud line audit over each complete body: split or cut any displayed multi-clause line that carries more than one independently performable beat. Preserve only approved source material while making every remaining line one breath.
+Run a mechanical line audit over every displayed spoken line in each complete body and ending. Split any English line over 18 spoken words and any Simplified Chinese line over 28 Han characters, even when it is one grammatical sentence or one ending breath. These are ceilings, not targets: split or cut shorter lines too whenever the aloud pass reveals a stumble, restart, breath failure, or more than one independently performable beat. Recount after every split and preserve only approved source material.
 
 ## Hard runtime gate
 
