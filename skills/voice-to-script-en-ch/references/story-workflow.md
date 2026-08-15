@@ -39,7 +39,7 @@ Recommend the direction best supported by the material, while leaving the choice
 
 ## Later voice passes
 
-Merge new material into the ledger. Do not restart. Update the content soul only when the new material truly changes it. Reflect which gaps closed, which direction became stronger, and which new conflict or resolution appeared.
+Merge new material into the ledger. Do not restart. Update the content soul only when the new material truly changes it. Reflect which gaps closed, which direction became stronger, and which new conflict, earned turn, or remaining unresolved tension appeared.
 
 Ask fewer questions on each pass. If enough material exists, say so. A user may keep speaking, choose a direction, ask you to choose, request research, or finalize.
 
