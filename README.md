@@ -18,13 +18,32 @@ The installable skill is in `skills/voice-to-script-en-ch/`. The repository root
 
 ## Install for local use
 
-Clone or download this repository, then install the skill directory with a host-compatible skill installer. With the Skills CLI:
+### Skills CLI — install directly from GitHub
+
+The open-source [Skills CLI](https://github.com/vercel-labs/skills) is a third-party tool, not an official OpenAI or Codex installer. To install this skill globally for Codex without cloning the repository first:
 
 ```bash
-npx skills add ./skills/voice-to-script-en-ch
+npx skills add ruohanus/voice-to-script-en-ch --skill voice-to-script-en-ch -g -a codex -y
 ```
 
-You can also copy the skill directory into the skills location supported by your host. For native Codex discovery, use `.agents/skills/voice-to-script-en-ch/` within a project or `$HOME/.agents/skills/voice-to-script-en-ch/` for a user-level installation. Do not copy the repository's test or development files into the skill directory.
+### Skills CLI — from an already cloned repository
+
+From the repository root, install the local skill directory with:
+
+```bash
+npx skills add ./skills/voice-to-script-en-ch -g -a codex -y
+```
+
+The `./skills/voice-to-script-en-ch` path is relative to this repository's root and will not work as a direct remote install command.
+
+### Native Codex local discovery
+
+Native Codex installation does not require the third-party Skills CLI. Place or symlink the skill directory at either supported location:
+
+- User-scoped: `$HOME/.agents/skills/voice-to-script-en-ch/`
+- Repository-scoped: `$REPO_ROOT/.agents/skills/voice-to-script-en-ch/`
+
+Codex follows symlinked skill directories. Codex also provides the built-in `$skill-installer` for local installation; invoke it and ask it to install the `skills/voice-to-script-en-ch` skill from this GitHub repository. Do not copy the repository's tests or development files into the skill directory.
 
 ## Required polishing dependencies
 
@@ -41,13 +60,7 @@ Research uses the strongest reliable web or research capability available in the
 
 ## Public distribution
 
-This repository remains a standalone skill package. A `SKILL.md` directory can be distributed directly, installed from a repository, or uploaded as a directory/zip through environments that support hosted skills. Plugin packaging is not required for this use case; add a plugin manifest only if publishing through a plugin-specific directory later.
-
-Current OpenAI guidance:
-
-- [Skills tool](https://developers.openai.com/api/docs/guides/tools-skills)
-- [Plugin skills](https://developers.openai.com/plugins/concepts/skills)
-- [Build a skill](https://developers.openai.com/plugins/build/skills)
+This GitHub repository distributes the standalone skill for local and repository use. It is not a plugin. [Current OpenAI guidance](https://developers.openai.com/codex/skills) recommends plugin packaging when an author later wants broadly installable distribution across ChatGPT and Codex; that future packaging is outside this repository's current scope.
 
 ## Development and verification
 
