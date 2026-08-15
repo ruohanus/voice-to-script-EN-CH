@@ -1,0 +1,11 @@
+Work in the repository root. Read and follow only the current public skill at `skills/voice-to-script-en-ch/SKILL.md` and its references needed for finalization. Do not inspect tests, plans, git history, or change any files. Treat the following as the user's complete request; return only the user-facing final response with no analysis or grading.
+
+Finalize this as an English-only talking-head video script for first-time managers. It must run 2.5–15 minutes. Keep it personal and do not research it.
+
+Last quarter I had to decide whether to stop reviewing every small decision on my team. I had become the last checkpoint for documents, customer replies, and routine choices. I told myself I was protecting quality, but I also liked being the person whose opinion settled things. The team started waiting. I could see that their waiting made me busier, and my busyness seemed to confirm that they needed me.
+
+A colleague objected to changing the system. Her point, as I understood it, was that newer people could make mistakes that would cost the team trust. She also thought I was moving too quickly from careful review to hands-off management. I agreed that the risk was real. I did not record her exact words, and I do not remember any physical detail from the conversation. What I remember is the question it left me with: was I really reducing risk, or was I making myself necessary?
+
+Instead of removing review entirely, we chose two kinds of decisions that could move without me, wrote down what a good decision looked like, and agreed to look at the results after three weeks. The first week was uncomfortable because I could see decisions happening without my input. One choice was not the one I would have made, but it was reasonable and the person who made it could explain why. Another person brought a harder decision to our regular check-in with a clearer recommendation than before.
+
+After three weeks, I still did not know whether the team would make better decisions over the next year, and I did not have proof that my new approach would work everywhere. I did know that waiting for my approval had been a system I was helping create. I want this to be honest about that uncertainty. I want the viewer to leave with one small question they can use in their own work, not a grand lesson.

@@ -23,7 +23,7 @@ If more than one situation applies, read every relevant reference. Treat the rul
 When requirements compete, protect them in this order:
 
 1. Factual integrity, faithful attribution, and the user's real experience.
-2. The hard 2.5-to-15-minute runtime for every requested language version.
+2. The hard 2.5-to-15-minute runtime for each requested language's complete teleprompter body plus recommended conclusion.
 3. The narrative direction the user authorized.
 4. The evidence the user authorized.
 5. Optional enrichment, examples, and stylistic flourishes.
@@ -61,4 +61,4 @@ If a required polishing skill is unavailable, stop only the affected finalizatio
 
 ## Final-output boundary
 
-When finalization succeeds, return only the requested final humanized teleprompter script or scripts. For each requested language, assemble the complete body, a visibly labeled `Recommended ending — [mode]` and conclusion, at least three labeled alternate endings, then light delivery notes. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.
+When finalization succeeds, return only the requested final humanized teleprompter script or scripts. For each requested language, assemble the complete body, a visibly labeled `Recommended ending — [mode]` and conclusion, at least three labeled alternate endings, then light delivery notes. Runtime includes the complete body and recommended conclusion but excludes the editorial heading, alternate endings, and notes. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.

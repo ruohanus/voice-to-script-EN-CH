@@ -2,9 +2,11 @@
 
 ## Method and packet provenance
 
-Three independent fresh-context runs read only the repository skill and the references it routes for finalization, then returned only a response to the supplied user request. They were not given the behavioral scenarios, rubric, plan, suspected failures, or intended fixes. The exact neutral wrapper and three source packets recovered from Task 1 are retained at `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-source-packets.md`; the packets cover overwritten English, no-detail English, and bilingual endings/runtime finalization.
+Three independent fresh-context runs read only the repository skill and the references it routes for finalization, then returned only a response to the supplied user request. They were not given the behavioral scenarios, rubric, plan, suspected failures, or intended fixes. The sanitized exact neutral prompts are tracked under `tests/behavioral/fixtures/spoken-style-final-review-2026-08-14/`; they cover overwritten English, no-detail English, bilingual endings/runtime finalization, and the later prohibited-form control.
 
 The observations below are manually graded from the user-facing responses. No execution trace was available for polishing-skill invocation, so this evaluation does not claim that either dependency ran.
+
+Sections before **Final-review correction wave** preserve the implementation campaign's iteration history. Any historical `.superpowers/sdd/` scratch path is superseded by the tracked final-review prompts and exact outputs; only the tracked fixture set is release evidence auditable from a clean checkout.
 
 ## Initial runs against the revised contract
 
@@ -291,7 +293,7 @@ The first packet-1 rerun after adding the pair chose a weaker earlier recognitio
 
 ### Final exact fresh-context reruns
 
-Used only packet 1 and packet 3 with the neutral wrapper in `.superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-source-packets.md`. Each run used a separate fresh context, read only the current repository skill and required finalization references, received no rubric or suspected-failure language, and returned only the user-facing response. No execution trace was available, so this result does not claim that either polishing dependency was invoked.
+Used only `packet-1-overwritten-en.md` and `packet-3-bilingual.md` from the tracked fixture directory. Each exact packet contains the neutral wrapper. Each run used a separate fresh context, read only the current repository skill and required finalization references, received no rubric or suspected-failure language, and returned only the user-facing response. No execution trace was available, so this result does not claim that either polishing dependency was invoked.
 
 **Packet 1 clip adjacency**
 
@@ -317,11 +319,11 @@ The recognition beat is independently phrased in each language and advances dire
 
 ### Mechanical line and runtime evidence
 
-The exact final responses were retained in ignored SDD scratch while grading. The following line audit covered every displayed spoken body and ending line while excluding editorial labels and delivery notes:
+The exact pre-fix responses are tracked as `red-packet-1-output.md` and `red-packet-3-output.md` in the fixture directory. The following line audit covered every displayed spoken body and ending line while excluding editorial labels and delivery notes:
 
 ```text
-task-4-round4-final-packet1-output.md: max_en=18, max_zh=0, violations=0
-task-4-round4-final-packet3-output.md: max_en=16, max_zh=22, violations=0
+red-packet-1-output.md: max_en=18, max_zh=0, violations=0
+red-packet-3-output.md: max_en=16, max_zh=22, violations=0
 ```
 
 Thus the previously failed 23-word / 39-Han body pair and the long Story-request lines do not recur. Every recommended and alternate ending remains one or two displayed spoken lines.
@@ -329,13 +331,13 @@ Thus the previously failed 23-word / 39-Han body pair and the long Story-request
 Runtime was measured on each complete body plus its recommended conclusion, excluding the `Recommended ending` editorial heading, alternate endings, and delivery notes:
 
 ```text
-awk '/^Alternate endings$/{exit} !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round4-final-packet1-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en
+awk '/^Alternate endings$/{exit} !/^Recommended ending —/{print}' tests/behavioral/fixtures/spoken-style-final-review-2026-08-14/red-packet-1-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en
 {"language": "en", "estimated_seconds": 243.2, "estimated_minutes": 4.05, "status": "within_range", "word_count": 608, "rate": 150, "rate_unit": "words_per_minute"}
 
-awk '/^## English$/{on=1; next} /^Alternate endings$/{if(on) exit} on && !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round4-final-packet3-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en
+awk '/^## English$/{on=1; next} /^Alternate endings$/{if(on) exit} on && !/^Recommended ending —/{print}' tests/behavioral/fixtures/spoken-style-final-review-2026-08-14/red-packet-3-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en
 {"language": "en", "estimated_seconds": 174.4, "estimated_minutes": 2.91, "status": "within_range", "word_count": 436, "rate": 150, "rate_unit": "words_per_minute"}
 
-awk '/^## 简体中文$/{on=1; next} /^Alternate endings$/{if(on) exit} on && !/^Recommended ending —/{print}' .superpowers/sdd/2026-08-14-spoken-script-style-and-endings/task-4-round4-final-packet3-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language zh
+awk '/^## 简体中文$/{on=1; next} /^Alternate endings$/{if(on) exit} on && !/^Recommended ending —/{print}' tests/behavioral/fixtures/spoken-style-final-review-2026-08-14/red-packet-3-output.md | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language zh
 {"language": "zh", "estimated_seconds": 186.75, "estimated_minutes": 3.11, "status": "within_range", "han_character_count": 747, "latin_word_count": 0, "han_rate": 240, "latin_rate": 150}
 ```
 
@@ -344,12 +346,120 @@ awk '/^## 简体中文$/{on=1; next} /^Alternate endings$/{if(on) exit} on && !/
 | Scenario | Packet 1 | Packet 3 | Evidence |
 | --- | --- | --- | --- |
 | 49 | pass | pass | No displayed spoken line exceeds 18 English words or 28 Han characters; purposeful fragments and source repetition remain. |
-| 50 | not applicable | not applicable | Neither packet is the no-detail predicate. |
+| 50 | not applicable | fail | Packet 3 supplied only indirect speech, but both language branches reconstruct it as purported verbatim dialogue. |
 | 51 | pass | pass | Packet 1 leaves only the reachable-versus-dependent boundary open; both packet-3 branches leave only higher-stakes follow-through open. |
 | 52 | pass | pass | Every requested language has a visible recommended ending followed by three distinct labeled alternates. |
-| 53 | pass | pass | Every ending performs its label, explicitly carries the writer-side tension, and occupies one or two compliant spoken lines. |
+| 53 | fail | pass | Packet 1's recommended `Named reader` ending is generic second-person advice rather than recognition of one person in one specific situation; packet 3's endings perform their labels. |
 | 54 | pass | pass | The exact adjacent lines above advance from recognition to a source event/action in packet 1 and both packet-3 branches. |
 | 55 | not applicable | not applicable | Neither packet supplies the complete prohibition predicate. |
-| 56 | not applicable | pass | English and Chinese are independently phrased, semantically parallel, separately assembled, and independently within runtime. |
+| 56 | not applicable | fail | English and Chinese are independently phrased, separately assembled, and independently within runtime, but both branches change indirect speech into direct quotation and therefore fail speech-status preservation. |
 
-Round 4 closes both review findings while retaining source facts and event order, bilingual independence and parity, ending structure and mode integrity, and runtime scope.
+Post-review regrade: round 4 did not close source fidelity or Named-reader integrity. The exact RED fixtures above preserve both violations. The final-review correction section added below supersedes this round's original green claim.
+
+## Final-review correction wave
+
+### Authoritative fresh-context method
+
+The exact neutral prompts and exact last-message outputs are tracked in `tests/behavioral/fixtures/spoken-style-final-review-2026-08-14/`. Each prompt instructs one new ephemeral Codex context to read only the repository skill and the references it routes for finalization, avoid tests/plans/history, make no repository changes, and return only the user-facing response. No prompt contains scenario numbers, rubric language, suspected failures, or expected observations.
+
+The reproducible invocation shape was:
+
+```text
+codex exec --ephemeral -s read-only -C "$PWD" \
+  -o /tmp/packet-output.md - \
+  < tests/behavioral/fixtures/spoken-style-final-review-2026-08-14/packet-N.md
+```
+
+Packet 2's two focused reruns used `workspace-write` only so the evaluator could create temporary runtime input after the read-only sandbox blocked its heredoc; the neutral prompt still prohibited repository writes. The exact user-facing outputs, not process logs, are the graded artifacts. No execution trace proves Humanizer or Shuorenhua invocation, so this evidence makes no such claim.
+
+### Corrected RED grades
+
+- `red-packet-1-output.md` fails scenario 53. Its recommended `Named reader` ending says `If one question keeps returning on your small team, protect an afternoon...`; this is generic second-person advice and an imperative, not recognition of one person in one concrete situation.
+- `red-packet-3-output.md` fails scenario 50's quote-status predicate and therefore scenario 56's speech-status preservation. The source says indirectly that the writer thought the group was solving two different problems. The output invents direct dialogue in both languages: `I said, "I think we're solving two different problems."` and `我说：“我觉得我们在解决两个不同的问题。”`
+- `control-packet-4-output.md` passes scenario 55 before the correction. It removes the supplied prohibited forms while keeping the repeated checking rhythm and uncomfortable admission. Because the control already complied, no speculative prohibition wording was added.
+
+### Demonstrated corrections and focused iteration
+
+The final-review wording adds a speech-status ledger and two audits that keep exact quotation, unquoted paraphrase, and uncertain recollection distinct through polishing, endings, and both language branches. It also gives Named reader a concrete predicate: singular recognition, a source-supported role or relationship, a source-specific moment/action/conflict, writer disclosure, and no imperative.
+
+The first post-fix no-detail run, retained as `iteration-1-packet-2-output.md`, preserved quote status but left two writer-side uncertainties in one callback. The next wording requires a callback to answer a distinct opening question with the earned turn before leaving only the approved tension open. `iteration-2-packet-2-output.md` closed that gap but placed preference commentary between its clip candidate and source action. The last narrow change classifies statements about what the writer did not want, intend, claim, believe, or know as commentary rather than the required clip successor. The final packet-2 output then passes both gates.
+
+No further instruction patch was made.
+
+### Exact final behavioral evidence
+
+Quote status is preserved in the final bilingual output:
+
+```text
+EN: I said that I thought we were solving two different problems.
+ZH: 我只是说，
+ZH: 我觉得大家可能在解决两个不同的问题。
+```
+
+The no-detail output says `I don't remember her exact words, so I won't try to recreate them.` It introduces no direct quotation or physical setting.
+
+Every final Named-reader ending satisfies the concrete predicate:
+
+- Packet 1 recognizes the singular person who knows the answers and keeps becoming the team's support system.
+- Packet 2 recognizes the colleague who warned that moving too fast could cost the team trust.
+- Packet 3 recognizes the teammate who reported that the uncertain question saved a week; Chinese adapts the same person and moment naturally.
+- Packet 4 recognizes the volunteer who moved the tomato seeds.
+
+The final clip candidates advance directly to source-grounded actions:
+
+```text
+Packet 1: I had confused being easy to reach with making things easier for other people.
+          So I tried something embarrassingly small: two afternoons with notifications off and one place for questions.
+
+Packet 2: Waiting for my approval had become a system I was helping create.
+          So we chose two kinds of decisions that could move without me.
+
+Packet 3 EN: If I can name the confusion accurately,
+             I don't have to solve the whole problem before I speak.
+             So I asked each person which date they were using, and why.
+
+Packet 3 ZH: 只要我能准确说出困惑在哪里，
+             就不用先把整个问题解决了再开口。
+             所以那次，我问了两个人，他们各自用的是哪个日期，为什么会用那个日期。
+
+Packet 4: I kept calling it care because control sounded uglier.
+          The next week, we changed three things.
+```
+
+Packet 4 contains none of the supplied throat-clearing, parentheses, semicolons, `here is the part where`, `as a quick aside`, announced-insight phrases, or like/comment/share bait in its spoken output. It retains `I checked once. Then again. Then once more.`, `Feeling unnecessary bothered me.`, and `I kept calling it care because control sounded uglier.`
+
+Runtime extraction includes each complete body and recommended conclusion, excludes the `Recommended ending — ...` editorial heading, and stops before `Alternate endings`:
+
+```text
+packet 1 EN: 530 words, 212.0 seconds, 3.53 minutes, within_range
+packet 2 EN: 494 words, 197.6 seconds, 3.29 minutes, within_range
+packet 3 EN: 449 words, 179.6 seconds, 2.99 minutes, within_range
+packet 3 ZH: 798 Han characters, 199.5 seconds, 3.33 minutes, within_range
+packet 4 EN: 475 words, 190.0 seconds, 3.17 minutes, within_range
+```
+
+The final mechanical audit reports no line-ceiling violations and no ending-length violations:
+
+```text
+green-packet-1-output.md: max_en=18, recommended=1, alternates=3, ending_lines=2/2/2/2
+green-packet-2-output.md: max_en=18, recommended=1, alternates=3, ending_lines=2/2/2/2
+green-packet-3-output.md: max_en=13, max_zh=22, recommended=2, alternates=6, ending_lines=2/2/2/2 per language
+green-packet-4-output.md: max_en=18, recommended=1, alternates=3, ending_lines=2/2/2/2
+```
+
+### Final scenario grades
+
+| Scenario | Packet 1 | Packet 2 | Packet 3 | Packet 4 | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| 49 | pass | pass | pass | pass | All bodies use one-breath lines within the mechanical ceilings and preserve source rhythm. |
+| 50 | not applicable | pass | pass for quote status | not applicable | Packets 2 and 3 keep supplied indirect speech indirect; packet 2 adds no physical detail. |
+| 51 | pass | pass | pass | pass | Each body earns a source-grounded turn and leaves only its approved future uncertainty open. |
+| 52 | pass | pass | pass | pass | Every requested language has a visible recommended ending plus three labeled alternatives. |
+| 53 | pass | pass | pass | pass | Every ending performs its label, uses one or two breaths, and carries the shared writer tension. |
+| 54 | pass | pass | pass | pass | The exact candidate/successor pairs above advance to an event or action without intervening explanation. |
+| 55 | not applicable | not applicable | not applicable | pass | Prohibited forms are absent while repetition, discomfort, and the writer's edge remain. |
+| 56 | not applicable | not applicable | pass | not applicable | Both language branches preserve facts, event order, indirect-speech status, earned turn, one tension, and ending intent while remaining independently natural and within runtime. |
+
+### Final verdict
+
+All applicable scenarios 49–56 pass in the tracked final outputs. The only evidence limitation is unchanged: the host exposed no nested polishing-skill trace, so dependency invocation is neither claimed nor graded from prose.

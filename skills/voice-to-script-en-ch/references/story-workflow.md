@@ -7,6 +7,7 @@ Create an internal source ledger from the user's recording, transcript, or notes
 - distinctive phrases and images;
 - events, examples, and chronological facts;
 - emotions, tensions, reversals, and unresolved questions;
+- every supplied speech or objection, marked as exact quotation, unquoted paraphrase, or uncertain wording, with exact words retained only for quotation-marked items;
 - claims that may need outside support;
 - uncertainties caused by transcription or missing context.
 
@@ -62,9 +63,10 @@ After narrative and evidence choices are authorized, create one internal, langua
 - earned turn and exactly one unresolved tension;
 - source passage for the clip line paired with the specific later source event, time, or action beat that must immediately follow it;
 - recommended ending mode and facts/disclosures available to alternates;
+- a speech-status ledger that preserves each exact quotation verbatim and keeps every paraphrase or uncertain recollection indirect;
 - approved facts, examples, claims, and evidence identifiers;
 - deliberate omissions and uncertainty boundaries;
-- target duration within 2.5–15 minutes;
+- target duration within 2.5–15 minutes for the complete teleprompter body plus recommended conclusion, excluding its editorial heading, alternate endings, and notes;
 - allowed delivery mood and emphasis.
 
 Generate English and Simplified Chinese independently from this contract. Never translate one finished script to create the other. In Chinese-only mode, do not generate an English draft internally or externally.

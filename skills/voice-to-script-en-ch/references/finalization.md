@@ -21,7 +21,7 @@ Build the complete teleprompter script with the approved clip line, earned turn,
 
 Before drafting the body, verify the clip-line pair in the approved story contract: the candidate must have a specific later source event, time, or action beat that can immediately follow it in source chronology. When the writer supplied a clear self-recognition line, keep that line as the candidate and use it as narrator-level framing immediately before the planned successor; moving commentary does not reorder the source events. Build a different source-grounded candidate only when the source contains no clear recognition line. Assemble the verified clip line and successor as an adjacent pair around two-thirds through the complete script.
 
-Before output, audit clip-line assembly separately. This is a hard ordering gate: the actual next spoken line must be the paired event, time, or action beat. If it instead defines, paraphrases, translates, compares, or otherwise explains the clip line, move that explanation before the pair or delete it, then re-check the adjacency.
+Before output, audit clip-line assembly separately. This is a hard ordering gate: the actual next spoken line must be the paired event, time, or action beat. A statement about what the writer did not want, intend, claim, believe, or know is commentary, not that successor. If the next line defines, paraphrases, translates, compares, qualifies, or otherwise explains the clip line, move it before the pair or after the successor, or delete it, then re-check the adjacency.
 
 Perform that clip-line audit independently for every requested language after its final body is assembled. Inspect the actual adjacent written line. If the pair fails, replace the candidate and successor together with another approved pair, then re-check the new adjacent line before output. Do not leave a failed candidate in place because it is strong or late.
 
@@ -51,14 +51,15 @@ If an installed dependency is incompatible, fails validation, or cannot run, tre
 
 Compare each polished complete script to the approved story contract. Reject or repair invented detail: an added experience, source, number, causal claim, certainty, or story beat. Also reject or repair smoothed-away edges, restored explanation, generic advice, or formatting that cannot be performed aloud. Check that omitted qualifications have not changed the meaning.
 
+Run a quote-status audit after polishing and again after assembling the endings. Compare every passage presented as direct speech, including quotation marks or dialogue phrasing, with the speech-status ledger. Only a ledger item marked as an exact quotation may remain direct: preserve its words in the source language or translate it faithfully for another requested language. Material marked unquoted paraphrase or uncertain must remain indirect in every language. Never turn `I said that I thought...` into reconstructed dialogue such as `I said, “I think...”`.
+
 For bilingual output, run a parity audit across:
 
 - hook question and audience promise;
 - event order and causal links;
 - every approved fact and evidence boundary;
 - meaningful conflicts and stakes;
-- clip line, earned turn, unresolved tension, and ending intent; and
-- earned turn and exactly one remaining unresolved tension.
+- clip line, earned turn, exactly one remaining unresolved tension, and ending intent.
 
 Parity is semantic, not literal. Do not make either version a line-by-line translation.
 
@@ -77,6 +78,10 @@ In the final user-facing output, place the complete script's last one-or-two-bre
 
 Before output, audit the words of the recommended ending and **every** alternate separately. A correct label is not evidence: each ending must actually perform its labeled mode as defined in `spoken-style.md` and state, rather than merely imply, the same source-specific unresolved tension. Reject any ending that only carries the mode label, substitutes a generic question for its function, or drops the unresolved tension to sound more conclusive.
 
+Inventory writer-side uncertainties across the complete body and recommended conclusion. Repeated phrasings of the approved unresolved tension count as one; answer or remove every other open writer-side question. In a callback, do not preserve a distinct opening question as a second uncertainty. A Story-request prompt may ask the viewer for a lived story, but it does not replace or multiply the writer's one approved tension.
+
+For every ending labeled `Named reader — best for shares`, apply this concrete predicate: it must recognize one singular person through both a source-supported role or relationship and a source-specific moment, action, or conflict, then pair that recognition with the writer's real disclosure. Reject a broad audience label, an `if you` condition, or an imperative telling the viewer what to do. If either recognition anchor is missing, the ending does not perform the mode.
+
 For every ending, reserve one of its one-or-two spoken lines for an explicit writer-side statement of that exact unresolved tension. A viewer question, a mode label, or an implied risk does not satisfy this requirement.
 
 Count the displayed spoken lines in the recommended ending and every alternate before output. Each must contain no more than two spoken lines or breaths; exclude only its editorial label. Compress Simplified Chinese naturally when needed rather than spilling an ending into a third line.
@@ -85,7 +90,9 @@ Run a mechanical line audit over every displayed spoken line in each complete bo
 
 ## Hard runtime gate
 
-Every requested complete script must be at least 2.5 minutes and no longer than 15 minutes. Before appending alternate endings and delivery notes, run `scripts/estimate_runtime.py` on the complete script body only:
+For each requested language, define the runtime-bearing script as the complete teleprompter body plus its recommended conclusion. The visible `Recommended ending — [mode]` heading is editorial and excluded. Alternate endings and light delivery notes are also excluded.
+
+Every runtime-bearing script must be at least 2.5 minutes and no longer than 15 minutes. After the recommended conclusion is final and before appending alternates and notes, run `scripts/estimate_runtime.py` on exactly that runtime-bearing script:
 
 - English: 150 spoken words per minute; valid range 375–2250 words.
 - Simplified Chinese: 240 Han characters per minute; valid range 600–3600 Han characters. Mixed Latin words add time at 150 words per minute.
@@ -97,7 +104,7 @@ python3 scripts/estimate_runtime.py --language en english.txt
 python3 scripts/estimate_runtime.py --language zh chinese.txt
 ```
 
-If the result is `too_short`, deepen an approved beat with source-grounded detail, reflection, or an authorized support point. Never pad with generic repetition. If `too_long`, cut secondary setup and optional examples before touching the core conflict or resolution. When duration changes, repeat polishing and measurement only on the complete script, then rerun its integrity audit and the bilingual parity audit when applicable. Do not include alternate endings or delivery notes in runtime measurement.
+If the result is `too_short`, deepen an approved beat with source-grounded detail, reflection, or an authorized support point. Never pad with generic repetition. If `too_long`, cut secondary setup and optional examples before touching the core conflict, earned turn, or open tension. When duration changes, repeat polishing and measurement only on the runtime-bearing script, then rerun its integrity audit and the bilingual parity audit when applicable. Do not measure the editorial recommended-ending heading, alternate endings, or delivery notes.
 
 After the numeric gate passes, read for spoken cadence. Pause-heavy delivery may run longer, so shorten scripts that sit too close to 15 minutes when cadence suggests an overrun. The numeric minimum remains binding.
 
@@ -117,6 +124,8 @@ Alternate endings
 Light delivery notes
 [Sparse notes]
 ```
+
+Although the editorial recommended-ending heading separates the conclusion visually, the runtime-bearing script is the complete body plus that conclusion. The heading itself, alternates, and notes remain outside the measurement.
 
 For bilingual mode, label the two language sections clearly and preserve this order within each section. Light delivery notes may mark a pause, emphasis, pronunciation, one optional visual or source cue, or one concise performance suggestion. Keep them sparse and do not turn them into production direction.
 

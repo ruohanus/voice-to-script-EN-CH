@@ -2,15 +2,15 @@
 
 A public ChatGPT/Codex skill for developing voice notes, recordings, transcripts, rambles, and rough spoken ideas into reflective, conversational talking-head video scripts.
 
-The skill supports English, Simplified Chinese, and bilingual output. Bilingual is the default. Each final language version is independently written from one approved, language-neutral story contract and must run between 2.5 and 15 minutes.
+The skill supports English, Simplified Chinese, and bilingual output. Bilingual is the default. Each final language version is independently written from one approved, language-neutral story contract. Its complete teleprompter body plus recommended conclusion must run between 2.5 and 15 minutes; the editorial heading, alternate endings, and notes do not count toward runtime.
 
 ## What it does
 
 - Preserves the speaker's distinctive phrasing, real experiences, and central insight.
-- Offers two or three selectable story directions built around a question, causal momentum, meaningful conflict, and an earned resolution.
+- Offers two or three selectable story directions built around a question, causal momentum, meaningful conflict, an earned turn, and exactly one unresolved tension.
 - Researches only claims that materially benefit from evidence, then asks the user which verified support to include.
 - Produces natural English and Chinese-speaking-audience adaptations without using English as the canonical draft.
-- Returns clean teleprompter scripts with only light delivery notes at finalization.
+- Returns, per language, a complete teleprompter body, a visible recommended ending and conclusion, at least three labeled alternate endings, and light delivery notes.
 
 ## Repository layout
 

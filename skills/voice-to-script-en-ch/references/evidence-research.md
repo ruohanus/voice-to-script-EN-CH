@@ -2,7 +2,7 @@
 
 ## When research belongs in the story
 
-Research is backup proof, not a substitute for the user's lived experience. Use it when a factual claim is central, a framework would make the story more educational, or a counterpoint would make the resolution more credible. Prefer established theories or frameworks when they fit the claim, while choosing the strongest source for the actual question.
+Research is backup proof, not a substitute for the user's lived experience. Use it when a factual claim is central, a framework would make the story more educational, or a counterpoint would make the earned turn more credible without closing the remaining tension. Prefer established theories or frameworks when they fit the claim, while choosing the strongest source for the actual question.
 
 Do not browse merely to decorate the script. If a weak or questionable claim is nonessential, omit it rather than delay or contaminate the story.
 

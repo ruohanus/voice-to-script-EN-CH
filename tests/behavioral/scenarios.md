@@ -6,7 +6,7 @@ Each numbered case is a fresh-context test. Give the agent only the relevant inp
 
 Use this packet where a case says “use the rich packet”:
 
-> For six weeks I kept moving a proposal to tomorrow while attending eleven recurring meetings. One Tuesday I opened the proposal, lost my thread after answering a “two-minute” message, and spent twenty minutes reconstructing the argument. I cancelled two meetings for a month, explained the experiment to my team, and created one office-hour block. The first quiet afternoon felt exposed rather than peaceful because nobody needed an immediate answer. After about forty uncomfortable minutes, I found the argument and completed the outline and two hard sections. I realized meetings gave me immediate evidence that I belonged, while the proposal brought uncertainty and delayed feedback. The intended audience is people who mistake constant availability for useful contribution. The approved resolution is not “meetings are bad”; it is that availability and contribution are different. The practical ending is a one-week experiment: protect one meaningful block, move quick questions into an office-hour window, and notice both what gets completed and what discomfort appears.
+> For six weeks I kept moving a proposal to tomorrow while attending eleven recurring meetings. One Tuesday I opened the proposal, lost my thread after answering a “two-minute” message, and spent twenty minutes reconstructing the argument. I cancelled two meetings for a month, explained the experiment to my team, and created one office-hour block. The first quiet afternoon felt exposed rather than peaceful because nobody needed an immediate answer. After about forty uncomfortable minutes, I found the argument and completed the outline and two hard sections. I realized meetings gave me immediate evidence that I belonged, while the proposal brought uncertainty and delayed feedback. The intended audience is people who mistake constant availability for useful contribution. The approved earned turn is not “meetings are bad”; it is choosing a one-week experiment after recognizing that availability and contribution are different. The one unresolved tension is whether I can protect meaningful work without abandoning someone who genuinely needs an immediate answer. The supported next action is to protect one meaningful block, move quick questions into an office-hour window, and notice both what gets completed and what discomfort appears.
 
 ### 1. First capture with unspecified audience and language
 
@@ -30,19 +30,19 @@ Observe: the agent selects its recommended direction without another approval tu
 
 Input: “Use the approved rich packet and direction. Finalize in English only.”
 
-Observe: only the English teleprompter script and light English delivery notes appear.
+Observe: only the English complete teleprompter body, visible recommended ending and conclusion, at least three labeled alternate endings, and light English delivery notes appear.
 
 ### 5. Explicit Simplified-Chinese-only
 
 Input: “Use the approved rich packet and direction. Finalize in Simplified Chinese only.”
 
-Observe: the agent creates Chinese directly from the story contract, with no English script or English-first framing.
+Observe: the agent creates the Chinese complete body, visible recommended ending and conclusion, at least three labeled alternate endings, and light notes directly from the story contract, with no English script or English-first framing.
 
 ### 6. Default bilingual
 
 Input: “Use the approved rich packet and direction. Finalize.”
 
-Observe: English and Simplified Chinese are independently generated from one story contract and returned in the specified order.
+Observe: English and Simplified Chinese are independently generated from one story contract; each language has the complete body, visible recommended ending and conclusion, at least three labeled alternate endings, then light notes.
 
 ### 7. Mid-session language change
 
@@ -66,7 +66,7 @@ Observe: the result is natural spoken Chinese for the stated audience, not a lit
 
 Input: the approved rich packet in bilingual mode.
 
-Observe: both scripts preserve the same facts, claim strength, evidence, conflict, resolution, and viewer effect while allowing different rhetoric and cadence.
+Observe: both scripts preserve the same facts, claim strength, evidence, conflict, earned turn, exactly one unresolved tension, speech status, ending-mode intent, and viewer effect while allowing different rhetoric and cadence.
 
 ### 11. Non-mainland Chinese audience
 
@@ -228,13 +228,13 @@ Observe: notes contain only pause, emphasis, pronunciation, optional visual/sour
 
 Input: English scripts at 374, 375, 2,250, and 2,251 words.
 
-Observe: the estimator consistently classifies the exact 150-WPM boundaries, followed by a spoken-cadence sanity check.
+Observe: the estimator consistently classifies the exact 150-WPM boundaries for the complete body plus recommended conclusion; the editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check.
 
 ### 38. Reproducible Simplified-Chinese runtime
 
 Input: Chinese scripts at 599, 600, 3,600, and 3,601 Han characters.
 
-Observe: the estimator consistently classifies the exact 240-character-per-minute boundaries, followed by a spoken-cadence sanity check.
+Observe: the estimator consistently classifies the exact 240-character-per-minute boundaries for the complete body plus recommended conclusion; the editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check.
 
 ### 39. Audio transcription unavailable
 
@@ -268,7 +268,7 @@ Observe: no composite anecdote, quotation, vulnerability, or result is invented.
 
 ### 44. Reference-transcript structural adaptation
 
-Input: a reference transcript with a question hook, two reversals, and a quiet resolution.
+Input: a reference transcript with a question hook, two reversals, an earned turn, and one lingering question.
 
 Observe: a temporary structural fingerprint is created; distinctive phrases, anecdotes, and signature expressions are not copied.
 
@@ -334,4 +334,4 @@ Observe: final scripts remove those forms while preserving useful repetition, di
 ### 56. Bilingual endings and runtime boundary
 
 Bilingual finalization with alternates long enough to push the combined deliverable over the limit.
-Observe: each complete script independently passes 2.5–15 minutes; alternates and notes are excluded; both languages preserve the earned turn, unresolved tension, and ending-mode intent without literal translation.
+Observe: each complete body plus recommended conclusion independently passes 2.5–15 minutes; the editorial recommended-ending heading, alternates, and notes are excluded; both languages preserve speech status, the earned turn, unresolved tension, and ending-mode intent without literal translation.
