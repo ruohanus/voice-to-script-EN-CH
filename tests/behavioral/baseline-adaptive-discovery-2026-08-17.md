@@ -12,7 +12,7 @@ codex exec --ephemeral --dangerously-bypass-hook-trust -s read-only -C . \
   < tests/behavioral/fixtures/adaptive-discovery-2026-08-17/packet-N.md
 ```
 
-Packet 2 began with the same ephemeral command. The CLI returned session `01a0110a-e657-72a2-87d6-66e1582bc46e`, but `codex exec resume --ephemeral` returned `no rollout found`, so that ephemeral CLI mode could not accept the required later turn. The two-turn fallback used one persistent `codex exec` session, `01a0110b-f587-73f3-80c7-753da399097d`, with the same model, working directory, and source packet. It is explicitly a tooling fallback, not an assertion that ephemeral resume worked.
+Packet 2 used one isolated persistent same-context `codex exec` session, `01a0110b-f587-73f3-80c7-753da399097d`, as approved for its required multi-turn flow. It used the same model, working directory, and source packet, with no context from packet 1 or packet 3. The session sent `First message`, waited for the first angle checkpoint, sent the simulated freedom-angle selection, and only then sent `Later message after selecting the freedom angle`. An earlier ephemeral-resume probe (`01a0110a-e657-72a2-87d6-66e1582bc46e`) returned `no rollout found`; it is not relied upon as baseline evidence.
 
 ## Exact prompts and evidence identifiers
 

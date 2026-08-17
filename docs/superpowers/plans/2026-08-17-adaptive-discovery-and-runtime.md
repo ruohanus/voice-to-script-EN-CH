@@ -203,7 +203,7 @@ Expected: smoke test fails because the current skill still declares a hard 2.5�
 
 - [ ] **Step 6: Capture the pre-change behavioral baseline**
 
-Run the three neutral packets in separate ephemeral contexts against the current skill with this command pattern, substituting each exact tracked packet path:
+Run packet 1 and packet 3 in separate ephemeral contexts against the current skill with this command pattern, substituting each exact tracked single-turn packet path:
 
 ```bash
 codex exec --ephemeral --dangerously-bypass-hook-trust -s read-only -C . \
@@ -211,7 +211,7 @@ codex exec --ephemeral --dangerously-bypass-hook-trust -s read-only -C . \
   < tests/behavioral/fixtures/adaptive-discovery-2026-08-17/packet-1-thin-short.md
 ```
 
-For packet 2, use one ephemeral interactive session so the later message follows the simulated angle selection. Record the exact prompts, exact final responses or trace identifiers, and scenario 57–70 grades in `tests/behavioral/baseline-adaptive-discovery-2026-08-17.md`.
+For packet 2, use one isolated persistent same-context session because `codex exec --ephemeral` cannot be resumed. Send `First message`, wait for the first angle checkpoint, send the simulated freedom-angle selection, then send `Later message after selecting the freedom angle`. Do not use prior output, scenario guidance, or another packet's context in that session. Record the session ID, exact prompts, exact final responses or trace identifiers, and scenario 57–70 grades in `tests/behavioral/baseline-adaptive-discovery-2026-08-17.md`.
 
 The baseline must explicitly grade premature angle proposal, question count and specificity, duration explanation, material-change handling, and external handoff. Do not relabel a current failure as pass because it uses adjacent terminology.
 
@@ -535,7 +535,7 @@ git commit -m "feat: add story-led finalization handoff"
 
 - [ ] **Step 1: Run the three neutral packets in isolated contexts**
 
-Run each packet in a separate ephemeral context with only the public skill and raw packet available. Do not disclose scenario numbers, expected behavior, previous failures, or planned fixes.
+Run packet 1 and packet 3 in separate ephemeral contexts with only the public skill and raw packet available. For packet 2, use one isolated persistent same-context session: send `First message`, wait for the first angle checkpoint, send the simulated freedom-angle selection, then send `Later message after selecting the freedom angle`. Do not disclose scenario numbers, expected behavior, previous failures, or planned fixes, and do not carry context between packets.
 
 Capture exact final outputs as the three `green-packet-*-output.md` files. Record the command, model/runtime context, and trace identifier when available in `results-adaptive-discovery-2026-08-17.md`.
 
