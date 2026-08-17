@@ -20,12 +20,14 @@ For audio or video, use an available transcription or media-reading capability. 
 - Ask once per new project unless duration is already supplied. Record the result internally as `duration_choice`.
 - Offer exact duration, rough range, or freestyle.
 - Explain that freestyle aims for the preferred 2–15-minute window, may be about 45 seconds when that is the strongest complete story, may exceed 15 minutes after a scope choice, and never pads.
-- Explain that question depth follows requested duration and the quality of available material.
-- Before sending the first response, verify that its intake explicitly covers both the full freestyle explanation above and the way duration and available material will scale question depth.
+- Explain that the number and depth of follow-up questions follow requested duration and the quality of available material.
+- Before sending the first response, verify that its intake explicitly covers both the full freestyle explanation above and says that duration and available material scale the number and depth of follow-up questions.
 
 Reflect the usable material before the duration choice so the intake gives immediate value. When the user says `draft now` or `finalize now` without a duration, ask only for this choice; after the answer, skip optional discovery and angle comparison and use the strongest supportable story.
 
 For every other new project, do not stop after the duration intake. In that same response, evaluate the supplied material against the readiness gate: ask the 4–6-question discovery batch when any field is missing, or present the three-choice angle checkpoint when all five fields already pass. An unanswered duration choice does not by itself block the checkpoint because an honestly shorter complete story remains allowed; record the user's choice before drafting.
+
+If the user responds to another offered choice or continues the story without answering the one-time duration intake, treat the duration choice as skipped and record `duration_choice = freestyle`. Do not ask for or repeat the duration options again; use the story-led scope unless the user later volunteers a different duration.
 
 ## Discovery batches
 

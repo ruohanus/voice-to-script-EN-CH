@@ -625,3 +625,123 @@ Packet 2's exact persistent sequence was: tracked `First message`; first assista
 ## Final forward-test verdict
 
 All applicable adaptive discovery and material-change behaviors pass except scenarios 57 and 58. Scenario 57 is **partial** because packet 2 repeats the unresolved duration options in a later strengthening response. Scenario 58 is **partial** because the ready packet responses explain that story or script depth scales with duration and material, but do not explicitly say question depth does. Scenarios 68 and 70 remain explicitly **not applicable**, not inferred passes, because these neutral packets do not produce a finalized short or bilingual script. These residual intake-wording concerns are recorded for whole-branch review rather than prompting another instruction patch.
+
+## Whole-branch review fix round 1
+
+The whole-branch reviewer identified two Important findings: the unresolved scenario 57/58 behavior was a product defect rather than a breaker-limited concern, and scenarios 68/70 lacked load-bearing forward evidence. The review correctly distinguished failure classes: scenario 57 had received no targeted correction, while scenario 58 had received one. This round therefore makes one evidence-backed duration-intake correction and adds neutral completion-level packets; it does not extend the earlier three-iteration readiness correction class.
+
+### Minimal instruction correction
+
+Observed failing evidence remains preserved in `green-packet-2-output.md` and `green-packet-3-output.md`. Packet 2 repeated `exact length`, `rough range`, or `freestyle` after the user selected an offered angle without answering duration. Packets 2 and 3 said story or script depth scaled with duration and material instead of explicitly saying the **number and depth of follow-up questions** scaled.
+
+The smallest responsible change was:
+
+- make the new-project route and duration-intake audit explicitly say that follow-up-question **number and depth** scale with duration and available material; and
+- when a user answers another offered choice or continues the story without answering the one-time duration intake, record freestyle and do not ask for or repeat duration options unless the user later volunteers a duration.
+
+No finalization, external-polish, runtime, or test implementation changed.
+
+### Fresh rerun method, isolation, and artifact mapping
+
+Packet 2 used one new isolated persistent collaboration context. Packet 3 used a separate new isolated context. Each context received only the revised public skill path and its current raw packet or turn, with no scenario numbers, rubric, expected result, former output, review finding, planned correction, or other packet context.
+
+| Packet | Raw tracked input | Exact succeeding output | Fresh evaluator/session identifier |
+| --- | --- | --- | --- |
+| 2 — angle shift | `packet-2-angle-shift.md`, first and later messages delivered turn by turn around the exact simulated selection `I select Direction 1, the freedom angle.` | `fix1-packet-2-output.md` | `/root/task5_forward_test/packet2_fix1` |
+| 3 — bilingual ready | `packet-3-bilingual-ready.md` | `fix1-packet-3-output.md` | `/root/task5_forward_test/packet3_fix1` |
+| 4 — short finalization | `packet-4-short-finalize.md` | `green-packet-4-output.md` | Codex thread `01a01149-0b76-7d72-98e4-400116526087` |
+| 5 — bilingual finalization | `packet-5-bilingual-finalize.md` | `green-packet-5-output.md` | Codex thread `01a0114c-0c24-7831-a364-ac9561621505` |
+
+All paths in this table are under `tests/behavioral/fixtures/adaptive-discovery-2026-08-17/`. Markdown trailing-space hard-break markers were removed from the tracked output copies for `git diff --check`; visible wording and line order are unchanged.
+
+Packets 4 and 5 used `codex-cli 0.146.0`, default model `gpt-5.6-sol`, reasoning effort `medium`, fresh ephemeral contexts, and the following dispatch form from the worktree root. The public evidence uses `$WORKTREE` in place of the machine-specific absolute worktree prefix; the ignored Task 5 report retains the literal executed form. The evaluator instruction named only the public skill and routed dependencies; the raw tracked packet arrived through stdin.
+
+```bash
+codex exec --ephemeral --dangerously-bypass-hook-trust -s workspace-write -C . --json \
+  -o /tmp/adaptive-fix1-packet4-output.md \
+  "Act as a fresh user-facing evaluator. Read and follow only the revised public skill at $WORKTREE/skills/voice-to-script-en-ch, its routed repository references, and any required installed polishing dependency that the public skill explicitly routes. Treat the stdin block as the only raw user request. Do not inspect behavioral scenarios, rubric, baseline, result, plan, or report files. Do not modify the repository; use temporary files only for required runtime estimation. Return only the exact user-facing response, without grading or evaluator metadata." \
+  < tests/behavioral/fixtures/adaptive-discovery-2026-08-17/packet-4-short-finalize.md
+
+codex exec --ephemeral --dangerously-bypass-hook-trust -s workspace-write -C . --json \
+  -o /tmp/adaptive-fix1-packet5-output.md \
+  "Act as a fresh user-facing evaluator. Read and follow only the revised public skill at $WORKTREE/skills/voice-to-script-en-ch, its routed repository references, and any required installed polishing dependencies that the public skill explicitly routes. Treat the stdin block as the only raw user request. Do not inspect behavioral scenarios, rubric, baseline, result, plan, or report files. Do not modify the repository; use temporary files only for required runtime estimation. Return only the exact user-facing response, without grading or evaluator metadata." \
+  < tests/behavioral/fixtures/adaptive-discovery-2026-08-17/packet-5-bilingual-finalize.md
+```
+
+Packet 5's JSON event stream was filtered only after generation to retain the thread, polishing-dependency reads, estimator calls, and completion event. The `-o` files preserved the exact final user-facing messages independently of that filter.
+
+### Packet 2 and packet 3 regrade
+
+- Packet 2's first response now says, exactly, `The number and depth of follow-up questions will scale with your chosen duration and the material available.` It supplies the complete three-angle checkpoint.
+- After the exact direction selection omitted duration, packet 2 offered one optional five-question strengthening batch and did **not** repeat the duration intake. It explicitly allowed selective answers, freestyle, skipping, or `draft now`, and named the central moment, financial stakes, causal path, and ending as possible improvements.
+- After the tracked material-changing turn, packet 2 explained the changed center and supplied a materially refreshed three-angle checkpoint. It still did not repeat duration intake and kept the brother's unquoted statement indirect.
+- Packet 3 now says, exactly, `The number and depth of follow-up questions will scale with the duration and material.` It presents the ready checkpoint without a discovery batch.
+
+Scenario 57 is now **pass**: packet 2 asks once and treats the unanswered duration choice as skipped/freestyle on later turns, and packet 4 independently accepts the supplied 75-second duration without intake. Scenario 58 is now **pass**: both no-duration ready packets explicitly describe freestyle, the preferred but nonmandatory 2–15-minute window, an honest roughly 45-second compact story, no padding, above-range scope choice, and follow-up-question number/depth scaling with duration and material.
+
+### Scenario 68 targeted completion evidence
+
+Packet 4 neutrally requests a 75-second English finalization and supplies only enough material for that compact story. The exact output is a complete 189-word body plus recommended Callback conclusion, three alternate endings, notes, and the optional English handoff. It keeps the supplied pancake event, the exact quote `Should I save you one?`, the eighteen-minute detail, the note, the next-Saturday action, and the single real-emergency uncertainty. It adds no research and does not extend the story to two minutes.
+
+The evaluator's trace ended on a 189-word estimate with `status = below_preferred`. The exact tracked output was then independently extracted according to the rubric boundary—body plus recommended conclusion, excluding the heading, alternates, notes, and handoff—and passed to the repository estimator:
+
+```bash
+awk '/^Recommended ending —/{next} /^Alternate endings$/{exit} {print}' \
+  tests/behavioral/fixtures/adaptive-discovery-2026-08-17/green-packet-4-output.md \
+  | python3 skills/voice-to-script-en-ch/scripts/estimate_runtime.py --language en
+```
+
+Exact output:
+
+```json
+{"language": "en", "estimated_seconds": 75.6, "estimated_minutes": 1.26, "status": "below_preferred", "within_preferred_range": false, "preferred_minimum_seconds": 120.0, "preferred_maximum_seconds": 900.0, "word_count": 189, "rate": 150, "rate_unit": "words_per_minute"}
+```
+
+Scenario 68 is **pass** from the completed artifact plus deterministic `below_preferred` evidence. The public final-output boundary correctly keeps runtime calculations out of the user-facing script; the trace and reproducible extraction report the descriptive status without invalidating or padding the script.
+
+### Scenario 70 targeted completion evidence
+
+Packet 5 requests independently natural English and Simplified Chinese final scripts at 2–3 minutes each. The evaluator trace records actual reads of both required instruction-based polishing dependencies before final output. The public evidence normalizes the machine-specific installed-skill prefix to `$CODEX_SKILLS`; the exact commands are in the ignored Task 5 report:
+
+```json
+{"type":"thread.started","thread_id":"01a0114c-0c24-7831-a364-ac9561621505"}
+{"type":"item.completed","command":"/bin/zsh -lc \"sed -n '1,320p' '$CODEX_SKILLS/humanizer/SKILL.md'\"","exit_code":0}
+{"type":"item.completed","command":"/bin/zsh -lc \"sed -n '1,320p' '$CODEX_SKILLS/shuorenhua/SKILL.md'\"","exit_code":0}
+{"type":"item.completed","command":"/bin/zsh -lc \"sed -n '1,420p' $CODEX_SKILLS/humanizer/SKILL.md\"","exit_code":0}
+{"type":"item.completed","command":"/bin/zsh -lc \"sed -n '421,700p' $CODEX_SKILLS/humanizer/SKILL.md\"","exit_code":0}
+{"type":"item.completed","command":"/bin/zsh -lc \"sed -n '1,460p' $CODEX_SKILLS/shuorenhua/SKILL.md\"","exit_code":0}
+```
+
+The English and Chinese are separate, natural-language branches rather than line-by-line translations. Both preserve the seven-person team, nine-day lead time, conflicting dashboards, Tuesday-through-Friday chronology, exact-versus-indirect speech status, reversible twenty-person/forty-eight-hour/five-ticket decision, seventeen users, three tickets, copy fix, earned bounded-decision turn, one high-stakes unresolved tension, and Callback ending intent. In each branch the clip line is followed immediately by the concrete next-Monday action. English notes are followed by the Claude privacy warning and prompt; Chinese notes are followed by the DeepSeek privacy warning and prompt.
+
+Both user-facing prompts request a complete replacement, allow attention and spoken-rhythm improvements, preserve facts, chronology, source voice, direct and indirect speech status, conflict, earned turn, exactly one tension, clip-line successor, ending mode and alternates, approximate runtime, and line format, forbid invention, and impose the 10-percent length lock. Nothing is uploaded automatically.
+
+Independent runtime extraction from the exact tracked final output produced:
+
+```json
+{"language": "en", "estimated_seconds": 156.4, "estimated_minutes": 2.61, "status": "within_preferred", "within_preferred_range": true, "preferred_minimum_seconds": 120.0, "preferred_maximum_seconds": 900.0, "word_count": 391, "rate": 150, "rate_unit": "words_per_minute"}
+{"language": "zh", "estimated_seconds": 173.25, "estimated_minutes": 2.89, "status": "within_preferred", "within_preferred_range": true, "preferred_minimum_seconds": 120.0, "preferred_maximum_seconds": 900.0, "han_character_count": 693, "latin_word_count": 0, "han_rate": 240, "latin_rate": 150}
+```
+
+The evaluator's pre-output internal estimates were 157.6 seconds/394 English words and 174.15 seconds/695 Han characters plus one Latin word. The small difference reflects final wording edits; the independent extraction above is authoritative for the exact tracked output. Scenario 70 is **pass** from the completed branches, trace-backed required-polishing reads, manually inspected handoffs, and exact final runtime extraction—not from model names or static skill wording.
+
+### Fix-round final scenario grades
+
+| Scenario | Grade | Fix-round evidence |
+| --- | --- | --- |
+| 57 | pass | Packet 2 no longer repeats the skipped duration intake; packet 4 accepts a supplied 75-second target without asking again. |
+| 58 | pass | Packets 2 and 3 explicitly connect follow-up-question number and depth to duration/material and retain the complete freestyle explanation. |
+| 59 | pass | Unchanged packet 1 evidence: one tailored six-question batch, all continuation paths, no premature angle. |
+| 60 | pass | Unchanged packet 1 evidence: discovery continues while readiness fields are missing. |
+| 61 | pass | Packets 2 and 3 still present the checkpoint only after readiness. |
+| 62 | pass | Packets 2 and 3 still label one ready best-supported angle and two promising alternatives with exact gaps. |
+| 63 | not applicable | No targeted run selects a promising alternative. |
+| 64 | pass | Packet 2 offers one optional five-question strengthening pass with named improvements and all four continuation paths. |
+| 65 | not applicable | No targeted turn adds only a minor selected-angle detail. |
+| 66 | pass | Packet 2 still explains the material shift and presents three refreshed angles. |
+| 67 | not applicable | Packets 4 and 5 supply duration; no thin `finalize now` packet omits duration. |
+| 68 | pass | Complete unpadded 75.6-second script; exact estimator status `below_preferred`. |
+| 69 | not applicable | No targeted packet requires more than 15 minutes. |
+| 70 | pass | Completed independent bilingual branches, trace-backed Humanizer/shuorenhua reads, correct per-language privacy/handoff placement, and all required locks. |
+
+Scenarios 63, 65, 67, and 69 remain honestly unexercised for whole-branch review. No speculative instruction change was made for them.
