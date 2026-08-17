@@ -56,6 +56,14 @@ require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17
 require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-selected-angle-source.md"
 require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-67-turn-1.md"
 require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-69.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-results.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-packet-2-output.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-packet-3-output.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-packet-4-output.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-63-output.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-65-output.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-67-output.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-69-red-output-3.md"
 
 require_pattern '^name: voice-to-script-en-ch$' "$skill_dir/SKILL.md" 'stable skill name'
 require_case_pattern '^  display_name: "voice to script en/ch"$' "$skill_dir/agents/openai.yaml" 'public display name'
@@ -88,6 +96,7 @@ require_pattern 'measured_preferred_status' "$skill_dir" 'frozen final measured-
 require_pattern 'angle_revision' "$skill_dir" 'per-angle-revision strengthening state'
 require_pattern 'more discovery.*honestly shorter.*additional freestyle.*narrower angle' "$skill_dir" 'unsupported explicit-target choices'
 require_pattern 'selected angle.*draft now|draft now.*selected angle|authorized angle.*draft now|draft now.*authorized angle' "$skill_dir" 'phase-aware selected-angle drafting'
+require_pattern 'do not infer.*freestyle|never infer.*freestyle' "$skill_dir" 'no-duration immediate-draft stop'
 require_pattern 'motive|interiority' "$skill_dir/references/finalization.md" 'motive-inference source audit'
 require_pattern 'invalidates.*measured|measured.*invalidates' "$skill_dir/references/finalization.md" 'post-measurement edit invalidation'
 require_pattern 'placeholder.*intact|intact.*placeholder' "$skill_dir/references/external-polish.md" 'nonduplicating prompt placeholder rule'

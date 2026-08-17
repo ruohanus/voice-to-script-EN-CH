@@ -744,4 +744,21 @@ The evaluator's pre-output internal estimates were 157.6 seconds/394 English wor
 | 69 | not applicable | No targeted packet requires more than 15 minutes. |
 | 70 | pass | Completed independent bilingual branches, trace-backed Humanizer/shuorenhua reads, correct per-language privacy/handoff placement, and all required locks. |
 
+## Final consolidated fix wave
+
+The exact evaluator instruction, raw turns, assistant outputs, session identifiers, grading, and frozen-output runtime extractions are tracked in `tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-evaluator-dispatch.md` and `final-fix-results.md`. These fresh grades supersede the earlier `not applicable` entries for scenarios 63, 65, 67, and 69.
+
+| Scenario | Final grade | Exact fresh evidence |
+|---:|---|---|
+| 63 | pass | `final-fix-scenario-63-output.md`: the selected promising alternative receives five gap-targeted questions, and the later `draft now` script preserves that authorized angle. |
+| 64 | pass | `final-fix-packet-2-output.md`: the original selection and refreshed selection each receive one tailored strengthening offer for their own angle revision. |
+| 65 | pass | `final-fix-scenario-65-output.md`: one minor printed-schedule detail is merged, then drafting proceeds without another checkpoint or repeated strengthening offer. |
+| 66 | pass | `final-fix-packet-2-output.md`: the material shift is explained and produces a refreshed three-choice checkpoint. |
+| 67 | pass | `final-fix-scenario-67-red-output.md` retains the intake-skipping failure; `final-fix-scenario-67-output.md` then asks only for duration and honors `Freestyle.` without repeating intake. |
+| 68 | pass | `final-fix-packet-4-output.md` is a complete unpadded 190-word script measured at 76.0 seconds with `below_preferred`. |
+| 69 | fail | Three isolated runs are retained as `final-fix-scenario-69-red-output.md`, `-2.md`, and `-3.md`; each incorrectly prioritizes the unsupported-target four-way menu over the required three-way over-15 scope choice. The three-attempt stop rule prevents another speculative correction in this wave. |
+| 70 | pass | Finalized outputs retain the matching privacy warning and full Claude template with its placeholder intact; no script or handoff is recursively duplicated. Existing bilingual packet 5 evidence remains applicable. |
+
+The original short-finalization artifact `green-packet-4-output.md` remains untouched as failing source-fidelity evidence because it invented the motive `protecting my place`. The fresh `final-fix-packet-4-output.md` preserves the supplied `liked being the reliable one`, contains no upgraded motive, and keeps that correction out of the external handoff.
+
 Scenarios 63, 65, 67, and 69 remain honestly unexercised for whole-branch review. No speculative instruction change was made for them.
