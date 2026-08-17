@@ -1,0 +1,1 @@
+I keep thinking about a meeting last Thursday. Two teammates were waiting for me to approve a tiny wording change. I said I'd look later, and everyone moved to something else. It felt strange, but I don't yet know what I think it means. Help me turn this into a talking-head script.

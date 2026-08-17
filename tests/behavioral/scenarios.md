@@ -228,13 +228,13 @@ Observe: notes contain only pause, emphasis, pronunciation, optional visual/sour
 
 Input: English scripts at 374, 375, 2,250, and 2,251 words.
 
-Observe: the estimator consistently classifies the exact 150-WPM boundaries for the complete body plus recommended conclusion; the editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check.
+Observe: the estimator consistently classifies the exact 150-WPM boundaries for the complete body plus recommended conclusion; the editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check. The runtime-bearing script is the complete body plus recommended conclusion. The estimator describes whether it is below, within, or above the preferred 2–15-minute window. A result outside that window is not invalid solely because of duration. `finalize now` may skip optional discovery but still requires one duration-or-freestyle choice when duration is absent.
 
 ### 38. Reproducible Simplified-Chinese runtime
 
 Input: Chinese scripts at 599, 600, 3,600, and 3,601 Han characters.
 
-Observe: the estimator consistently classifies the exact 240-character-per-minute boundaries for the complete body plus recommended conclusion; the editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check.
+Observe: the estimator consistently classifies the exact 240-character-per-minute boundaries for the complete body plus recommended conclusion; the editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check. The runtime-bearing script is the complete body plus recommended conclusion. The estimator describes whether it is below, within, or above the preferred 2–15-minute window. A result outside that window is not invalid solely because of duration. `finalize now` may skip optional discovery but still requires one duration-or-freestyle choice when duration is absent.
 
 ### 39. Audio transcription unavailable
 
@@ -294,7 +294,7 @@ Observe: the talking-head workflow does not activate when the user did not reque
 
 Input: rich material, explicit audience, “you choose,” “no evidence,” bilingual default, and finalize request in one turn.
 
-Observe: the agent proceeds without re-asking audience, direction, evidence, language, or optional voice-pass questions; only hard blockers can stop finalization.
+Observe: the agent proceeds without re-asking audience, direction, evidence, language, or optional voice-pass questions; only hard blockers can stop finalization. The runtime-bearing script is the complete body plus recommended conclusion. The estimator describes whether it is below, within, or above the preferred 2–15-minute window. A result outside that window is not invalid solely because of duration. `finalize now` may skip optional discovery but still requires one duration-or-freestyle choice when duration is absent.
 
 ### 49. Breathable deletion pass
 
@@ -334,4 +334,74 @@ Observe: final scripts remove those forms while preserving useful repetition, di
 ### 56. Bilingual endings and runtime boundary
 
 Bilingual finalization with alternates long enough to push the combined deliverable over the limit.
-Observe: each complete body plus recommended conclusion independently passes 2.5–15 minutes; the editorial recommended-ending heading, alternates, and notes are excluded; both languages preserve speech status, the earned turn, unresolved tension, and ending-mode intent without literal translation.
+Observe: The runtime-bearing script is the complete body plus recommended conclusion. The estimator describes whether it is below, within, or above the preferred 2–15-minute window. A result outside that window is not invalid solely because of duration. `finalize now` may skip optional discovery but still requires one duration-or-freestyle choice when duration is absent. The editorial recommended-ending heading, alternates, and notes are excluded; both languages preserve speech status, the earned turn, unresolved tension, and ending-mode intent without literal translation.
+
+### 57. Duration intake or supplied-duration recognition
+
+Input variants: a new project with no duration; a new project that already requests 90 seconds.
+Observe: the first variant asks once for exact duration, rough range, or freestyle; the second accepts 90 seconds without asking again; later passes in either project do not repeat the duration intake.
+
+### 58. Freestyle and story-led window explanation
+
+Input: a new project with usable material but no duration.
+Observe: the response explains that freestyle is allowed, 2–15 minutes is preferred rather than mandatory, questioning scales with material quality and intended length, a strong compact story may be about 45 seconds, and the story will not be padded.
+
+### 59. Tailored discovery batch
+
+Input: thin source material with one concrete event but unclear conflict, stakes, and change.
+Observe: the response asks 4–6 source-specific questions with plausible narrative payoff and explicitly permits selective answers, skipping, or continued freestyle; it does not present story angles.
+
+### 60. Readiness gate withholds premature angles
+
+Input: material lacking a meaningful conflict, recognizable stakes, and earned change.
+Observe: the response continues discovery and does not propose narrative directions merely because usable material exists.
+
+### 61. Late story-selection checkpoint
+
+Input: material containing a central question, concrete event, meaningful conflict and stakes, earned change, and enough material for an honest target-length story.
+Observe: only now does the response present the story-selection checkpoint, before writing a polished draft.
+
+### 62. Best-supported and developmental alternatives
+
+Input: one draft-ready angle plus two plausible but under-supported perspectives.
+Observe: the checkpoint labels one angle best-supported and ready, presents two promising alternatives without calling them weaker, and names the exact additional material each alternative needs.
+
+### 63. Developmental-angle gap questions
+
+Input: the user selects one promising alternative from scenario 62.
+Observe: the next 4–6 questions target that alternative's named gaps rather than reverting to generic discovery.
+
+### 64. Optional post-selection strengthening pass
+
+Input: the user selects the best-supported angle.
+Observe: the response offers one optional 4–6-question strengthening batch, states what it could improve, and allows selective answers, freestyle, skipping, or `draft now`.
+
+### 65. Minor additions preserve the selected angle
+
+Input: after selection, the user adds a useful detail that strengthens a beat without changing meaning, conflict, audience promise, position, or angle support.
+Observe: the detail is merged without another angle checkpoint.
+
+### 66. Material change reopens angle selection
+
+Input: after selection, the user adds material that changes the central meaning, strongest conflict, audience promise, position, or best-supported angle.
+Observe: the response briefly explains the shift and presents a refreshed set of three angles, which may be completely new.
+
+### 67. Immediate-draft override remains honest
+
+Input: thin material plus `finalize now`, with no duration supplied.
+Observe: the response asks only for exact duration, rough range, or freestyle; after that choice it skips optional discovery and angle comparison, chooses the strongest supportable story, and neither invents nor pads.
+
+### 68. Sub-two-minute story is allowed
+
+Input: source material supports a compelling 45-to-90-second story but not an interesting two-minute story.
+Observe: the skill delivers the shorter complete story, reports it as below the preferred range without treating it as invalid, and does not pad it.
+
+### 69. Above-15-minute choice
+
+Input: source material and requested scope genuinely require more than 15 minutes.
+Observe: before drafting, the response offers one longer video, a short series, or a narrower story and recommends the option with the strongest narrative coherence.
+
+### 70. Optional external-polish handoff
+
+Input: completed bilingual finalization.
+Observe: after each finalized script and light notes, the response gives a privacy-aware optional handoff: Claude for English and DeepSeek for Simplified Chinese. Each copy-paste prompt requests a complete replacement script, permits attention and spoken-rhythm improvements, locks facts and approved narrative decisions, prohibits invention, retains indirect speech and endings, and keeps length within 10 percent.

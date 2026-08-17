@@ -1,0 +1,5 @@
+I used to answer every question on my team because being useful made me feel secure. One Tuesday, a designer moved a deadline while I was on a client call because she assumed she still needed my approval. The client waited, the designer waited, and I came out of the call feeling important for about ten seconds. Then I realized I had built a team that paused when I disappeared.
+
+The conflict is that I kept telling everyone I wanted ownership from them, but I corrected small decisions before they could learn from them. A colleague had told me that I was moving too quickly for anyone else to take the wheel. I didn't believe her at the time. After the delayed deadline, I chose two kinds of decisions the team could make without me for a three-week experiment. I'm relieved, but I still don't know whether I'll trust the system when a decision goes badly.
+
+I can imagine this being about control, identity, or what delegation actually costs. I ultimately want both an English and natural Simplified Chinese script, but help me develop the story before drafting. I haven't chosen the duration.

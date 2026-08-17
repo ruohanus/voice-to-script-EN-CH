@@ -63,8 +63,11 @@ require_pattern 'strongest available.*research|research.*capability' "$skill_dir
 require_pattern 'humanizer' "$skill_dir" 'English polishing dependency'
 require_pattern 'shuorenhua' "$skill_dir" 'Chinese polishing dependency'
 require_pattern 'return only|output only' "$skill_dir" 'clean final output'
-require_pattern '2\.5' "$skill_dir" 'minimum runtime'
-require_pattern '15 minutes' "$skill_dir" 'maximum runtime'
+require_pattern '2.*15.*preferred|preferred.*2.*15' "$skill_dir" 'preferred runtime window'
+require_pattern '4.*6.*question' "$skill_dir" 'adaptive discovery batch'
+require_pattern 'best-supported angle' "$skill_dir" 'late story-selection checkpoint'
+require_pattern 'Claude' "$skill_dir" 'English external-polish handoff'
+require_pattern 'DeepSeek' "$skill_dir" 'Chinese external-polish handoff'
 
 if rg -n '/Users/|Simplified Mandarin|Jenny Hoyos|Jessica McCabe|Struthless|How to ADHD|Tracey Marks' \
   "$repo_root/README.md" "$repo_root/skills" "$repo_root/tests/behavioral"; then
@@ -73,8 +76,8 @@ if rg -n '/Users/|Simplified Mandarin|Jenny Hoyos|Jessica McCabe|Struthless|How 
 fi
 
 scenario_count=$(rg -c '^### [0-9]+\.' "$repo_root/tests/behavioral/scenarios.md")
-test "$scenario_count" -eq 56 || {
-  printf 'expected 56 behavioral scenarios, found %s\n' "$scenario_count" >&2
+test "$scenario_count" -eq 70 || {
+  printf 'expected 70 behavioral scenarios, found %s\n' "$scenario_count" >&2
   exit 1
 }
 
