@@ -52,6 +52,8 @@ When external support would materially help, offer a small evidence menu and use
 
 If a supplied target or expected one-video scope exceeds 15 minutes and no scope choice has been made, set `scope_choice_required`. This transition occurs before source-sufficiency assessment.
 
+An initial request for one video, including “one 18-minute video,” is not a scope choice. Set `scope_choice_resolved` only from a follow-up turn in which the user selects one of the three options after this skill displayed them; never infer resolution from wording in the original request.
+
 While `scope_choice_required`, the complete response has these parts in order:
 
 1. Acknowledge that the request exceeds the preferred window.
