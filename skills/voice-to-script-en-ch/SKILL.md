@@ -41,12 +41,22 @@ Omit dispensable material before weakening a higher-priority requirement. Never 
 | New material after selection | Merge minor additions without reopening or repeating the same revision's offer. Reopen only after a material change to meaning, conflict or stakes, audience promise, position, or best-supported angle. |
 | User says `draft now` or `finalize now` before angle selection | If duration is absent, ask only for exact duration, rough range, or freestyle; then skip optional discovery and use the strongest supportable angle without invention or padding. |
 | User says `draft now` or `finalize now` after angle selection | Preserve the selected angle; waive only optional questioning and draft that authorized angle subject to source and runtime honesty. |
-| Selected scope exceeds 15 minutes | Before assessing whether the chosen shape has enough detail, do not draft. Offer one longer video, a short series, or a narrower story and recommend the most coherent choice. |
-| Explicit target for the chosen scope is unsupported | Before drafting, explain the mismatch and offer more discovery, an honestly shorter script, additional freestyle material, or a narrower angle. |
+| Selected scope exceeds 15 minutes | If no scope choice has been made, set `scope_choice_required` and use the above-15 first response contract before assessing whether the chosen shape has enough detail. |
+| Explicit target for the chosen scope is unsupported | Only after `scope_choice_resolved`, explain the mismatch before drafting and offer more discovery, an honestly shorter script, additional freestyle material, or a narrower angle. |
 
 When external support would materially help, offer a small evidence menu and use the strongest available reliable research or web capability only after the user authorizes the support. Once story and evidence choices are authorized, create the internal approved story contract with `planned_preferred_status` before drafting. Finalization adds `measured_preferred_status` only from frozen final text. `draft now` and `finalize now` waive optional discovery, not truthfulness, the duration choice, an already authorized angle, language, source-grounded drafting, or required polishing.
 
-Runtime-stop order is mandatory. Whenever a supplied target or expected one-video scope exceeds 15 minutes, the next user-facing stop is only the three-way choice among one longer video, a short series, or a narrower story, with a recommendation. Do not replace it with the unsupported-target four-way menu. If the user authorizes one longer video, then assess whether the supplied material can honestly support that duration and use the four-way menu only if it cannot.
+### Above-15 first response contract
+
+If a supplied target or expected one-video scope exceeds 15 minutes and no scope choice has been made, set `scope_choice_required`. This transition occurs before source-sufficiency assessment.
+
+While `scope_choice_required`, the complete response has these parts in order:
+
+1. Acknowledge that the request exceeds the preferred window.
+2. Offer only one longer video, a short series, or a narrower story.
+3. Recommend one option based on narrative coherence.
+
+End the turn. Do not draft, assess whether the source can fill the chosen shape, or show the four-option unsupported-target menu. After the user chooses, set `scope_choice_resolved`, assess source sufficiency for that shape, and use the unsupported-target menu only if the selected shape lacks honest support.
 
 The one-time duration choice is also a strict stop for immediate drafting. If `draft now` or `finalize now` arrives before any exact duration, rough range, or freestyle choice, do not infer freestyle and do not draft in that response. Ask only for those three options, end the turn, and resume after the user answers.
 
