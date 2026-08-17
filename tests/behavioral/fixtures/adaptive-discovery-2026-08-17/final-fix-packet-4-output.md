@@ -1,24 +1,24 @@
 For six Saturdays, I told my daughter we'd make pancakes together.
 
-And for six Saturdays, I answered a work message  
+And for six Saturdays, I answered a work message
 before breakfast was finished.
 
-I was on the customer-support rotation.  
+I was on the customer-support rotation.
 The messages were real.
 
 But another teammate was on rotation too.
 
-I answered because I was fast at it,  
+I answered because I was fast at it,
 and I liked being the reliable one.
 
-One Saturday, my daughter put a pancake on a plate  
+One Saturday, my daughter put a pancake on a plate
 and asked, "Should I save you one?"
 
 I came back eighteen minutes later.
 
 I hadn't missed the whole morning.
 
-That was almost worse,  
+That was almost worse,
 because I could tell myself the interruption was small.
 
 But six small interruptions had become six Saturdays.
@@ -27,10 +27,10 @@ Afterward, I wrote one sentence in my notes:
 
 I had been calling every interruption responsible.
 
-The next Saturday, I left my phone in the hallway  
+The next Saturday, I left my phone in the hallway
 until breakfast ended.
 
-The pancakes were uneven.  
+The pancakes were uneven.
 She told me a long story about a school project.
 
 The phone buzzed twice.
@@ -41,28 +41,28 @@ I'm not claiming every message can wait.
 
 But answering fastest wasn't the same as caring most.
 
-Recommended ending — Callback — best for cohesion  
-Six Saturdays taught me that much.  
+Recommended ending — Callback — best for cohesion
+Six Saturdays taught me that much.
 I still don't know if I'll protect that boundary when a real emergency arrives.
 
 Alternate endings
 
-Story request — best for comments  
-I still don't know if I'll protect that boundary when a real emergency arrives.  
+Story request — best for comments
+I still don't know if I'll protect that boundary when a real emergency arrives.
 What small interruption changed a moment with someone you love?
 
-Named reader — best for shares  
-To the parent leaving breakfast for one real message: I kept doing that too.  
+Named reader — best for shares
+To the parent leaving breakfast for one real message: I kept doing that too.
 I still don't know if I'll protect that boundary when a real emergency arrives.
 
-Unapologized position  
-Answering fastest isn't the same as caring most.  
+Unapologized position
+Answering fastest isn't the same as caring most.
 I still don't know if I'll protect that boundary when a real emergency arrives.
 
 Light delivery notes
 
-Keep the first half matter-of-fact.  
-Pause after your daughter's question and the sentence from your notes.  
+Keep the first half matter-of-fact.
+Pause after your daughter's question and the sentence from your notes.
 Let the final uncertainty remain unresolved.
 
 Optional external polish

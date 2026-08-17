@@ -618,24 +618,24 @@ Or whether I'll retreat into control when the possible cost becomes real.
 
 Recommended ending — Callback — best for cohesion
 
-I can help keep him safe without making his life smaller.  
+I can help keep him safe without making his life smaller.
 I still don't know what I'll do if preventable consequences become real.
 
 Alternate endings
 
 Story request — best for comments
 
-What happened when someone you loved chose a risk you might have prevented?  
+What happened when someone you loved chose a risk you might have prevented?
 I still don't know whether I'd respect his choice when the possible cost becomes real.
 
 Named reader — best for shares
 
-To my sister, who said, "First, find out if it's his choice": that changed how I help.  
+To my sister, who said, "First, find out if it's his choice": that changed how I help.
 I still don't know whether I'd follow it when the possible cost becomes real.
 
 Unapologized position
 
-I won't require agreement before he can choose, even though I still hate that distinction.  
+I won't require agreement before he can choose, even though I still hate that distinction.
 I still don't know whether I'll hold that position when preventable consequences become real.
 
 Light delivery notes

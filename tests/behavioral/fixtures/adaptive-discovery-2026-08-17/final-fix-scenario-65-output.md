@@ -60,46 +60,46 @@ Answer selectively, continue in freestyle, skip this pass, or say **draft now**.
 
 What happens when being useful starts making everyone else wait?
 
-I used to answer every small question on my team  
+I used to answer every small question on my team
 because being useful made me feel secure.
 
 I answered quickly.
 
-I corrected small decisions  
+I corrected small decisions
 before anyone could learn from them.
 
 I kept saying I wanted ownership.
 
 My habits taught people to wait for approval.
 
-A colleague told me I was moving too quickly  
+A colleague told me I was moving too quickly
 for anyone else to take the wheel.
 
 I didn't believe her.
 
 Then one Tuesday, I was on a client call.
 
-A designer moved a deadline from Tuesday to Wednesday  
+A designer moved a deadline from Tuesday to Wednesday
 because she assumed she still needed my approval.
 
 The client waited.
 
 The designer waited.
 
-When I came out of the call,  
+When I came out of the call,
 she was holding the printed schedule.
 
-She had already crossed out Tuesday  
+She had already crossed out Tuesday
 and written in Wednesday.
 
 For about ten seconds, I felt important.
 
-Then I looked at that schedule  
+Then I looked at that schedule
 and understood what my colleague had been trying to tell me.
 
 I had built a team that paused when I disappeared.
 
-So I chose two kinds of decisions  
+So I chose two kinds of decisions
 the team could make without me.
 
 We turned that into a three-week experiment.
@@ -110,10 +110,10 @@ But relief is easy while nothing has gone badly.
 
 Recommended ending — Callback — best for cohesion
 
-I wanted to be useful,  
+I wanted to be useful,
 and I became the reason everyone waited.
 
-I still don't know whether I'll trust the system  
+I still don't know whether I'll trust the system
 when one of those decisions goes badly.
 
 Alternate endings

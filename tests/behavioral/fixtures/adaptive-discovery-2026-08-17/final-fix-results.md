@@ -23,6 +23,16 @@ The successful packet 3, scenario 67, and packet 4 runs read implementation comm
 
 Codex emitted repeatable model-cache warnings (`missing field base_instructions`) and one rejected attempt by the evaluator to write a temporary file outside its workspace. All listed processes completed with exit code 0 and wrote complete user-facing outputs. No evaluator modified the repository.
 
+The approved focused release-fix cycle used the same isolated instruction and the strengthened `final-fix-scenario-69.md` raw packet. It preserved the original three failures above and produced these additional artifacts:
+
+| Context | Exact output | Session identifier | Grade |
+|---|---|---|---|
+| Scenario 69 focused attempt 1 | `final-fix-scenario-69-red-output-4.md` | `01a011df-a743-7c60-af16-fc8d9f3aaf63` | fail; drafted instead of stopping |
+| Scenario 69 focused attempt 2 | `final-fix-scenario-69-red-output-5.md` | `01a011e7-7154-7373-b8f3-6bc3a5a11faf` | fail; treated the initial request as a resolved choice, then was interrupted |
+| Scenario 69 focused attempt 3 | `final-fix-scenario-69-green-output.md` | `01a011e9-6429-7623-8929-a0701f1a4dac` | pass |
+
+The interrupted second focused attempt is represented by its exact two user-facing progress messages; it has no fabricated final response. The third attempt completed with exit code 0. No focused evaluator modified the repository.
+
 ## Behavioral grading
 
 ### Refreshed selection and one strengthening offer per revision
@@ -43,7 +53,7 @@ Attempt 1 incorrectly inferred freestyle and drafted immediately; the exact outp
 
 ### Scenario 69 — above-15 choice
 
-All three isolated attempts failed the required transition. Each recognized that an 18-minute draft could not be written honestly from the supplied outline, but each substituted the four-way unsupported-target menu for the prior three-way scope choice among one longer video, a short series, or a narrower story. Two increasingly explicit, evidence-backed priority clarifications did not change the observable response. Per the three-attempt stop rule, no fourth wording change or altered fixture was attempted. Scenario 69 remains fail and is a release concern.
+The original fix wave's three isolated attempts failed the required transition and remain tracked as RED history. The focused release-fix cycle replaced the outline-only input with sixteen supplied concrete scenes. Its first attempt drafted instead of stopping. Its second treated the original request for one 18-minute video as though the user had already selected from the required checkpoint. After the state contract made runtime preflight first and limited resolution to a follow-up selection, the third fresh attempt returned only the three scope choices and a narrative-coherence recommendation. It did not draft or show the unsupported-target menu. Scenario 69 passes from `final-fix-scenario-69-green-output.md`.
 
 ### Packet 4 — motive inference and short finalization
 

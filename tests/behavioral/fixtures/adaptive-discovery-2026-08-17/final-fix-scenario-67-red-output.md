@@ -6,32 +6,32 @@ I didn't ask the volunteer who had made the signs.
 
 She had already printed eighty copies.
 
-Moving quickly had created more work  
+Moving quickly had created more work
 for the person I said I was helping.
 
-I apologized, restored the original meeting point,  
+I apologized, restored the original meeting point,
 and helped tape up the signs she had made.
 
 I can see that now.
 
 But seeing it afterward isn't the same as pausing beforehand.
 
-Recommended ending — Callback — best for cohesion  
-I still don't know whether I'll pause next time  
+Recommended ending — Callback — best for cohesion
+I still don't know whether I'll pause next time
 when the change seems obviously useful to me.
 
 Alternate endings
 
-Story request — best for comments  
-I still don't know whether I'll pause next time it seems obviously useful.  
+Story request — best for comments
+I still don't know whether I'll pause next time it seems obviously useful.
 When has your attempt to help created more work for someone else?
 
-Named reader — best for shares  
-To the volunteer who had already printed eighty signs: I still don't know whether I'll pause next time,  
+Named reader — best for shares
+To the volunteer who had already printed eighty signs: I still don't know whether I'll pause next time,
 when a change seems obviously useful to me.
 
-Unapologized position  
-I fixed what I could after I created more work for her.  
+Unapologized position
+I fixed what I could after I created more work for her.
 I still don't know whether I'll pause next time a change seems obviously useful to me.
 
 Light delivery notes

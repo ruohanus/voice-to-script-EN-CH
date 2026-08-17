@@ -60,68 +60,68 @@ You can answer selectively, continue in freestyle, skip this pass, or say **“d
 
 ## Assistant turn 3
 
-I used to answer every small question on my team.  
+I used to answer every small question on my team.
 Being useful made me feel secure.
 
 And I kept telling everyone I wanted ownership from them.
 
-But when someone made a small decision,  
-I corrected it before they had the chance to learn from it.  
-I was asking them to take ownership  
+But when someone made a small decision,
+I corrected it before they had the chance to learn from it.
+I was asking them to take ownership
 while teaching them that I still had the final say.
 
-A colleague told me  
-that I was moving too quickly for anyone else to take the wheel.  
+A colleague told me
+that I was moving too quickly for anyone else to take the wheel.
 At the time, I didn't believe her.
 
-Then one Tuesday, I was on a client call.  
-A designer moved a deadline from Tuesday to Wednesday  
+Then one Tuesday, I was on a client call.
+A designer moved a deadline from Tuesday to Wednesday
 because she assumed she still needed my approval.
 
-So the client waited.  
+So the client waited.
 The designer waited.
 
-When I came out of the call,  
-I felt important for about ten seconds.  
+When I came out of the call,
+I felt important for about ten seconds.
 Then I realized what that importance had cost.
 
-I had built a team that paused when I disappeared.  
-After the delayed deadline,  
-I chose two kinds of decisions the team could make without me.  
+I had built a team that paused when I disappeared.
+After the delayed deadline,
+I chose two kinds of decisions the team could make without me.
 We would try it for three weeks.
 
 I'm relieved.
 
-I said I wanted ownership.  
-Now I have to see whether I can leave room for it  
+I said I wanted ownership.
+Now I have to see whether I can leave room for it
 when I don't like the result.
 
 Recommended ending — Callback — best for cohesion
 
-I used to feel secure when every small question came to me.  
+I used to feel secure when every small question came to me.
 I still don't know whether I'll trust this system when a decision goes badly.
 
 Alternate endings
 
 Story request — best for comments
 
-I'm testing team ownership, but I don't know whether I'll trust the system after a bad decision.  
+I'm testing team ownership, but I don't know whether I'll trust the system after a bad decision.
 Tell me about a time your team made a decision without your approval.
 
 Named reader — best for shares
 
-This is for the person whose designer waits for approval during a client call.  
+This is for the person whose designer waits for approval during a client call.
 I'm testing ownership, but I don't know whether I'll trust the system after a bad decision.
 
 Unapologized position
 
-For three weeks, those two kinds of decisions belong to the team.  
+For three weeks, those two kinds of decisions belong to the team.
 I still don't know whether I'll trust the system when one goes badly.
 
 Light delivery notes
 
-Pause after “ten seconds.”  
-Give “The client waited. The designer waited.” room to land.  
+Pause after “ten seconds.”
+Give “The client waited. The designer waited.” room to land.
 Keep the final uncertainty quiet and unresolved.
 
 Optional external polish

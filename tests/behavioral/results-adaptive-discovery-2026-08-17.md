@@ -756,9 +756,9 @@ The exact evaluator instruction, raw turns, assistant outputs, session identifie
 | 66 | pass | `final-fix-packet-2-output.md`: the material shift is explained and produces a refreshed three-choice checkpoint. |
 | 67 | pass | `final-fix-scenario-67-red-output.md` retains the intake-skipping failure; `final-fix-scenario-67-output.md` then asks only for duration and honors `Freestyle.` without repeating intake. |
 | 68 | pass | `final-fix-packet-4-output.md` is a complete unpadded 190-word script measured at 76.0 seconds with `below_preferred`. |
-| 69 | fail | Three isolated runs are retained as `final-fix-scenario-69-red-output.md`, `-2.md`, and `-3.md`; each incorrectly prioritizes the unsupported-target four-way menu over the required three-way over-15 scope choice. The three-attempt stop rule prevents another speculative correction in this wave. |
+| 69 | pass | The original three failures plus two focused-cycle failures remain tracked. `final-fix-scenario-69-green-output.md` is the fresh passing result: it offers only one longer video, a short series, or a narrower story, recommends one for narrative coherence, and does not draft. |
 | 70 | pass | Finalized outputs retain the matching privacy warning and full Claude template with its placeholder intact; no script or handoff is recursively duplicated. Existing bilingual packet 5 evidence remains applicable. |
 
 The original short-finalization artifact `green-packet-4-output.md` remains untouched as failing source-fidelity evidence because it invented the motive `protecting my place`. The fresh `final-fix-packet-4-output.md` preserves the supplied `liked being the reliable one`, contains no upgraded motive, and keeps that correction out of the external handoff.
 
-Scenarios 63, 65, 67, and 69 remain honestly unexercised for whole-branch review. No speculative instruction change was made for them.
+Scenarios 63, 65, 67, and 69 all have tracked fresh evidence. Scenario 69's source-rich fixture, five preserved RED artifacts, and final isolated GREEN artifact document the complete correction sequence.

@@ -64,6 +64,9 @@ require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17
 require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-65-output.md"
 require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-67-output.md"
 require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-69-red-output-3.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-69-red-output-4.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-69-red-output-5.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-69-green-output.md"
 
 require_pattern '^name: voice-to-script-en-ch$' "$skill_dir/SKILL.md" 'stable skill name'
 require_case_pattern '^  display_name: "voice to script en/ch"$' "$skill_dir/agents/openai.yaml" 'public display name'
