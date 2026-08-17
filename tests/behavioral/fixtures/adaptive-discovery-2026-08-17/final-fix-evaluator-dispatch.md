@@ -41,3 +41,4 @@ For a one-turn case, add `--ephemeral` to the initial command.
 - Short-finalization source-fidelity rerun: one-turn `packet-4-short-finalize.md`.
 
 The exact assistant messages, session identifiers, commands, grades, and any runtime extraction are recorded in `final-fix-results.md` beside the corresponding raw turns.
+The historical `final-fix-scenario-69-red-output*.md` artifacts remain immutable; store a successful fresh rerun as `final-fix-scenario-69-green-output.md`.
