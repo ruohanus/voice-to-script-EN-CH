@@ -99,6 +99,7 @@ require_pattern 'acknowledge.*preferred window' "$skill_dir" 'above-15 acknowled
 require_pattern 'only.*one longer video.*short series.*narrower story' "$skill_dir" 'three-option above-15 response shape'
 require_pattern 'recommend.*narrative coherence' "$skill_dir" 'above-15 recommendation slot'
 require_pattern 'before.*source-sufficiency|before.*source sufficiency' "$skill_dir" 'target-first scope ordering'
+require_pattern 'runtime preflight.*before.*other route|before.*other route.*runtime preflight' "$skill_dir" 'runtime preflight route precedence'
 require_pattern 'angle_revision' "$skill_dir" 'per-angle-revision strengthening state'
 require_pattern 'more discovery.*honestly shorter.*additional freestyle.*narrower angle' "$skill_dir" 'unsupported explicit-target choices'
 require_pattern 'selected angle.*draft now|draft now.*selected angle|authorized angle.*draft now|draft now.*authorized angle' "$skill_dir" 'phase-aware selected-angle drafting'
