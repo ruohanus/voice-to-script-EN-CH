@@ -6,6 +6,8 @@ Use Claude for English and DeepSeek for Simplified Chinese. In bilingual mode, p
 
 Humanizer and `shuorenhua` must run for their matching language branches before this optional handoff. Claude and DeepSeek do not replace those required internal polishing passes, runtime estimation, or source-fidelity audits.
 
+In the normal final response, render each complete prompt template once with its documented script placeholder intact. Immediately before the fenced block, tell the user to replace that placeholder with the finalized matching-language section above, from the teleprompter body through light delivery notes. Do not duplicate the script inside the prompt block, do not embed the other language, and do not include the `Optional external polish` section recursively. If the user explicitly asks for a fully substituted ready-to-send prompt, replace the placeholder with that exact matching-language payload once and omit any second copy of the same payload from the handoff.
+
 ## Claude copy-paste prompt
 
 ```text

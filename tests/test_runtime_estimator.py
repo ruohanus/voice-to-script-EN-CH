@@ -19,10 +19,17 @@ def load_estimator():
 
 
 class RuntimeEstimatorTests(unittest.TestCase):
-    def test_english_boundaries_use_150_words_per_minute(self):
+    def test_english_rate_uses_150_words_per_minute(self):
         estimator = load_estimator()
         self.assertEqual(estimator.estimate_seconds("word " * 375, "en"), 150.0)
         self.assertEqual(estimator.estimate_seconds("word " * 2250, "en"), 900.0)
+
+    def test_english_preferred_window_boundaries_by_word_count(self):
+        estimator = load_estimator()
+        self.assertEqual(estimator.estimate("word " * 299, "en")["status"], "below_preferred")
+        self.assertEqual(estimator.estimate("word " * 300, "en")["status"], "within_preferred")
+        self.assertEqual(estimator.estimate("word " * 2250, "en")["status"], "within_preferred")
+        self.assertEqual(estimator.estimate("word " * 2251, "en")["status"], "above_preferred")
 
     def test_preferred_window_is_two_to_fifteen_minutes(self):
         estimator = load_estimator()
@@ -41,10 +48,17 @@ class RuntimeEstimatorTests(unittest.TestCase):
         self.assertEqual(long["status"], "above_preferred")
         self.assertFalse(long["within_preferred_range"])
 
-    def test_simplified_chinese_boundaries_use_240_han_characters_per_minute(self):
+    def test_simplified_chinese_rate_uses_240_han_characters_per_minute(self):
         estimator = load_estimator()
         self.assertEqual(estimator.estimate_seconds("你" * 600, "zh"), 150.0)
         self.assertEqual(estimator.estimate_seconds("你" * 3600, "zh"), 900.0)
+
+    def test_simplified_chinese_preferred_window_boundaries_by_character_count(self):
+        estimator = load_estimator()
+        self.assertEqual(estimator.estimate("你" * 479, "zh")["status"], "below_preferred")
+        self.assertEqual(estimator.estimate("你" * 480, "zh")["status"], "within_preferred")
+        self.assertEqual(estimator.estimate("你" * 3600, "zh")["status"], "within_preferred")
+        self.assertEqual(estimator.estimate("你" * 3601, "zh")["status"], "above_preferred")
 
     def test_chinese_mixed_text_counts_han_characters_and_latin_words(self):
         estimator = load_estimator()
@@ -64,6 +78,8 @@ class RuntimeEstimatorTests(unittest.TestCase):
         self.assertEqual(result["estimated_seconds"], 150.0)
         self.assertEqual(result["status"], "within_preferred")
         self.assertTrue(result["within_preferred_range"])
+        self.assertEqual(result["preferred_minimum_seconds"], 120.0)
+        self.assertEqual(result["preferred_maximum_seconds"], 900.0)
 
 
 if __name__ == "__main__":

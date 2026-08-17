@@ -8,6 +8,7 @@ Create an internal source ledger from the user's recording, transcript, or notes
 - events, examples, and chronological facts;
 - emotions, tensions, reversals, and unresolved questions;
 - every supplied speech or objection, marked as exact quotation, unquoted paraphrase, or uncertain wording, with exact words retained only for quotation-marked items;
+- every first-person motive, intention, fear, desire, identity claim, or causal self-interpretation, marked as explicit source language, faithful paraphrase, or unsupported inference;
 - claims that may need outside support;
 - uncertainties caused by transcription or missing context.
 
@@ -23,7 +24,7 @@ For audio or video, use an available transcription or media-reading capability. 
 - Explain that the number and depth of follow-up questions follow requested duration and the quality of available material.
 - Before sending the first response, verify that its intake explicitly covers both the full freestyle explanation above and says that duration and available material scale the number and depth of follow-up questions.
 
-Reflect the usable material before the duration choice so the intake gives immediate value. When the user says `draft now` or `finalize now` without a duration, ask only for this choice; after the answer, skip optional discovery and angle comparison and use the strongest supportable story.
+Reflect the usable material before the duration choice so the intake gives immediate value. When the user says `draft now` or `finalize now` without a duration, ask only for exact duration, rough range, or freestyle and end that response. Do not infer or default to freestyle from the immediate-draft instruction, and do not draft until the user answers. After the answer, record it once, skip optional discovery and angle comparison, and never repeat intake. Before any angle selection, infer the strongest supportable angle; after a selection, preserve and draft the authorized angle from available source material. Never switch back to a different angle merely because it has more support.
 
 For every other new project, do not stop after the duration intake. In that same response, evaluate the supplied material against the readiness gate: ask the 4–6-question discovery batch when any field is missing, or present the three-choice angle checkpoint when all five fields already pass. An unanswered duration choice does not by itself block the checkpoint because an honestly shorter complete story remains allowed; record the user's choice before drafting.
 
@@ -65,19 +66,22 @@ Create an internal `angle_checkpoint` with one best-supported angle that is read
 
 In the user-facing checkpoint, visibly label one choice `Best-supported — ready to draft` and each other choice `Promising alternative`; never describe all three as ready. Before sending, verify that every displayed choice contains all nine fields above rather than compressing the alternatives to only a hook, promise, and gap. Apply the speech-status ledger to every proposed hook: quotation marks or reconstructed dialogue count as direct speech, so supplied paraphrases and uncertain wording must remain indirect.
 
-Leave the choice to the user unless they say `you choose`, `pick the strongest`, or equivalent.
+Leave the choice to the user unless they say `you choose`, `pick the strongest`, or equivalent. If the user continues speaking instead of selecting at this checkpoint, merge the material, retain every compatible source and checkpoint decision, and reassess readiness and angle support. Do not force a selection; refresh displayed angles only when that reassessment changes them.
 
 ## Post-selection strengthening and reopening
 
-After any angle selection, offer one optional `strengthening_pass` of 4–6 source-specific questions and state specifically which story elements the answers could improve, such as the central moment, stakes, causal progression, earned turn, or ending. For a promising alternative, present questions targeted to its named gaps instead of returning to generic discovery. In that offer, explicitly name all four paths: answer selectively, continue freestyle, skip the pass, or say `draft now`. Before sending, verify that both the improvement statement and all four paths are present. Do not repeat this offer after it is accepted or declined.
+Assign each displayed checkpoint an `angle_revision`. After a selection, record `selected_angle_revision` and `strengthening_status[angle_revision]`. Offer one optional `strengthening_pass` of 4–6 source-specific questions only while that revision's status is `not_offered`, then mark it `offered`. State specifically which story elements the answers could improve, such as the central moment, stakes, causal progression, earned turn, or ending. For a promising alternative, target its named gaps instead of returning to generic discovery. In that offer, explicitly name all four paths: answer selectively, continue freestyle, skip the pass, or say `draft now`. Before sending, verify that both the improvement statement and all four paths are present. Never repeat the offer for the same revision.
 
-Merge later material into the source ledger and update the content soul only when the material truly changes it. Reopen only when new material changes the central meaning, strongest conflict or stakes, audience promise, user's actual position, or which angle is best supported. Explain the shift briefly, record it internally as `angle_reopen_reason`, and present a refreshed three-choice checkpoint. Incorporate all lesser additions without re-selection.
+When the user answers any of the strengthening questions, continues freestyle, skips, or says `draft now`, mark that revision `answered`, `skipped`, or `waived` as appropriate and proceed to drafting the selected angle unless the new material triggers angle reopening. A minor addition is an answer, not a new discovery cycle: merge it and proceed without another checkpoint or strengthening offer.
+
+Merge later material into the source ledger and update the content soul only when the material truly changes it. Reopen only when new material changes the central meaning, strongest conflict or stakes, audience promise, user's actual position, or which angle is best supported. Explain the shift briefly, record it internally as `angle_reopen_reason`, increment `angle_revision`, and present a refreshed three-choice checkpoint. Incorporate all lesser additions without re-selection. A selection from the refreshed checkpoint receives one new tailored strengthening offer for the new revision; the prior revision's completed offer does not suppress it.
 
 ## Choice semantics
 
 - A named or numbered angle authorizes that angle.
 - `You choose`, `pick the strongest`, or equivalent authorizes the best-supported angle and proceeds without another confirmation.
-- `Draft now` or `finalize now` authorizes immediate drafting from the strongest supportable story after the one-time duration choice, without invention or padding.
+- Before selection, `draft now` or `finalize now` authorizes immediate drafting from the strongest supportable angle after the one-time duration choice, without invention or padding.
+- After selection, `draft now` or `finalize now` preserves the selected angle and waives only optional questions. Use the shortest honest version of that angle that the source supports; do not silently substitute the best-supported alternative.
 - Changing the audience or language invalidates only downstream decisions that depend on that change. Preserve the source ledger and any still-compatible approvals.
 - If the user supplies a usable audience, do not substitute a niche default. If they do not, describe the likely audience inferred from the material and allow correction.
 
@@ -95,16 +99,18 @@ After angle and evidence choices are authorized, create one internal, language-n
 - a speech-status ledger that preserves each exact quotation verbatim and keeps every paraphrase or uncertain recollection indirect;
 - approved facts, examples, claims, and evidence identifiers;
 - deliberate omissions and uncertainty boundaries;
-- requested or inferred duration for the complete teleprompter body plus recommended conclusion, excluding its editorial heading, alternate endings, and notes, together with estimator status `below_preferred`, `within_preferred`, or `above_preferred`;
+- requested or inferred duration for the complete teleprompter body plus recommended conclusion, excluding its editorial heading, alternate endings, and notes;
+- pre-draft `planned_preferred_status` (`below_preferred`, `within_preferred`, or `above_preferred`), whether the target is honestly supported, and any shorter-result or over-15 scope authorization; and
+- an initially empty `measured_preferred_status`, filled only during finalization from the frozen runtime-bearing text;
 - allowed delivery mood and emphasis.
 
 Generate English and Simplified Chinese independently from this contract. Never translate one finished script to create the other. In Chinese-only mode, do not generate an English draft internally or externally.
 
 ## Optional enrichment
 
-Offer, rather than assume, enrichment such as a concrete example, a counterpoint, an analogy, or a researched framework. A user may decline any optional enrichment. If source material is thin, build the shortest honest complete story and report its `below_preferred` status; ask for more material only when the authorized duration cannot be reached without invention or empty padding.
+Offer, rather than assume, enrichment such as a concrete example, a counterpoint, an analogy, or a researched framework. A user may decline any optional enrichment. First classify the requested or expected scope. If `planned_preferred_status` is `above_preferred`, resolve the three-way scope choice below before assessing whether the selected shape has enough detail. For the resulting one-video target, compare the selected angle and source ledger with its duration. If that target cannot be reached without invention, repetition, or empty padding, explain the mismatch and stop with four choices in one response: more discovery, an honestly shorter script, additional freestyle material, or a narrower angle. Record the user's choice. Freestyle may proceed with the shortest honest complete story and a planned `below_preferred` status without a warning merely for being short.
 
-If the selected scope would exceed 15 minutes, offer one longer video, a short series, or a narrower story before drafting and recommend the most coherent choice. Preserve the essential conflict, earned movement, and productive openness in each proposed unit. Offer omitted material as a possible sequel only outside the finalized output.
+If `planned_preferred_status` is `above_preferred`, stop before drafting and before the support check. Offer exactly one longer video, a short series, or a narrower story; recommend the most coherent choice. Draft above 15 minutes only after the user explicitly selects the longer-video option, then apply the source-support check to that authorized shape. Preserve the essential conflict, earned movement, and productive openness in each proposed unit. Offer omitted material as a possible sequel only outside the finalized output.
 
 ## References and imitation safety
 

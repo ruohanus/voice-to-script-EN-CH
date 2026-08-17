@@ -2,7 +2,7 @@
 
 ## Preconditions
 
-Finalize after the user authorizes a narrative direction and evidence choices, delegates the choice with “you choose,” or explicitly says “finalize now.” Build the approved story contract described in `story-workflow.md` before drafting, then read and apply `references/spoken-style.md`.
+Finalize after the user authorizes a narrative direction and evidence choices, delegates the choice with “you choose,” or explicitly says “finalize now.” A missing `duration_choice` is a strict precondition failure: ask only for exact duration, rough range, or freestyle, end the turn, and never infer freestyle from `finalize now`. Build the approved story contract described in `story-workflow.md` only after the user answers, including `planned_preferred_status` and any required shorter-result or over-15 authorization, then read and apply `references/spoken-style.md`. Do not begin drafting while an unsupported explicit target or above-15 scope choice remains unresolved. Resolve an above-15 scope choice first: its immediate response contains only one longer video, a short series, or a narrower story plus a recommendation. Assess source sufficiency and show the four-way unsupported-target menu only after the user chooses the resulting shape.
 
 Confirm the requested mode: English, Simplified Chinese, or bilingual. Default to bilingual. Confirm or infer the audience from the user's material; never impose a career, neurodiversity, founder, or other niche audience unless the user chooses it.
 
@@ -49,7 +49,9 @@ If an installed dependency is incompatible, fails validation, or cannot run, tre
 
 ## Integrity and parity audits after polishing
 
-Compare each polished complete script to the approved story contract. Reject or repair invented detail: an added experience, source, number, causal claim, certainty, or story beat. Also reject or repair smoothed-away edges, restored explanation, generic advice, or formatting that cannot be performed aloud. Check that omitted qualifications have not changed the meaning.
+Compare each polished complete script to the approved story contract. Reject or repair invented detail: an added experience, source, number, causal claim, certainty, story beat, motive, or interior state. Also reject or repair smoothed-away edges, restored explanation, generic advice, or formatting that cannot be performed aloud. Check that omitted qualifications have not changed the meaning.
+
+Run a motive-and-interiority audit after polishing and again after assembling the endings. Map every first-person explanation of why the speaker acted, what they wanted or feared, what identity they protected, and what an event meant to the source ledger. A preference such as “I liked being the reliable one” does not authorize a stronger motive such as “I was protecting my place as the reliable one.” Keep only explicit source language or a meaning-equivalent paraphrase. Turn any useful but unsupported inference into a discovery question before drafting, or remove it; never assert it in the script or pass it into the external-polish prompt.
 
 Run a quote-status audit after polishing and again after assembling the endings. Compare every passage presented as direct speech, including quotation marks or dialogue phrasing, with the speech-status ledger. Only a ledger item marked as an exact quotation may remain direct: preserve its words in the source language or translate it faithfully for another requested language. Material marked unquoted paraphrase or uncertain must remain indirect in every language. Never turn `I said that I thought...` into reconstructed dialogue such as `I said, “I think...”`.
 
@@ -92,7 +94,9 @@ Run a mechanical line audit over every displayed spoken line in each complete bo
 
 For each requested language, define the runtime-bearing script as the complete teleprompter body plus its recommended conclusion. The visible `Recommended ending — [mode]` heading is editorial and excluded. Alternate endings and light delivery notes are also excluded.
 
-After the recommended conclusion is final and before appending alternates and notes, run `scripts/estimate_runtime.py` on exactly that runtime-bearing script:
+The approved story contract already contains the pre-draft `planned_preferred_status`. A planned `above_preferred` result must have explicit longer-video authorization before drafting; a series or narrower-story choice creates a new plan and status. The post-draft estimator never substitutes for that planning stop.
+
+After polishing, ending assembly, spoken-cadence reading, mechanical line checks, source-integrity, quote-status, motive-and-interiority, clip-line, ending, and bilingual parity audits are complete, freeze the runtime-bearing text. Run `scripts/estimate_runtime.py` on exactly that frozen text:
 
 - English: 150 spoken words per minute; the preferred 2–15-minute range is 300–2250 words.
 - Simplified Chinese: 240 Han characters per minute; the preferred 2–15-minute range is 480–3600 Han characters. Mixed Latin words add time at 150 words per minute.
@@ -104,14 +108,14 @@ python3 scripts/estimate_runtime.py --language en english.txt
 python3 scripts/estimate_runtime.py --language zh chinese.txt
 ```
 
-- Measure the complete teleprompter body plus recommended conclusion exactly as before.
+- Record the result as `measured_preferred_status` for that language, together with the exact measured counts and a text fingerprint sufficient to identify the frozen body and recommended conclusion.
 - Treat `within_preferred` as the normal 2–15-minute result.
 - For `below_preferred`, keep the shorter result when extending it would require padding, repetition, or invention; deepen it only with approved material.
-- For `above_preferred`, do not draft until the user chooses one longer video, a short series, or a narrower story.
+- If an unplanned `above_preferred` result appears, withhold the draft, return to the three-way pre-draft scope choice, and rebuild from the user's selection.
 - An explicit user duration remains the target when the source can support it honestly.
 - Never reject an otherwise complete script solely for `below_preferred` or an authorized `above_preferred` result.
 
-When duration changes, repeat polishing and measurement only on the runtime-bearing script, then rerun its integrity audit and the bilingual parity audit when applicable. Do not measure the editorial recommended-ending heading, alternate endings, or delivery notes. Read for spoken cadence after measurement; pause-heavy delivery may run longer, so adjust honestly when cadence suggests an overrun without removing essential meaning merely to stay inside the preferred window.
+No text edit is allowed after measurement: any such edit invalidates measured state, including `measured_preferred_status` and the stored fingerprint. After any edit to a measured body or recommended conclusion, rerun the matching required polishing pass when applicable, every integrity, quote-status, motive-and-interiority, clip-line, ending, mechanical-line, and bilingual parity audit, then freeze and measure again. Output only when the final displayed runtime-bearing text exactly matches the last measurement. Do not measure the editorial recommended-ending heading, alternate endings, delivery notes, or external handoff. Account for pause-heavy cadence before freezing; never remove essential meaning merely to stay inside the preferred window.
 
 ## Clean output contract
 
@@ -138,6 +142,6 @@ Although the editorial recommended-ending heading separates the conclusion visua
 
 For bilingual mode, label the two language sections clearly and preserve this order within each section. Keep the Claude prompt with the English section and the DeepSeek prompt with the Simplified Chinese section. Light delivery notes may mark a pause, emphasis, pronunciation, one optional visual or source cue, or one concise performance suggestion. Keep them sparse and do not turn them into production direction.
 
-Read `references/external-polish.md` only after finalization and all internal integrity checks. Humanizer must already have run for English and `shuorenhua` for Simplified Chinese; the optional third-party handoff never replaces either. Insert the matching privacy warning and complete copy-paste prompt after each requested language's light notes. Never send the script automatically.
+Read `references/external-polish.md` only after finalization and all internal integrity checks. Humanizer must already have run for English and `shuorenhua` for Simplified Chinese; the optional third-party handoff never replaces either. Insert the matching privacy warning and complete copy-paste prompt template after each requested language's light notes, following its placeholder rule. Never send the script automatically.
 
 Suppress internal workbench, research, source ledgers, citations lists, approved story contract, polishing commentary, runtime metrics, parity reports, editorial explanations, and all other process notes unless the user explicitly requests them.

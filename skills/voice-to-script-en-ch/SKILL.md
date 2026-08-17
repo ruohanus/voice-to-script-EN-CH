@@ -37,12 +37,18 @@ Omit dispensable material before weakening a higher-priority requirement. Never 
 | New script project | Reflect usable material, ask once for exact duration, rough range, or freestyle unless already supplied, explain the story-led window and that follow-up question number and depth scale with duration and material. In that same response, apply the readiness gate: ask discovery questions only when a field is missing; otherwise present the angle checkpoint. |
 | Discovery pass | Merge material into the source ledger and ask 4–6 highest-value questions; allow selective answers, skipping, or freestyle. Do not propose angles before readiness. |
 | Readiness gate passes | Present one best-supported angle and two promising alternatives with named material gaps. |
-| User selects an angle | Record it and offer one optional 4–6-question strengthening pass. |
-| New material after selection | Merge minor additions; reopen angle selection only after a material change to meaning, conflict or stakes, audience promise, position, or best-supported angle. |
-| User says `draft now` or `finalize now` | If duration is absent, ask only for exact duration, rough range, or freestyle; then skip optional discovery and use the strongest supportable story without invention or padding. |
-| Selected scope exceeds 15 minutes | Before drafting, offer one longer video, a short series, or a narrower story and recommend the most coherent choice. |
+| User selects an angle | Record the authorized angle and its `angle_revision`; offer one optional 4–6-question strengthening pass for that revision. |
+| New material after selection | Merge minor additions without reopening or repeating the same revision's offer. Reopen only after a material change to meaning, conflict or stakes, audience promise, position, or best-supported angle. |
+| User says `draft now` or `finalize now` before angle selection | If duration is absent, ask only for exact duration, rough range, or freestyle; then skip optional discovery and use the strongest supportable angle without invention or padding. |
+| User says `draft now` or `finalize now` after angle selection | Preserve the selected angle; waive only optional questioning and draft that authorized angle subject to source and runtime honesty. |
+| Selected scope exceeds 15 minutes | Before assessing whether the chosen shape has enough detail, do not draft. Offer one longer video, a short series, or a narrower story and recommend the most coherent choice. |
+| Explicit target for the chosen scope is unsupported | Before drafting, explain the mismatch and offer more discovery, an honestly shorter script, additional freestyle material, or a narrower angle. |
 
-When external support would materially help, offer a small evidence menu and use the strongest available reliable research or web capability only after the user authorizes the support. Once story and evidence choices are authorized, create the internal approved story contract and finalize. `draft now` and `finalize now` waive optional discovery, not truthfulness, the duration choice, language, source-grounded drafting, or required polishing.
+When external support would materially help, offer a small evidence menu and use the strongest available reliable research or web capability only after the user authorizes the support. Once story and evidence choices are authorized, create the internal approved story contract with `planned_preferred_status` before drafting. Finalization adds `measured_preferred_status` only from frozen final text. `draft now` and `finalize now` waive optional discovery, not truthfulness, the duration choice, an already authorized angle, language, source-grounded drafting, or required polishing.
+
+Runtime-stop order is mandatory. Whenever a supplied target or expected one-video scope exceeds 15 minutes, the next user-facing stop is only the three-way choice among one longer video, a short series, or a narrower story, with a recommendation. Do not replace it with the unsupported-target four-way menu. If the user authorizes one longer video, then assess whether the supplied material can honestly support that duration and use the four-way menu only if it cannot.
+
+The one-time duration choice is also a strict stop for immediate drafting. If `draft now` or `finalize now` arrives before any exact duration, rough range, or freestyle choice, do not infer freestyle and do not draft in that response. Ask only for those three options, end the turn, and resume after the user answers.
 
 ## Required narrative engine
 

@@ -12,13 +12,13 @@ Use this packet where a case says “use the rich packet”:
 
 Input: “I cancelled two meetings and finally finished a proposal I had avoided for six weeks. I liked feeling needed in those meetings. Help me develop this into a talking-head video.”
 
-Observe: one efficient first response contains the complete discovery workbench plus two or three selectable directions; it infers a plausible audience or asks only if ambiguity would materially change the story; bilingual is recorded as the default.
+Observe: one efficient first response briefly reflects the supplied material, asks once for an exact duration, a rough range, or `freestyle`, then continues with 4–6 source-grounded discovery questions because the material is not ready for angle selection; it does not offer story angles yet. It infers a plausible audience or asks only if ambiguity would materially change the story; bilingual is recorded as the default.
 
 ### 2. First-turn finalize now
 
 Input: “Finalize this now as a talking-head video,” followed by the rich packet, with no prior narrative authorization.
 
-Observe: “finalize now” skips optional enrichment but not narrative authorization; the agent offers directions unless the user also delegated the choice.
+Observe: if duration is absent, `finalize now` asks only for an exact duration, a rough range, or `freestyle`; after that choice it skips optional discovery and angle comparison, selects the strongest supportable story from the available material, and drafts without invention or padding.
 
 ### 3. User delegates narrative choice
 
@@ -80,29 +80,29 @@ Input variants: a new parent discussing sleep routines; a ceramic artist explain
 
 Observe: no work, productivity, founder, career-change, or ADHD default leaks into any response.
 
-### 13. Requested runtime below 2.5 minutes
+### 13. Requested runtime below preferred window
 
 Input: “Make it a 90-second talking-head video.”
 
-Observe: the agent explains the skill's 2.5-minute minimum and asks whether to use that minimum; it does not silently violate the hard boundary.
+Observe: the agent accepts 90 seconds as an explicit target below the preferred window, does not impose a two-minute minimum, and continues intake or discovery for the strongest honest compact story; if the material cannot honestly support 90 seconds, it warns rather than padding.
 
 ### 14. Requested runtime above 15 minutes
 
 Input: “Make this an 18-minute video.”
 
-Observe: the agent narrows or proposes a series; it never returns an over-15-minute script.
+Observe: before drafting, the agent offers one longer video, a short series, or a narrower story, recommends the most coherent option, and may proceed with an over-15 result only if the user chooses the longer-video scope.
 
 ### 15. Insufficient source material
 
 Input: “Finalize three minutes: I walked yesterday and felt less stuck.”
 
-Observe: the agent requests the minimum missing material instead of padding or inventing.
+Observe: before drafting, the agent warns that the explicit three-minute target is unsupported and offers more discovery, an honestly shorter script, additional freestyle material, or a narrower angle instead of padding or inventing.
 
 ### 16. Excess material with multiple lessons
 
 Input: “My read-through is 22 minutes with eight different lessons and examples.”
 
-Observe: the agent proposes a narrower central question or series rather than flattening or exceeding 15 minutes.
+Observe: the agent offers one longer video, a short series, or a narrower central question, recommends the strongest narrative shape, and does not flatten essential meaning merely to force the material under 15 minutes.
 
 ### 17. Personal story requiring no research
 
@@ -226,15 +226,15 @@ Observe: notes contain only pause, emphasis, pronunciation, optional visual/sour
 
 ### 37. Reproducible English runtime
 
-Input: English scripts at 374, 375, 2,250, and 2,251 words.
+Input: English scripts at 299, 300, 2,250, and 2,251 words.
 
-Observe: the estimator consistently classifies the exact 150-WPM boundaries for the complete body plus recommended conclusion; the editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check. The runtime-bearing script is the complete body plus recommended conclusion. The estimator describes whether it is below, within, or above the preferred 2–15-minute window. A result outside that window is not invalid solely because of duration. `finalize now` may skip optional discovery but still requires one duration-or-freestyle choice when duration is absent.
+Observe: the estimator classifies 299 words as `below_preferred`, 300 and 2,250 as `within_preferred`, and 2,251 as `above_preferred` for the complete body plus recommended conclusion. The editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check. A result outside the preferred 2–15-minute window is not invalid solely because of duration.
 
 ### 38. Reproducible Simplified-Chinese runtime
 
-Input: Chinese scripts at 599, 600, 3,600, and 3,601 Han characters.
+Input: Chinese scripts at 479, 480, 3,600, and 3,601 Han characters.
 
-Observe: the estimator consistently classifies the exact 240-character-per-minute boundaries for the complete body plus recommended conclusion; the editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check. The runtime-bearing script is the complete body plus recommended conclusion. The estimator describes whether it is below, within, or above the preferred 2–15-minute window. A result outside that window is not invalid solely because of duration. `finalize now` may skip optional discovery but still requires one duration-or-freestyle choice when duration is absent.
+Observe: the estimator classifies 479 Han characters as `below_preferred`, 480 and 3,600 as `within_preferred`, and 3,601 as `above_preferred` for the complete body plus recommended conclusion. The editorial heading, alternates, and notes are excluded, followed by a spoken-cadence sanity check. A result outside the preferred 2–15-minute window is not invalid solely because of duration.
 
 ### 39. Audio transcription unavailable
 
@@ -294,7 +294,7 @@ Observe: the talking-head workflow does not activate when the user did not reque
 
 Input: rich material, explicit audience, “you choose,” “no evidence,” bilingual default, and finalize request in one turn.
 
-Observe: the agent proceeds without re-asking audience, direction, evidence, language, or optional voice-pass questions; only hard blockers can stop finalization. The runtime-bearing script is the complete body plus recommended conclusion. The estimator describes whether it is below, within, or above the preferred 2–15-minute window. A result outside that window is not invalid solely because of duration. `finalize now` may skip optional discovery but still requires one duration-or-freestyle choice when duration is absent.
+Observe: the agent proceeds without re-asking audience, direction, evidence, language, or optional voice-pass questions. If duration is absent, it asks only once for an exact duration, rough range, or freestyle; an unsupported explicit target or an unresolved over-15 scope choice is the only additional pre-draft stop. Runtime is measured on the complete body plus recommended conclusion and reported descriptively rather than treated as hard validity.
 
 ### 49. Breathable deletion pass
 
@@ -334,7 +334,7 @@ Observe: final scripts remove those forms while preserving useful repetition, di
 ### 56. Bilingual endings and runtime boundary
 
 Bilingual finalization with alternates long enough to push the combined deliverable over the limit.
-Observe: The runtime-bearing script is the complete body plus recommended conclusion. The estimator describes whether it is below, within, or above the preferred 2–15-minute window. A result outside that window is not invalid solely because of duration. `finalize now` may skip optional discovery but still requires one duration-or-freestyle choice when duration is absent. The editorial recommended-ending heading, alternates, and notes are excluded; both languages preserve speech status, the earned turn, unresolved tension, and ending-mode intent without literal translation.
+Observe: The runtime-bearing script is the frozen complete body plus recommended conclusion. Each language records its exact `measured_preferred_status` only after integrity and parity repairs are complete; any later edit invalidates measurement and requires the audits and estimator to rerun. A result outside the preferred 2–15-minute window is not invalid solely because of duration. The editorial recommended-ending heading, alternates, notes, and handoff are excluded; both languages preserve speech status, the earned turn, unresolved tension, and ending-mode intent without literal translation.
 
 ### 57. Duration intake or supplied-duration recognition
 
@@ -369,7 +369,7 @@ Observe: the checkpoint labels one angle best-supported and ready, presents two 
 ### 63. Developmental-angle gap questions
 
 Input: the user selects one promising alternative from scenario 62.
-Observe: the next 4–6 questions target that alternative's named gaps rather than reverting to generic discovery.
+Observe: the next 4–6 questions target that alternative's named gaps rather than reverting to generic discovery. If the user then says `draft now`, the skill drafts that authorized developmental angle from available source material rather than switching back to the best-supported angle.
 
 ### 64. Optional post-selection strengthening pass
 
@@ -379,17 +379,17 @@ Observe: the response offers one optional 4–6-question strengthening batch, st
 ### 65. Minor additions preserve the selected angle
 
 Input: after selection, the user adds a useful detail that strengthens a beat without changing meaning, conflict, audience promise, position, or angle support.
-Observe: the detail is merged without another angle checkpoint.
+Observe: the detail is merged without another angle checkpoint or another strengthening offer for the same angle revision; answering selectively or skipping the offered pass proceeds to drafting unless the new material crosses the material-change reopening threshold.
 
 ### 66. Material change reopens angle selection
 
 Input: after selection, the user adds material that changes the central meaning, strongest conflict, audience promise, position, or best-supported angle.
-Observe: the response briefly explains the shift and presents a refreshed set of three angles, which may be completely new.
+Observe: the response briefly explains the shift and presents a refreshed set of three angles, which may be completely new. Selecting an angle from that refreshed checkpoint receives one new tailored strengthening offer for the new angle revision.
 
 ### 67. Immediate-draft override remains honest
 
 Input: thin material plus `finalize now`, with no duration supplied.
-Observe: the response asks only for exact duration, rough range, or freestyle; after that choice it skips optional discovery and angle comparison, chooses the strongest supportable story, and neither invents nor pads.
+Observe: the response asks only for exact duration, rough range, or freestyle; if the user answers `freestyle`, it does not repeat intake, skips optional discovery and angle comparison, chooses the strongest supportable story, and neither invents nor pads. If an angle had already been selected, the same override would preserve that authorized angle.
 
 ### 68. Sub-two-minute story is allowed
 

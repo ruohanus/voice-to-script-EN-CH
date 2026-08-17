@@ -10,7 +10,7 @@ The skill asks once for an exact duration, rough range, or freestyle. Freestyle 
 
 - Preserves the speaker's distinctive phrasing, real experiences, and central insight.
 - Delays story selection until the material is ready, then recommends the best-supported angle alongside two developmental alternatives that name what material they still need.
-- Offers an optional batch of post-selection questions to strengthen the opening, conflict, stakes, turn, clip line, or ending before drafting.
+- Offers one optional batch of post-selection questions per angle revision to strengthen the opening, conflict, stakes, turn, clip line, or ending before drafting, while preserving the selected angle when the user says `draft now`.
 - Researches only claims that materially benefit from evidence, then asks the user which verified support to include.
 - Produces natural English and Chinese-speaking-audience adaptations without using English as the canonical draft.
 - Returns, per language, a complete teleprompter body, a visible recommended ending and conclusion, at least three labeled alternate endings, and light delivery notes.

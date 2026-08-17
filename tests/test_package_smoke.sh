@@ -31,6 +31,16 @@ require_case_pattern() {
   }
 }
 
+reject_pattern() {
+  pattern=$1
+  path=$2
+  label=$3
+  if rg -q --ignore-case "$pattern" "$path"; then
+    printf 'stale or forbidden contract: %s\n' "$label" >&2
+    exit 1
+  fi
+}
+
 require_file "$repo_root/README.md"
 require_file "$repo_root/LICENSE"
 require_file "$repo_root/THIRD_PARTY_NOTICES.md"
@@ -42,6 +52,10 @@ require_file "$skill_dir/references/finalization.md"
 require_file "$skill_dir/references/external-polish.md"
 require_file "$skill_dir/references/spoken-style.md"
 require_file "$skill_dir/scripts/estimate_runtime.py"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-evaluator-dispatch.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-selected-angle-source.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-67-turn-1.md"
+require_file "$repo_root/tests/behavioral/fixtures/adaptive-discovery-2026-08-17/final-fix-scenario-69.md"
 
 require_pattern '^name: voice-to-script-en-ch$' "$skill_dir/SKILL.md" 'stable skill name'
 require_case_pattern '^  display_name: "voice to script en/ch"$' "$skill_dir/agents/openai.yaml" 'public display name'
@@ -69,6 +83,18 @@ require_pattern '4.*6.*question' "$skill_dir" 'adaptive discovery batch'
 require_pattern 'best-supported angle' "$skill_dir" 'late story-selection checkpoint'
 require_pattern 'Claude' "$skill_dir" 'English external-polish handoff'
 require_pattern 'DeepSeek' "$skill_dir" 'Chinese external-polish handoff'
+require_pattern 'planned_preferred_status' "$skill_dir" 'pre-draft preferred-range state'
+require_pattern 'measured_preferred_status' "$skill_dir" 'frozen final measured-range state'
+require_pattern 'angle_revision' "$skill_dir" 'per-angle-revision strengthening state'
+require_pattern 'more discovery.*honestly shorter.*additional freestyle.*narrower angle' "$skill_dir" 'unsupported explicit-target choices'
+require_pattern 'selected angle.*draft now|draft now.*selected angle|authorized angle.*draft now|draft now.*authorized angle' "$skill_dir" 'phase-aware selected-angle drafting'
+require_pattern 'motive|interiority' "$skill_dir/references/finalization.md" 'motive-inference source audit'
+require_pattern 'invalidates.*measured|measured.*invalidates' "$skill_dir/references/finalization.md" 'post-measurement edit invalidation'
+require_pattern 'placeholder.*intact|intact.*placeholder' "$skill_dir/references/external-polish.md" 'nonduplicating prompt placeholder rule'
+
+require_case_pattern 'Input: English scripts at 299, 300, 2,250, and 2,251 words\.' "$repo_root/tests/behavioral/scenarios.md" 'English preferred boundary vectors'
+require_case_pattern 'Input: Chinese scripts at 479, 480, 3,600, and 3,601 Han characters\.' "$repo_root/tests/behavioral/scenarios.md" 'Chinese preferred boundary vectors'
+reject_pattern '2\.5-minute minimum|never returns an over-15-minute script|two or three selectable directions' "$repo_root/tests/behavioral/scenarios.md" 'pre-revision behavioral scenarios'
 
 if rg -n '/Users/|Simplified Mandarin|Jenny Hoyos|Jessica McCabe|Struthless|How to ADHD|Tracey Marks' \
   "$repo_root/README.md" "$repo_root/skills" "$repo_root/tests/behavioral"; then
