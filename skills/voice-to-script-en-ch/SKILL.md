@@ -1,6 +1,6 @@
 ---
 name: voice-to-script-en-ch
-description: Use when someone wants to turn a voice note, recording, transcript, ramble, or rough idea into a reflective, conversational talking-head video script with an engaging story arc, optional evidence, English or Simplified Chinese output, and a verified 2.5-to-15-minute runtime.
+description: Use when someone wants to turn a voice note, recording, transcript, ramble, or rough idea into a reflective, conversational talking-head video script with an engaging story arc, optional evidence, English or Simplified Chinese output, and a verified user-authorized runtime.
 ---
 
 # voice to script en/ch
@@ -23,24 +23,26 @@ If more than one situation applies, read every relevant reference. Treat the rul
 When requirements compete, protect them in this order:
 
 1. Factual integrity, faithful attribution, and the user's real experience.
-2. The hard 2.5-to-15-minute runtime for each requested language's complete teleprompter body plus recommended conclusion.
-3. The narrative direction the user authorized.
+2. The user's authorized duration and scope choice for each requested language's complete teleprompter body plus recommended conclusion, using the 2–15-minute preferred window as a planning guide.
+3. The story angle the user authorized.
 4. The evidence the user authorized.
 5. Optional enrichment, examples, and stylistic flourishes.
 
-Omit dispensable material before weakening a higher-priority requirement. Never invent experiences, quotations, statistics, sources, or certainty.
+Omit dispensable material before weakening a higher-priority requirement. Never invent experiences, quotations, statistics, sources, or certainty, and never pad to reach the preferred window.
 
 ## Route the current stage
 
 | Input state | Action |
 |---|---|
-| First useful capture | Analyze it now; return a discovery workbench plus 2–3 narrative directions when the material supports meaningful alternatives. |
-| Added voice pass or answers | Merge them into the workbench, update the directions, and ask only the highest-value remaining questions. |
-| User selects a direction, including “you choose” | Record the selection and continue without asking for another confirmation. |
-| External support would materially help | Offer a small evidence menu; research with the strongest available reliable research or web capability. |
-| User approves the story and evidence choices, or says “finalize now” | Create the internal approved story contract and finalize. |
+| New script project | Reflect usable material, ask once for exact duration, rough range, or freestyle unless already supplied, explain the story-led window, then begin discovery. |
+| Discovery pass | Merge material into the source ledger and ask 4–6 highest-value questions; allow selective answers, skipping, or freestyle. Do not propose angles before readiness. |
+| Readiness gate passes | Present one best-supported angle and two promising alternatives with named material gaps. |
+| User selects an angle | Record it and offer one optional 4–6-question strengthening pass. |
+| New material after selection | Merge minor additions; reopen angle selection only after a material change to meaning, conflict or stakes, audience promise, position, or best-supported angle. |
+| User says `draft now` or `finalize now` | If duration is absent, ask only for exact duration, rough range, or freestyle; then skip optional discovery and use the strongest supportable story without invention or padding. |
+| Selected scope exceeds 15 minutes | Before drafting, offer one longer video, a short series, or a narrower story and recommend the most coherent choice. |
 
-Do not draft a polished script from a first capture unless the user explicitly asks to finalize now. “Finalize now” waives optional discovery, not truthfulness, runtime, language, or required polishing.
+When external support would materially help, offer a small evidence menu and use the strongest available reliable research or web capability only after the user authorizes the support. Once story and evidence choices are authorized, create the internal approved story contract and finalize. `draft now` and `finalize now` waive optional discovery, not truthfulness, the duration choice, language, source-grounded drafting, or required polishing.
 
 ## Required narrative engine
 
@@ -61,4 +63,4 @@ If a required polishing skill is unavailable, stop only the affected finalizatio
 
 ## Final-output boundary
 
-When finalization succeeds, return only the requested final humanized teleprompter script or scripts. For each requested language, assemble the complete body, a visibly labeled `Recommended ending — [mode]` and conclusion, at least three labeled alternate endings, then light delivery notes. Runtime includes the complete body and recommended conclusion but excludes the editorial heading, alternate endings, and notes. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.
+When finalization succeeds, return only the requested final humanized teleprompter script or scripts. For each requested language, assemble the complete body, a visibly labeled `Recommended ending — [mode]` and conclusion, at least three labeled alternate endings, then light delivery notes. Runtime includes the complete body and recommended conclusion but excludes the editorial heading, alternate endings, and notes. Optional external-polish handoff content may follow the notes. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.
