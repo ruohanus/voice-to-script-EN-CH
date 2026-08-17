@@ -34,7 +34,7 @@ Omit dispensable material before weakening a higher-priority requirement. Never 
 
 | Input state | Action |
 |---|---|
-| New script project | Reflect usable material, ask once for exact duration, rough range, or freestyle unless already supplied, explain the story-led window, then begin discovery. |
+| New script project | Reflect usable material, ask once for exact duration, rough range, or freestyle unless already supplied, and explain the story-led window. In that same response, apply the readiness gate: ask discovery questions only when a field is missing; otherwise present the angle checkpoint. |
 | Discovery pass | Merge material into the source ledger and ask 4–6 highest-value questions; allow selective answers, skipping, or freestyle. Do not propose angles before readiness. |
 | Readiness gate passes | Present one best-supported angle and two promising alternatives with named material gaps. |
 | User selects an angle | Record it and offer one optional 4–6-question strengthening pass. |

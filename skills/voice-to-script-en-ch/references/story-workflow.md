@@ -21,12 +21,15 @@ For audio or video, use an available transcription or media-reading capability. 
 - Offer exact duration, rough range, or freestyle.
 - Explain that freestyle aims for the preferred 2–15-minute window, may be about 45 seconds when that is the strongest complete story, may exceed 15 minutes after a scope choice, and never pads.
 - Explain that question depth follows requested duration and the quality of available material.
+- Before sending the first response, verify that its intake explicitly covers both the full freestyle explanation above and the way duration and available material will scale question depth.
 
 Reflect the usable material before the duration choice so the intake gives immediate value. When the user says `draft now` or `finalize now` without a duration, ask only for this choice; after the answer, skip optional discovery and angle comparison and use the strongest supportable story.
 
+For every other new project, do not stop after the duration intake. In that same response, evaluate the supplied material against the readiness gate: ask the 4–6-question discovery batch when any field is missing, or present the three-choice angle checkpoint when all five fields already pass. An unanswered duration choice does not by itself block the checkpoint because an honestly shorter complete story remains allowed; record the user's choice before drafting.
+
 ## Discovery batches
 
-Merge every new capture or answer into the source ledger rather than restarting. In each discovery pass, reflect the strongest usable material and ask 4–6 source-specific, highest-value questions with plausible story payoff. Explicitly invite the user to answer selectively, skip any question, or continue in freestyle. Match the depth of each batch to `duration_choice` and available material; later batches should target remaining gaps rather than repeat answered questions.
+Merge every new capture or answer into the source ledger rather than restarting. In each discovery pass, reflect the strongest usable material and ask 4–6 source-specific, highest-value questions with plausible story payoff. Ask one batch in the language the user is currently using; a bilingual final-script default does not duplicate discovery questions. Explicitly invite the user to answer selectively, skip any question, or continue in freestyle. Match the depth of each batch to `duration_choice` and available material; later batches should target remaining gaps rather than repeat answered questions.
 
 Discovery precedes angle selection. Do not present story angles merely because the first capture is usable.
 
@@ -42,6 +45,8 @@ Evaluate the internal `story_readiness` record against all five fields:
 
 Continue discovery while any field is missing unless the user says `draft now` or `finalize now`. Once all five pass, present the angle checkpoint.
 
+Apply the gate as a sufficiency test, not an exhaustiveness test. If one angle supports an honest complete story, including a compact `below_preferred` story, questions that would only deepen that angle, sharpen its audience, or develop an alternative are not blockers. Present the checkpoint and name such unanswered details as gaps on the promising alternatives; continue discovery only when a field is missing from the best-supported story itself.
+
 ## Three-choice angle checkpoint
 
 Create an internal `angle_checkpoint` with one best-supported angle that is ready to draft and two promising alternatives with named material gaps. For each of the three, state concisely:
@@ -56,11 +61,13 @@ Create an internal `angle_checkpoint` with one best-supported angle that is read
 - expected duration; and
 - missing material, using `none required` when the ready angle has no blocking gap.
 
+In the user-facing checkpoint, visibly label one choice `Best-supported — ready to draft` and each other choice `Promising alternative`; never describe all three as ready. Before sending, verify that every displayed choice contains all nine fields above rather than compressing the alternatives to only a hook, promise, and gap. Apply the speech-status ledger to every proposed hook: quotation marks or reconstructed dialogue count as direct speech, so supplied paraphrases and uncertain wording must remain indirect.
+
 Leave the choice to the user unless they say `you choose`, `pick the strongest`, or equivalent.
 
 ## Post-selection strengthening and reopening
 
-After any angle selection, offer one optional `strengthening_pass` of 4–6 source-specific questions and state what the answers could improve. For a promising alternative, present questions targeted to its named gaps instead of returning to generic discovery. The user may answer selectively, freestyle, skip, or say `draft now`. Do not repeat this offer after it is accepted or declined.
+After any angle selection, offer one optional `strengthening_pass` of 4–6 source-specific questions and state specifically which story elements the answers could improve, such as the central moment, stakes, causal progression, earned turn, or ending. For a promising alternative, present questions targeted to its named gaps instead of returning to generic discovery. In that offer, explicitly name all four paths: answer selectively, continue freestyle, skip the pass, or say `draft now`. Before sending, verify that both the improvement statement and all four paths are present. Do not repeat this offer after it is accepted or declined.
 
 Merge later material into the source ledger and update the content soul only when the material truly changes it. Reopen only when new material changes the central meaning, strongest conflict or stakes, audience promise, user's actual position, or which angle is best supported. Explain the shift briefly, record it internally as `angle_reopen_reason`, and present a refreshed three-choice checkpoint. Incorporate all lesser additions without re-selection.
 
