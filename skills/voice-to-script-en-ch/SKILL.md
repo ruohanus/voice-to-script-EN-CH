@@ -32,8 +32,11 @@ Omit dispensable material before weakening a higher-priority requirement. Never 
 
 ## Route the current stage
 
+Run the runtime preflight before evaluating any other route. If a supplied target or expected one-video scope exceeds 15 minutes and no scope choice exists, `scope_choice_required` overrides project phase, readiness, `draft now`, `finalize now`, and apparent source sufficiency: use the above-15 first response contract and end the turn.
+
 | Input state | Action |
 |---|---|
+| Selected scope exceeds 15 minutes | If no scope choice has been made, set `scope_choice_required` and use the above-15 first response contract before assessing whether the chosen shape has enough detail. |
 | New script project | Reflect usable material, ask once for exact duration, rough range, or freestyle unless already supplied, explain the story-led window and that follow-up question number and depth scale with duration and material. In that same response, apply the readiness gate: ask discovery questions only when a field is missing; otherwise present the angle checkpoint. |
 | Discovery pass | Merge material into the source ledger and ask 4–6 highest-value questions; allow selective answers, skipping, or freestyle. Do not propose angles before readiness. |
 | Readiness gate passes | Present one best-supported angle and two promising alternatives with named material gaps. |
@@ -41,7 +44,6 @@ Omit dispensable material before weakening a higher-priority requirement. Never 
 | New material after selection | Merge minor additions without reopening or repeating the same revision's offer. Reopen only after a material change to meaning, conflict or stakes, audience promise, position, or best-supported angle. |
 | User says `draft now` or `finalize now` before angle selection | If duration is absent, ask only for exact duration, rough range, or freestyle; then skip optional discovery and use the strongest supportable angle without invention or padding. |
 | User says `draft now` or `finalize now` after angle selection | Preserve the selected angle; waive only optional questioning and draft that authorized angle subject to source and runtime honesty. |
-| Selected scope exceeds 15 minutes | If no scope choice has been made, set `scope_choice_required` and use the above-15 first response contract before assessing whether the chosen shape has enough detail. |
 | Explicit target for the chosen scope is unsupported | Only after `scope_choice_resolved`, explain the mismatch before drafting and offer more discovery, an honestly shorter script, additional freestyle material, or a narrower angle. |
 
 When external support would materially help, offer a small evidence menu and use the strongest available reliable research or web capability only after the user authorizes the support. Once story and evidence choices are authorized, create the internal approved story contract with `planned_preferred_status` before drafting. Finalization adds `measured_preferred_status` only from frozen final text. `draft now` and `finalize now` waive optional discovery, not truthfulness, the duration choice, an already authorized angle, language, source-grounded drafting, or required polishing.
