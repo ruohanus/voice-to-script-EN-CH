@@ -39,6 +39,7 @@ require_file "$skill_dir/agents/openai.yaml"
 require_file "$skill_dir/references/story-workflow.md"
 require_file "$skill_dir/references/evidence-research.md"
 require_file "$skill_dir/references/finalization.md"
+require_file "$skill_dir/references/external-polish.md"
 require_file "$skill_dir/references/spoken-style.md"
 require_file "$skill_dir/scripts/estimate_runtime.py"
 

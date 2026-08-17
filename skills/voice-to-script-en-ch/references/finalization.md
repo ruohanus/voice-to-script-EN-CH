@@ -88,14 +88,14 @@ Count the displayed spoken lines in the recommended ending and every alternate b
 
 Run a mechanical line audit over every displayed spoken line in each complete body and ending. Split any English line over 18 spoken words and any Simplified Chinese line over 28 Han characters, even when it is one grammatical sentence or one ending breath. These are ceilings, not targets: split or cut shorter lines too whenever the aloud pass reveals a stumble, restart, breath failure, or more than one independently performable beat. Recount after every split and preserve only approved source material.
 
-## Hard runtime gate
+## Story-led runtime check
 
 For each requested language, define the runtime-bearing script as the complete teleprompter body plus its recommended conclusion. The visible `Recommended ending — [mode]` heading is editorial and excluded. Alternate endings and light delivery notes are also excluded.
 
-Every runtime-bearing script must be at least 2.5 minutes and no longer than 15 minutes. After the recommended conclusion is final and before appending alternates and notes, run `scripts/estimate_runtime.py` on exactly that runtime-bearing script:
+After the recommended conclusion is final and before appending alternates and notes, run `scripts/estimate_runtime.py` on exactly that runtime-bearing script:
 
-- English: 150 spoken words per minute; valid range 375–2250 words.
-- Simplified Chinese: 240 Han characters per minute; valid range 600–3600 Han characters. Mixed Latin words add time at 150 words per minute.
+- English: 150 spoken words per minute; the preferred 2–15-minute range is 300–2250 words.
+- Simplified Chinese: 240 Han characters per minute; the preferred 2–15-minute range is 480–3600 Han characters. Mixed Latin words add time at 150 words per minute.
 
 Examples:
 
@@ -104,9 +104,14 @@ python3 scripts/estimate_runtime.py --language en english.txt
 python3 scripts/estimate_runtime.py --language zh chinese.txt
 ```
 
-If the result is `too_short`, deepen an approved beat with source-grounded detail, reflection, or an authorized support point. Never pad with generic repetition. If `too_long`, cut secondary setup and optional examples before touching the core conflict, earned turn, or open tension. When duration changes, repeat polishing and measurement only on the runtime-bearing script, then rerun its integrity audit and the bilingual parity audit when applicable. Do not measure the editorial recommended-ending heading, alternate endings, or delivery notes.
+- Measure the complete teleprompter body plus recommended conclusion exactly as before.
+- Treat `within_preferred` as the normal 2–15-minute result.
+- For `below_preferred`, keep the shorter result when extending it would require padding, repetition, or invention; deepen it only with approved material.
+- For `above_preferred`, do not draft until the user chooses one longer video, a short series, or a narrower story.
+- An explicit user duration remains the target when the source can support it honestly.
+- Never reject an otherwise complete script solely for `below_preferred` or an authorized `above_preferred` result.
 
-After the numeric gate passes, read for spoken cadence. Pause-heavy delivery may run longer, so shorten scripts that sit too close to 15 minutes when cadence suggests an overrun. The numeric minimum remains binding.
+When duration changes, repeat polishing and measurement only on the runtime-bearing script, then rerun its integrity audit and the bilingual parity audit when applicable. Do not measure the editorial recommended-ending heading, alternate endings, or delivery notes. Read for spoken cadence after measurement; pause-heavy delivery may run longer, so adjust honestly when cadence suggests an overrun without removing essential meaning merely to stay inside the preferred window.
 
 ## Clean output contract
 
@@ -123,10 +128,16 @@ Alternate endings
 
 Light delivery notes
 [Sparse notes]
+
+Optional external polish
+[Privacy warning]
+[Claude copy-paste prompt for English or DeepSeek copy-paste prompt for Simplified Chinese]
 ```
 
 Although the editorial recommended-ending heading separates the conclusion visually, the runtime-bearing script is the complete body plus that conclusion. The heading itself, alternates, and notes remain outside the measurement.
 
-For bilingual mode, label the two language sections clearly and preserve this order within each section. Light delivery notes may mark a pause, emphasis, pronunciation, one optional visual or source cue, or one concise performance suggestion. Keep them sparse and do not turn them into production direction.
+For bilingual mode, label the two language sections clearly and preserve this order within each section. Keep the Claude prompt with the English section and the DeepSeek prompt with the Simplified Chinese section. Light delivery notes may mark a pause, emphasis, pronunciation, one optional visual or source cue, or one concise performance suggestion. Keep them sparse and do not turn them into production direction.
+
+Read `references/external-polish.md` only after finalization and all internal integrity checks. Humanizer must already have run for English and `shuorenhua` for Simplified Chinese; the optional third-party handoff never replaces either. Insert the matching privacy warning and complete copy-paste prompt after each requested language's light notes. Never send the script automatically.
 
 Suppress internal workbench, research, source ledgers, citations lists, approved story contract, polishing commentary, runtime metrics, parity reports, editorial explanations, and all other process notes unless the user explicitly requests them.

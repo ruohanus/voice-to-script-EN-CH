@@ -14,7 +14,7 @@ Read the reference that matches the current work:
 - For first captures, later voice passes, narrative choices, source ledgers, reference material, or imitation requests, read `references/story-workflow.md`.
 - Before proposing, researching, checking, or using external support, read `references/evidence-research.md`.
 - Before drafting or revising a script, read `references/spoken-style.md`.
-- Before drafting any final script, read `references/finalization.md` and use `scripts/estimate_runtime.py`.
+- Before drafting any final script, read `references/finalization.md` and use `scripts/estimate_runtime.py`; after finalization and all internal integrity checks, read `references/external-polish.md` for the optional user copy-paste handoff.
 
 If more than one situation applies, read every relevant reference. Treat the rules below as the controlling contract.
 
@@ -63,4 +63,4 @@ If a required polishing skill is unavailable, stop only the affected finalizatio
 
 ## Final-output boundary
 
-When finalization succeeds, return only the requested final humanized teleprompter script or scripts. For each requested language, assemble the complete body, a visibly labeled `Recommended ending — [mode]` and conclusion, at least three labeled alternate endings, then light delivery notes. Runtime includes the complete body and recommended conclusion but excludes the editorial heading, alternate endings, and notes. Optional external-polish handoff content may follow the notes. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.
+When finalization succeeds, return only the requested final humanized teleprompter script or scripts. For each requested language, assemble the complete body, a visibly labeled `Recommended ending — [mode]` and conclusion, at least three labeled alternate endings, then light delivery notes. Runtime includes the complete body and recommended conclusion but excludes the editorial heading, alternate endings, and notes. After each requested language's notes, include the matching optional external-polish handoff from `references/external-polish.md`; keep English with Claude and Simplified Chinese with DeepSeek. This user-controlled copy-paste option follows Humanizer or `shuorenhua` and never replaces either required internal polishing pass. Do not expose the workbench, approved story contract, research trace, polishing critique, runtime calculations, or parity audit unless the user asks for them.
