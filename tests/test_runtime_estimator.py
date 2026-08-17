@@ -23,10 +23,23 @@ class RuntimeEstimatorTests(unittest.TestCase):
         estimator = load_estimator()
         self.assertEqual(estimator.estimate_seconds("word " * 375, "en"), 150.0)
         self.assertEqual(estimator.estimate_seconds("word " * 2250, "en"), 900.0)
-        self.assertEqual(estimator.classify_seconds(149.99), "too_short")
-        self.assertEqual(estimator.classify_seconds(150.0), "within_range")
-        self.assertEqual(estimator.classify_seconds(900.0), "within_range")
-        self.assertEqual(estimator.classify_seconds(900.01), "too_long")
+
+    def test_preferred_window_is_two_to_fifteen_minutes(self):
+        estimator = load_estimator()
+        self.assertEqual(estimator.classify_seconds(45.0), "below_preferred")
+        self.assertEqual(estimator.classify_seconds(119.99), "below_preferred")
+        self.assertEqual(estimator.classify_seconds(120.0), "within_preferred")
+        self.assertEqual(estimator.classify_seconds(900.0), "within_preferred")
+        self.assertEqual(estimator.classify_seconds(900.01), "above_preferred")
+
+    def test_short_and_long_results_are_descriptive_not_invalid(self):
+        estimator = load_estimator()
+        short = estimator.estimate("word " * 113, "en")
+        long = estimator.estimate("word " * 2251, "en")
+        self.assertEqual(short["status"], "below_preferred")
+        self.assertFalse(short["within_preferred_range"])
+        self.assertEqual(long["status"], "above_preferred")
+        self.assertFalse(long["within_preferred_range"])
 
     def test_simplified_chinese_boundaries_use_240_han_characters_per_minute(self):
         estimator = load_estimator()
@@ -49,7 +62,8 @@ class RuntimeEstimatorTests(unittest.TestCase):
         result = json.loads(completed.stdout)
         self.assertEqual(result["language"], "zh")
         self.assertEqual(result["estimated_seconds"], 150.0)
-        self.assertEqual(result["status"], "within_range")
+        self.assertEqual(result["status"], "within_preferred")
+        self.assertTrue(result["within_preferred_range"])
 
 
 if __name__ == "__main__":

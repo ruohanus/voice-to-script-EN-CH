@@ -12,8 +12,8 @@ from typing import Dict, Union
 
 ENGLISH_WORDS_PER_MINUTE = 150
 CHINESE_HAN_CHARACTERS_PER_MINUTE = 240
-MINIMUM_SECONDS = 150.0
-MAXIMUM_SECONDS = 900.0
+PREFERRED_MINIMUM_SECONDS = 120.0
+PREFERRED_MAXIMUM_SECONDS = 900.0
 
 _HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 _LATIN_WORD_RE = re.compile(r"[A-Za-z]+(?:['’][A-Za-z]+)?(?:-[A-Za-z]+)*")
@@ -21,12 +21,12 @@ _GENERAL_WORD_RE = re.compile(r"\b[\w]+(?:['’][\w]+)?(?:-[\w]+)*\b", re.UNICOD
 
 
 def classify_seconds(seconds: float) -> str:
-    """Classify an estimate against the hard 2.5-to-15-minute range."""
-    if seconds < MINIMUM_SECONDS:
-        return "too_short"
-    if seconds > MAXIMUM_SECONDS:
-        return "too_long"
-    return "within_range"
+    """Describe an estimate against the preferred 2-to-15-minute window."""
+    if seconds < PREFERRED_MINIMUM_SECONDS:
+        return "below_preferred"
+    if seconds > PREFERRED_MAXIMUM_SECONDS:
+        return "above_preferred"
+    return "within_preferred"
 
 
 def estimate_seconds(text: str, language: str) -> float:
@@ -46,11 +46,15 @@ def estimate_seconds(text: str, language: str) -> float:
 
 def estimate(text: str, language: str) -> Dict[str, Union[str, int, float]]:
     seconds = estimate_seconds(text, language)
+    status = classify_seconds(seconds)
     result: Dict[str, Union[str, int, float]] = {
         "language": language,
         "estimated_seconds": round(seconds, 2),
         "estimated_minutes": round(seconds / 60, 2),
-        "status": classify_seconds(seconds),
+        "status": status,
+        "within_preferred_range": status == "within_preferred",
+        "preferred_minimum_seconds": PREFERRED_MINIMUM_SECONDS,
+        "preferred_maximum_seconds": PREFERRED_MAXIMUM_SECONDS,
     }
     if language == "en":
         result["word_count"] = len(_GENERAL_WORD_RE.findall(text))
