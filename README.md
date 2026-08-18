@@ -4,7 +4,7 @@ A public ChatGPT/Codex skill for developing voice notes, recordings, transcripts
 
 The skill supports English, Simplified Chinese, and bilingual output. Bilingual is the default. Each final language version is independently written from one approved, language-neutral story contract.
 
-The skill asks once for an exact duration, rough range, or freestyle. Freestyle aims for a preferred 2–15-minute window, but a strong story may be shorter and an authorized story may be longer. The skill never pads merely to reach a minimum. Runtime covers the complete teleprompter body plus recommended conclusion; the editorial heading, alternate endings, and notes do not count.
+The skill asks once for an exact duration, rough range, or freestyle. Freestyle aims for a preferred 2–15-minute window, but a strong story may be shorter and an authorized story may be longer. The skill never pads merely to reach a minimum. Runtime covers the complete teleprompter body plus recommended conclusion; the editorial heading, alternate endings, platform-title packages, notes, and optional external handoff do not count.
 
 ## What it does
 
@@ -13,8 +13,8 @@ The skill asks once for an exact duration, rough range, or freestyle. Freestyle 
 - Offers one optional batch of post-selection questions per angle revision to strengthen the opening, conflict, stakes, turn, clip line, or ending before drafting, while preserving the selected angle when the user says `draft now`.
 - Researches only claims that materially benefit from evidence, then asks the user which verified support to include.
 - Produces natural English and Chinese-speaking-audience adaptations without using English as the canonical draft.
-- Returns, per language, a complete teleprompter body, a visible recommended ending and conclusion, at least three labeled alternate endings, and light delivery notes.
-- Offers an optional copy-paste handoff to Claude for English and DeepSeek for Simplified Chinese after internal finalization. The user should not share private or sensitive material unless comfortable sending it to that third-party service; these services do not replace Humanizer or `shuorenhua`.
+- Returns, per language, a complete teleprompter body, a visible recommended ending and conclusion, exactly three labeled alternate endings, platform-specific title packages, and light delivery notes. English receives TikTok and Instagram options; Simplified Chinese receives Xiaohongshu options.
+- Offers an optional copy-paste handoff to Claude for English and DeepSeek for Simplified Chinese after internal finalization. Each prompt requests both a delivery-focused rewrite that preserves the story's structure and a retention-focused rewrite that may restructure only the supplied material. Each external version receives its own platform-title set. The user should not share private or sensitive material unless comfortable sending it to that third-party service; these services do not replace Humanizer or `shuorenhua`.
 
 ## Repository layout
 

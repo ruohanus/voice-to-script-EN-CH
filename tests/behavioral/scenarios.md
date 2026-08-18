@@ -30,19 +30,19 @@ Observe: the agent selects its recommended direction without another approval tu
 
 Input: “Use the approved rich packet and direction. Finalize in English only.”
 
-Observe: only the English complete teleprompter body, visible recommended ending and conclusion, at least three labeled alternate endings, and light English delivery notes appear.
+Observe: only the English complete teleprompter body, visible recommended ending and conclusion, exactly three labeled alternate endings, three TikTok options, three Instagram cover/caption packages, and light English delivery notes appear.
 
 ### 5. Explicit Simplified-Chinese-only
 
 Input: “Use the approved rich packet and direction. Finalize in Simplified Chinese only.”
 
-Observe: the agent creates the Chinese complete body, visible recommended ending and conclusion, at least three labeled alternate endings, and light notes directly from the story contract, with no English script or English-first framing.
+Observe: the agent creates the Chinese complete body, visible recommended ending and conclusion, exactly three labeled alternate endings, three Xiaohongshu note-title/cover-phrase packages, and light notes directly from the story contract, with no English script or English-first framing.
 
 ### 6. Default bilingual
 
 Input: “Use the approved rich packet and direction. Finalize.”
 
-Observe: English and Simplified Chinese are independently generated from one story contract; each language has the complete body, visible recommended ending and conclusion, at least three labeled alternate endings, then light notes.
+Observe: English and Simplified Chinese are independently generated from one story contract; each language has the complete body, visible recommended ending and conclusion, exactly three labeled alternate endings, its platform-specific title packages, then light notes.
 
 ### 7. Mid-session language change
 
@@ -313,13 +313,13 @@ Observe: the complete script earns the decision and leaves exactly that future u
 
 ### 52. Main ending and labeled alternatives
 
-Approved English finalization with enough material for all four ending modes.
-Observe: one complete script uses a recommended ending and is followed by at least three materially different alternatives labeled by mode and optimization goal where applicable.
+Approved English finalization with enough material for several ending approaches.
+Observe: one complete script uses a recommended ending and is followed by three materially different alternatives labeled by intended viewer aftereffect rather than promised platform performance.
 
 ### 53. Ending-mode integrity
 
-Source supports a story request, named reader, callback, and unapologized position.
-Observe: each ending performs its named function, remains one or two breaths, avoids a generic maxim, and preserves the same facts and unresolved tension.
+Source supports a story invitation, callback with new meaning, open decision, concrete final image, unapologized position, and next real move.
+Observe: the selected endings perform their named functions, remain one or two breaths, avoid a generic maxim, and preserve the same facts. The complete story retains exactly one unresolved tension, but an alternate may embody it without restating it.
 
 ### 54. Source-grounded clip line
 
@@ -404,4 +404,39 @@ Observe: before drafting, the response offers one longer video, a short series, 
 ### 70. Optional external-polish handoff
 
 Input: completed bilingual finalization.
-Observe: after each finalized script and light notes, the response gives a privacy-aware optional handoff: Claude for English and DeepSeek for Simplified Chinese. Each copy-paste prompt requests a complete replacement script, permits attention and spoken-rhythm improvements, locks facts and approved narrative decisions, prohibits invention, retains indirect speech and endings, and keeps length within 10 percent.
+Observe: after each finalized script and light notes, the response gives a privacy-aware optional handoff: Claude for English and DeepSeek for Simplified Chinese. Each copy-paste prompt requests both `Same Story, Better Delivery` and `Same Material, Stronger Storytelling` by default, includes a compact source-truth record, keeps the first version's major beat order and ending concepts, allows the second to restructure presentation and endings, prohibits invention in both, and follows the authorized runtime without padding.
+
+### 71. Ending palette and aftereffect labels
+
+Input: source material that can support several of the six approved ending approaches.
+Observe: the agent considers story invitation, callback with new meaning, open decision, concrete final image, unapologized position, and next real move; it recommends the best story fit and labels three alternatives by intended viewer aftereffect without claiming one is best for comments or shares.
+
+### 72. Implicit unresolved tension in alternate endings
+
+Input: the complete story has one clear unresolved career decision, while a concrete final image can preserve that tension without naming it.
+Observe: the main script retains exactly one unresolved tension. The concrete-image alternate neither resolves nor contradicts it and is accepted without mechanically restating the decision.
+
+### 73. English platform title packages
+
+Input: completed English talking-head narrative.
+Observe: after the ending alternatives, the output contains three TikTok opening-title options and three Instagram packages, each with a cover headline and caption opening line. The options use distinct truthful emotional entry points, match the script, and contain no invented drama, generic inspiration, forced emoji, hashtag, or platform cliché.
+
+### 74. Simplified Chinese and bilingual title adaptation
+
+Input variants: completed Chinese-only narrative; completed bilingual narrative.
+Observe: every Chinese version has three Xiaohongshu packages, each containing a concise `笔记标题` and shorter `封面短句`. In bilingual mode the Chinese titles are independently adapted rather than literal translations of the English TikTok or Instagram options.
+
+### 75. Two external versions have different permissions
+
+Input: an English final script with a stable beat order and four ending choices.
+Observe: Claude is asked for both versions by default. `Same Story, Better Delivery` may freely rewrite spoken language but preserves story content, event order, major beat order, and ending concepts. `Same Material, Stronger Storytelling` may change presentation order, reveal timing, tempo, hook, emotional progression, clip-line placement, and ending strategy while preserving source truth and real event chronology.
+
+### 76. External versions receive matching title sets
+
+Input: optional English and Chinese handoffs whose structurally reworked versions use different hooks from the internal final drafts.
+Observe: each of the two Claude versions receives its own three TikTok options and three Instagram cover/caption packages; each of the two DeepSeek versions receives its own three Xiaohongshu note-title/cover-phrase packages. Titles match the version they accompany, and the models return no critique, scoring, change summary, article, or essay.
+
+### 77. Ending breath limit survives mechanical splitting
+
+Input: a Simplified Chinese ending whose first draft needs more than two displayed lines after applying the 28-Han-character ceiling.
+Observe: the ending is cut and recomposed from approved material until it occupies no more than two displayed spoken lines. The mechanical line audit never creates or leaves a third ending line.

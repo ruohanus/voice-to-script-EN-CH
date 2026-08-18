@@ -19,7 +19,7 @@ Draft each requested language directly from the approved story contract:
 
 For every branch, make an initial deletion pass before rewriting: cut throat-clearing, duplicate explanation, softened restatements, and transcription artifacts while retaining source tics, useful repetition, fragments, and uncomfortable admissions that carry the writer's voice. Then perform an aloud pass. Split or cut every stumble, restart, or breath failure. Format one breath per line; line breaks are pauses. Use contractions in English and equivalent natural spoken compression in Simplified Chinese without forcing English grammar onto Chinese.
 
-Build the complete teleprompter script with the approved clip line, earned turn, and exactly one unresolved tension. Choose the strongest ending mode for that complete script and use it as the recommended ending.
+Build the complete teleprompter script with the approved clip line, earned turn, and exactly one unresolved tension. Choose the strongest ending approach for that complete script and use it as the recommended ending.
 
 Before drafting the body, verify the clip-line pair in the approved story contract: the candidate must have a specific later source event, time, or action beat that can immediately follow it in source chronology. When the writer supplied a clear self-recognition line, keep that line as the candidate and use it as narrator-level framing immediately before the planned successor; moving commentary does not reorder the source events. Build a different source-grounded candidate only when the source contains no clear recognition line. Assemble the verified clip line and successor as an adjacent pair around two-thirds through the complete script.
 
@@ -63,38 +63,46 @@ For bilingual output, run a parity audit across:
 - event order and causal links;
 - every approved fact and evidence boundary;
 - meaningful conflicts and stakes;
-- clip line, earned turn, exactly one remaining unresolved tension, and ending intent.
+- clip line, earned turn, exactly one remaining unresolved tension, and ending approach and intended aftereffect.
 
 Parity is semantic, not literal. Do not make either version a line-by-line translation.
 
 ## Ending-generation pass
 
-After the complete script's recommended ending is chosen and polished, generate at least three labeled additional endings. Label each additional ending with one of these exact modes:
+After the complete script's recommended ending is chosen and polished, generate exactly three labeled additional endings. Draw only from the six approaches defined in `spoken-style.md`: story invitation, callback with new meaning, open decision, concrete final image, unapologized position, and next real move. Use named-reader recognition only as an optional targeting technique inside a fitting approach.
 
-1. `Story request — best for comments`
-2. `Named reader — best for shares`
-3. `Callback — best for cohesion`
-4. `Unapologized position`
+The recommended ending plus the alternatives must be materially distinct in both mechanism and intended viewer aftereffect. Every ending must be one or two breaths, preserve approved facts and the earned turn, and avoid generic advice, generic maxims, engagement bait, manufactured uncertainty, or new explanation. No alternative may resolve or contradict the one tension left intentionally open in the complete script. An ending may embody that tension implicitly when its approved image, position, or next move already carries it.
 
-The recommended ending plus the alternatives must collectively use at least three modes. Alternatives must be materially distinct, one or two breaths each, preserve the approved facts, earned turn, and exactly one unresolved tension, and avoid generic advice, generic maxims, engagement bait, or new explanation. Do not use an alternative to resolve the tension left intentionally open in the complete script.
+In the final user-facing output, place the complete script's last one-or-two-breath conclusion beneath `Recommended ending — [approach] · [intended aftereffect]`. Label each alternate with the same approach-and-aftereffect pattern. These labels are editorial and excluded from runtime. Never label an ending `best for comments`, `best for shares`, or with another unsupported performance promise.
 
-In the final user-facing output, place the complete script's last one-or-two-breath conclusion beneath `Recommended ending — [mode]`, using the exact selected mode label above. The label is editorial and is excluded from the complete script's runtime. The recommended ending itself must perform its named mode; do not replace it with a generic reflective question or invitation addressed to an abstract viewer.
+Before output, audit the words of the recommended ending and **every** alternate separately. A correct label is not evidence: each ending must actually perform its labeled approach as defined in `spoken-style.md`, create the stated aftereffect, remain inseparable from this source, and preserve rather than close the approved unresolved tension. Reject any ending that only carries a label, substitutes a generic question for its function, or becomes stronger when its final line is deleted.
 
-Before output, audit the words of the recommended ending and **every** alternate separately. A correct label is not evidence: each ending must actually perform its labeled mode as defined in `spoken-style.md` and state, rather than merely imply, the same source-specific unresolved tension. Reject any ending that only carries the mode label, substitutes a generic question for its function, or drops the unresolved tension to sound more conclusive.
+Inventory writer-side uncertainties across the complete body and recommended conclusion. Repeated phrasings or an implicit final embodiment of the approved unresolved tension count as one; answer or remove every other open writer-side question. In a callback, do not preserve a distinct opening question as a second uncertainty. A story invitation may ask the viewer for a lived story, but it does not replace or multiply the writer's one approved tension.
 
-Inventory writer-side uncertainties across the complete body and recommended conclusion. Repeated phrasings of the approved unresolved tension count as one; answer or remove every other open writer-side question. In a callback, do not preserve a distinct opening question as a second uncertainty. A Story-request prompt may ask the viewer for a lived story, but it does not replace or multiply the writer's one approved tension.
+For every ending that uses named-reader recognition, apply this concrete predicate: it must recognize one singular person through both a source-supported role or relationship and a source-specific moment, action, or conflict, then pair that recognition with the writer's real disclosure. Reject a broad audience label, an `if you` condition, or an imperative telling the viewer what to do. If either recognition anchor is missing, remove the targeting technique.
 
-For every ending labeled `Named reader — best for shares`, apply this concrete predicate: it must recognize one singular person through both a source-supported role or relationship and a source-specific moment, action, or conflict, then pair that recognition with the writer's real disclosure. Reject a broad audience label, an `if you` condition, or an imperative telling the viewer what to do. If either recognition anchor is missing, the ending does not perform the mode.
+Count the displayed spoken lines in the recommended ending and every alternate before output. Each must contain no more than two spoken lines or breaths; exclude only its editorial label. This limit applies to the final displayed line breaks, not merely to sentences or conceptual breaths. Compress Simplified Chinese naturally when needed rather than spilling an ending into a third line.
 
-For every ending, reserve one of its one-or-two spoken lines for an explicit writer-side statement of that exact unresolved tension. A viewer question, a mode label, or an implied risk does not satisfy this requirement.
+Run a mechanical line audit over every displayed spoken line in each complete body and ending. Split any English line over 18 spoken words and any Simplified Chinese line over 28 Han characters, even when it is one grammatical sentence or one ending breath. These are ceilings, not targets: split or cut shorter lines too whenever the aloud pass reveals a stumble, restart, breath failure, or more than one independently performable beat. Recount after every split and preserve only approved source material. The mechanical audit may never create or leave a third displayed ending line. If a split would do so, cut and recompose the ending from approved material until both the per-line ceiling and the two-line ending limit pass together.
 
-Count the displayed spoken lines in the recommended ending and every alternate before output. Each must contain no more than two spoken lines or breaths; exclude only its editorial label. Compress Simplified Chinese naturally when needed rather than spilling an ending into a third line.
+## Platform-title pass
 
-Run a mechanical line audit over every displayed spoken line in each complete body and ending. Split any English line over 18 spoken words and any Simplified Chinese line over 28 Han characters, even when it is one grammatical sentence or one ending breath. These are ceilings, not targets: split or cut shorter lines too whenever the aloud pass reveals a stumble, restart, breath failure, or more than one independently performable beat. Recount after every split and preserve only approved source material.
+Generate titles only after the final story, recommended ending, and alternates are stable. Titles are platform packaging for a talking-head narrative, not alternate facts or a substitute hook.
+
+For every English script version, provide:
+
+- three TikTok opening-title options suitable for the first on-screen frame and the beginning of the post caption; and
+- three Instagram packages, each containing a short `Cover headline` and one natural `Caption opening line` that deepens rather than summarizes the tension.
+
+For every Simplified Chinese script version, provide three Xiaohongshu packages, each containing a concise `笔记标题` and a shorter `封面短句`. In bilingual mode, create the Chinese and English packages independently from the approved story contract. Do not translate title candidates literally merely to create parity.
+
+Normally vary the three candidates across a vulnerable admission, a specific conflict or unresolved question, and an unexpected but truthful realization. Depart from those shapes when another source-supported emotional entry point better fits the story.
+
+Every title must be authentic, colloquial, emotionally truthful, understandable without context, and clickable through specificity. It must match what the video delivers and remain recognizably this narrator's story. Reject invented drama, diagnoses, motives, credentials, quotations, outcomes, certainty, fake controversy, generic inspiration, forced emojis, hashtags, platform slang, and interchangeable clickbait. Do not repeat the script hook verbatim unless it is genuinely the strongest platform title.
 
 ## Story-led runtime check
 
-For each requested language, define the runtime-bearing script as the complete teleprompter body plus its recommended conclusion. The visible `Recommended ending — [mode]` heading is editorial and excluded. Alternate endings and light delivery notes are also excluded.
+For each requested language, define the runtime-bearing script as the complete teleprompter body plus its recommended conclusion. The visible `Recommended ending — [approach] · [intended aftereffect]` heading is editorial and excluded. Alternate endings, platform-title packages, and light delivery notes are also excluded.
 
 The approved story contract already contains the pre-draft `planned_preferred_status`. A planned `above_preferred` result must have explicit longer-video authorization before drafting; a series or narrower-story choice creates a new plan and status. The post-draft estimator never substitutes for that planning stop.
 
@@ -117,7 +125,7 @@ python3 scripts/estimate_runtime.py --language zh chinese.txt
 - An explicit user duration remains the target when the source can support it honestly.
 - Never reject an otherwise complete script solely for `below_preferred` or an authorized `above_preferred` result.
 
-No text edit is allowed after measurement: any such edit invalidates measured state, including `measured_preferred_status` and the stored fingerprint. After any edit to a measured body or recommended conclusion, rerun the matching required polishing pass when applicable, every integrity, quote-status, motive-and-interiority, clip-line, ending, mechanical-line, and bilingual parity audit, then freeze and measure again. Output only when the final displayed runtime-bearing text exactly matches the last measurement. Do not measure the editorial recommended-ending heading, alternate endings, delivery notes, or external handoff. Account for pause-heavy cadence before freezing; never remove essential meaning merely to stay inside the preferred window.
+No text edit is allowed after measurement: any such edit invalidates measured state, including `measured_preferred_status` and the stored fingerprint. After any edit to a measured body or recommended conclusion, rerun the matching required polishing pass when applicable, every integrity, quote-status, motive-and-interiority, clip-line, ending, mechanical-line, and bilingual parity audit, then freeze and measure again. Output only when the final displayed runtime-bearing text exactly matches the last measurement. Do not measure the editorial recommended-ending heading, alternate endings, platform-title packages, delivery notes, or external handoff. Account for pause-heavy cadence before freezing; never remove essential meaning merely to stay inside the preferred window.
 
 ## Clean output contract
 
@@ -126,11 +134,14 @@ For each requested language, output in this exact order:
 ```text
 [Complete teleprompter body]
 
-Recommended ending — [mode]
+Recommended ending — [approach] · [intended aftereffect]
 [One-or-two-breath recommended conclusion]
 
 Alternate endings
-[At least three labeled alternatives]
+[Exactly three approach-and-aftereffect alternatives]
+
+Platform titles
+[Matching TikTok and Instagram packages for English, or Xiaohongshu packages for Simplified Chinese]
 
 Light delivery notes
 [Sparse notes]
@@ -140,10 +151,10 @@ Optional external polish
 [Claude copy-paste prompt for English or DeepSeek copy-paste prompt for Simplified Chinese]
 ```
 
-Although the editorial recommended-ending heading separates the conclusion visually, the runtime-bearing script is the complete body plus that conclusion. The heading itself, alternates, and notes remain outside the measurement.
+Although the editorial recommended-ending heading separates the conclusion visually, the runtime-bearing script is the complete body plus that conclusion. The heading itself, alternates, platform-title packages, and notes remain outside the measurement.
 
 For bilingual mode, label the two language sections clearly and preserve this order within each section. Keep the Claude prompt with the English section and the DeepSeek prompt with the Simplified Chinese section. Light delivery notes may mark a pause, emphasis, pronunciation, one optional visual or source cue, or one concise performance suggestion. Keep them sparse and do not turn them into production direction.
 
-Read `references/external-polish.md` only after finalization and all internal integrity checks. Humanizer must already have run for English and `shuorenhua` for Simplified Chinese; the optional third-party handoff never replaces either. Insert the matching privacy warning and complete copy-paste prompt template after each requested language's light notes, following its placeholder rule. Never send the script automatically.
+Read `references/external-polish.md` only after finalization and all internal integrity checks. Humanizer must already have run for English and `shuorenhua` for Simplified Chinese; the optional third-party handoff never replaces either. Build its compact source-truth record, then insert the matching privacy warning and complete copy-paste prompt template after each requested language's light notes, following its placeholder rule. Request both external versions by default and never send the script automatically.
 
 Suppress internal workbench, research, source ledgers, citations lists, approved story contract, polishing commentary, runtime metrics, parity reports, editorial explanations, and all other process notes unless the user explicitly requests them.

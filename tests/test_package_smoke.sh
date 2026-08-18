@@ -112,6 +112,24 @@ require_pattern 'do not infer.*freestyle|never infer.*freestyle' "$skill_dir" 'n
 require_pattern 'motive|interiority' "$skill_dir/references/finalization.md" 'motive-inference source audit'
 require_pattern 'invalidates.*measured|measured.*invalidates' "$skill_dir/references/finalization.md" 'post-measurement edit invalidation'
 require_pattern 'placeholder.*intact|intact.*placeholder' "$skill_dir/references/external-polish.md" 'nonduplicating prompt placeholder rule'
+require_pattern 'story invitation' "$skill_dir/references/spoken-style.md" 'story-invitation ending approach'
+require_pattern 'callback with new meaning' "$skill_dir/references/spoken-style.md" 'callback ending approach'
+require_pattern 'open decision' "$skill_dir/references/spoken-style.md" 'open-decision ending approach'
+require_pattern 'concrete final image' "$skill_dir/references/spoken-style.md" 'concrete-image ending approach'
+require_pattern 'next real move' "$skill_dir/references/spoken-style.md" 'forward-motion ending approach'
+require_pattern 'intended.*aftereffect|aftereffect.*intended' "$skill_dir/references/spoken-style.md" 'viewer-aftereffect ending labels'
+require_pattern 'three TikTok' "$skill_dir/references/finalization.md" 'TikTok title options'
+require_pattern 'three Instagram' "$skill_dir/references/finalization.md" 'Instagram title packages'
+require_case_pattern '笔记标题' "$skill_dir/references/finalization.md" 'Xiaohongshu note title field'
+require_case_pattern '封面短句' "$skill_dir/references/finalization.md" 'Xiaohongshu cover phrase field'
+require_case_pattern 'Same Story, Better Delivery' "$skill_dir/references/external-polish.md" 'delivery-focused external version'
+require_case_pattern 'Same Material, Stronger Storytelling' "$skill_dir/references/external-polish.md" 'structural external version'
+require_pattern 'both versions.*default|default.*both versions' "$skill_dir/references/external-polish.md" 'two external versions by default'
+require_pattern 'source-truth record' "$skill_dir/references/external-polish.md" 'external source-truth record'
+require_pattern 'major beat order' "$skill_dir/references/external-polish.md" 'version-one beat-order lock'
+require_pattern 'presentation order' "$skill_dir/references/external-polish.md" 'version-two presentation freedom'
+require_pattern 'each version.*three TikTok|three TikTok.*each version' "$skill_dir/references/external-polish.md" 'per-version English titles'
+require_case_pattern '每个版本.*三组小红书|三组小红书.*每个版本' "$skill_dir/references/external-polish.md" 'per-version Chinese titles'
 
 require_case_pattern 'Input: English scripts at 299, 300, 2,250, and 2,251 words\.' "$repo_root/tests/behavioral/scenarios.md" 'English preferred boundary vectors'
 require_case_pattern 'Input: Chinese scripts at 479, 480, 3,600, and 3,601 Han characters\.' "$repo_root/tests/behavioral/scenarios.md" 'Chinese preferred boundary vectors'
@@ -124,8 +142,8 @@ if rg -n '/Users/|Simplified Mandarin|Jenny Hoyos|Jessica McCabe|Struthless|How 
 fi
 
 scenario_count=$(rg -c '^### [0-9]+\.' "$repo_root/tests/behavioral/scenarios.md")
-test "$scenario_count" -eq 70 || {
-  printf 'expected 70 behavioral scenarios, found %s\n' "$scenario_count" >&2
+test "$scenario_count" -eq 77 || {
+  printf 'expected 77 behavioral scenarios, found %s\n' "$scenario_count" >&2
   exit 1
 }
 

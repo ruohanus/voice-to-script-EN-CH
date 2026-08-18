@@ -40,22 +40,28 @@ Select and place the clip line at a boundary where an approved later event, time
 
 ## Design the ending
 
-Give the ending its own revision pass. Let the story earn a decision, changed interpretation, honest position, or next action, then leave exactly one intentional tension, uncertainty, or question open. The ending must preserve the same approved facts, earned turn, and unresolved tension as the main script.
+Give the ending its own revision pass. Let the story earn a decision, changed interpretation, honest position, or next action, then leave exactly one intentional tension, uncertainty, or question open. The ending must preserve the same approved facts and earned turn as the main script. It must not resolve or contradict the approved unresolved tension, but it may carry that tension implicitly when the final image, position, or next move already makes it felt.
 
 Make every ending one or two breaths.
 
-## Ending modes
+## Ending approaches
 
-Choose the mode that best fits the approved story contract:
+Generate candidates only from approaches the approved source can support, then choose the one that best fits the story:
 
-1. **Story request — best for comments:** ask for a lived story, not an opinion. It is a sincere camera-facing question, never engagement bait.
-2. **Named reader — best for shares:** recognize one identifiable person with both a source-supported role or relationship and a source-specific moment, action, or conflict, then pair that recognition with the writer's real disclosure. A broad audience category, an `if you` condition, or advice in the imperative is not a named reader.
-3. **Callback — best for cohesion:** answer the opening question honestly, including `I don't know`, and repeat the opening phrase when natural. When the opening question differs from the approved unresolved tension, answer it with the earned turn rather than reopening it as a second uncertainty, then leave only the approved tension open. It must still work when the viewer does not remember the opening verbatim.
-4. **Unapologized position:** let the writer stand somewhere without adding justification or a lesson.
+1. **Story invitation:** ask for one specific lived experience, not a general opinion. It is a sincere camera-facing question, never engagement bait.
+2. **Callback with new meaning:** return to the opening question, image, or phrase after the journey has changed what it means. Answer honestly, including `I don't know`, without opening a second unresolved tension or depending on verbatim audience recall.
+3. **Open decision:** land on a real choice the writer has not resolved. The uncertainty must already exist in the approved source; never manufacture indecision for interaction.
+4. **Concrete final image:** end on an approved object, action, place, or moment and let it carry the emotional residue without explaining the lesson.
+5. **Unapologized position:** let the writer stand somewhere without adding justification, advice, or a lesson.
+6. **Next real move:** end on the writer's approved next action or experiment so the story keeps moving without pretending the outcome is known.
+
+Treat **named-reader recognition** as an optional targeting technique, not a required standalone approach. When it fits, recognize one identifiable person through both a source-supported role or relationship and a source-specific moment, action, or conflict, then pair that recognition with the writer's real disclosure. A broad audience category, an `if you` condition, or advice in the imperative is not specific recognition.
+
+Label user-facing choices by their intended viewer aftereffect, such as `invites a personal story`, `leaves a lingering image`, `keeps the decision open`, `ends with conviction`, or `leaves forward momentum`. Do not claim that an approach is best for comments, shares, reach, or another platform metric.
 
 ## Reject weak endings
 
-Reject an ending that could close an unrelated person's script unchanged, addresses an abstract `you`, lands on a maxim, repeats an explanation, becomes stronger when its final line is deleted, or resolves every tension. Keep the remaining openness specific to this writer and this story.
+Reject an ending that could close an unrelated person's script unchanged, addresses an abstract `you`, lands on a maxim, repeats an explanation, becomes stronger when its final line is deleted, manufactures uncertainty, or resolves every tension. Keep the remaining openness and emotional residue specific to this writer and this story.
 
 ## Final spoken-style audit
 
@@ -68,4 +74,4 @@ Before finalizing, confirm that the script:
 - uses source-only physical detail and exact quotations, keeps paraphrases and uncertain speech indirect, and relies on implicit causality where explanation is unnecessary;
 - contains one source-grounded clip line around two-thirds with no immediate explanation;
 - earns meaningful movement while leaving exactly one unresolved tension; and
-- uses a one-or-two-breath ending that fits a named ending mode and survives the weak-ending checks.
+- uses a one-or-two-breath ending that fits a named ending approach, produces its labeled intended aftereffect, and survives the weak-ending checks.

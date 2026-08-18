@@ -95,11 +95,11 @@ After angle and evidence choices are authorized, create one internal, language-n
 - causal links and meaningful conflicts;
 - earned turn and exactly one unresolved tension;
 - source passage for the clip line paired with the specific later source event, time, or action beat that must immediately follow it;
-- recommended ending mode and facts/disclosures available to alternates;
+- recommended ending approach, intended aftereffect, and facts or disclosures available to alternates;
 - a speech-status ledger that preserves each exact quotation verbatim and keeps every paraphrase or uncertain recollection indirect;
 - approved facts, examples, claims, and evidence identifiers;
 - deliberate omissions and uncertainty boundaries;
-- requested or inferred duration for the complete teleprompter body plus recommended conclusion, excluding its editorial heading, alternate endings, and notes;
+- requested or inferred duration for the complete teleprompter body plus recommended conclusion, excluding its editorial heading, alternate endings, platform-title packages, notes, and external handoff;
 - pre-draft `planned_preferred_status` (`below_preferred`, `within_preferred`, or `above_preferred`), whether the target is honestly supported, and any shorter-result or over-15 scope authorization; and
 - an initially empty `measured_preferred_status`, filled only during finalization from the frozen runtime-bearing text;
 - allowed delivery mood and emphasis.

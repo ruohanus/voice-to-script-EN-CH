@@ -1,6 +1,6 @@
 # Testing
 
-`tests/behavioral/scenarios.md` defines 70 required behavior cases. `tests/behavioral/rubric.md` grades observable behavior, including source fidelity, friction, adaptive discovery, runtime, external-polish handoff, evidence quality, spoken naturalness, bilingual parity, dependency invocation, and output cleanliness.
+`tests/behavioral/scenarios.md` defines 77 required behavior cases. `tests/behavioral/rubric.md` grades observable behavior, including source fidelity, friction, adaptive discovery, runtime, engaging endings, platform-title packages, external-polish handoff, evidence quality, spoken naturalness, bilingual parity, dependency invocation, and output cleanliness.
 
 Run deterministic and static checks with:
 
